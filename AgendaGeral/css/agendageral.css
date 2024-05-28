@@ -5,11 +5,173 @@ body {
     font-family: 'Mulish';
     color: #424242;
 }
+/* NAVBARS */
 
+.linha {
+    background-color: #FF6711;
+    height: 1.5px;
+    width: 90%;
+    margin-left: 65px;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    font-family: Panchang-Semibold;
+ 
+}
+
+.containerM {
+    width: 100%;
+    margin-top: 10px;
+
+}
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.menu a {
+    color: #FF6711;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.dropdown {
+    position: relative;
+    font-family: Panchang-Light;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    font-family: Panchang-Light;
+    background-color: #ffffff;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: #FF6711;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {color:#9F97CA;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    color:#9F97CA;
+}
+ 
+.menu-container a:hover {color:#9F97CA;}
+ 
+.arrow1:hover {
+    filter: invert(62%) sepia(84%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(91%);
+}
+ 
+.search-box {
+    display: none;
+}
+.search-box.active {
+    display: block;
+}
+ 
+.search-icon:hover {
+    filter: invert(62%) sepia(84%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(91%);
+}
+ 
+.cityAndArrow1 {
+    justify-content: flex-start;
+    margin-left: 45px;
+}
+ 
+.LanguageAndArrow {
+    justify-content: flex-start;
+    margin-right: 90px;
+}
+ 
+.navbarmobile {
+    font-family: Panchang-Semibold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #FF6711;
+}
+ 
+.menumobile {
+    font-family: Panchang-Semibold;
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+ 
+.menu-mobile a {
+    padding: 10px;
+    text-decoration: none;
+    color: #FF6711;
+    text-align: center;
+}
+ 
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 25px;
+}
+ 
+.icons {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    width: 25px;
+    height: 25px;
+}
+ 
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #FF6711;
+}
+ 
+@media (min-width: 768px) {
+    .menu-mobile {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+ 
+    .menu-mobile a {
+        padding: 10px 20px;
+    }
+ 
+    .hamburger {
+        display: none;
+    }
+ 
+    .icons {
+        display: none;
+    }
+}
+
+
+/* FILTROS */
 .buttonfilter{
     border: none;
     background-color:  #FF6711;
     width: 150px;
+    height: 28px;
     font-family: "Panchang";
     color: white;
     font-size: 13px;
@@ -19,42 +181,71 @@ body {
 .buttonMoreFilters{
     border: none;
     background-color:  #FF6711;
-    width: 120px;
-    height: 32px;
+    width: 100px;
+    height: 28px;
     font-family: "Mulish";
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
 }
 
 .results{
     font-family: "Mulish";
     color:#424242;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 800;
 }
 
 .buttonMonth{
+    line-height:2px;
     border: none;
     background-color: white;
     font-family:"Panchang";
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    color:#424242
+    color:#424242;
+}
+.buttonMonth:hover {
+    border: none;
+    background-color: white;
+    font-family:"Panchang";
+    font-size: 18px;
+    font-weight: 600;
+    color:#FF6711;
+}
+
+.lineMonth {
+    background-color: #424242;
+    height: 2px;
+    width: 95%;
+    margin-left: 65px;
+    margin-top: 9px;
 }
 
 .buttonDay{
     border: none;
     background-color: white;
+    min-width: 60px;
     border-right: 2px solid;
     border-color: #FF6711;
-    width: 70px;
-    height: 60px;
-    color:#424242
+    text-align: center;
+    color:#424242;
+    padding: 0px 20px;
+    display: grid;
+    justify-content: center;
 
 }
 
+.buttonDay > h5, .buttonDay > p {
+margin: 0;
+}
+
+.buttonDay:hover{
+    color:#FF6711
+}
+
 .dayofmonthB{
+    font-size: 16px;
     font-weight: 700;
 }
 .dayofweekB{
@@ -66,13 +257,54 @@ ul{
     list-style-type: none;
 }
 
+.dropdownMobile {
+    position: relative;
+    font-family: Panchang-Light;
+    display: inline-block;
+}
+.dropdown-contentMobile {
+    width: 335px;
+    display: none;
+    position: absolute;
+    font-family: Panchang-Light;
+    background-color: #ffffff;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-contentMobile a {
+    color: #FF6711;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+.dropdown-contentMobile a:hover {color:#9F97CA;}
+.dropdownMobile:hover .dropdown-contentMobile {
+    display: block;
+}
 
-/*.navbar{
-    background-color: #d9d9d9;
-    font-family: "Mulish";
-    font-size: 10px;
-}*/
+.dropbtnM{
+    color:#ffffff;
+    text-decoration: none;
+}
+.dropdownMobile:hover .dropbtnM {
+    text-decoration: none;
+    color:#9F97CA;
+}
 
+.monthsMobileButton {
+    border: none;
+    background-color:  #FF6711;
+    width: 335px;
+    height: 28px; 
+    font-family: "Panchang";
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+
+/*agenda*/
 
 
 .TitleSchedule{
@@ -85,15 +317,14 @@ ul{
 
 .containerEvent {
     min-width: 300px;
-    height: 500px;
-    border: 3px solid black;
+    height: 350px;
+
 }
 
 .image-container {
-    background-color: red;
     width: 100%;
     height: 50%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 52% 100%, 52% 73%, 0 73%);
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 53% 98%, 53% 70%, 0 70%);
     border-radius: 15px;
     contain: content;
 }
@@ -113,6 +344,7 @@ ul{
     display: none;
     font-family: "Panchang";
     font-size: 15px;
+    margin-right: 10px;
 }
 
 .image-container:hover > h1 {
@@ -124,8 +356,8 @@ ul{
     width: 100%;
     height: 50%;
     transform: translateY(-50px);
-    clip-path: polygon(0 0, 48% 0, 48% 27%, 100% 27%, 100% 100%, 0 100%);
-    border-radius:15px;
+    clip-path: polygon(0 4%, 50% 4%, 50% 32%, 100% 32%, 100% 100%, 0 100%);
+    border-radius:15px
 }
 
 .header {
@@ -137,40 +369,60 @@ ul{
 }
 
 .content-zone {
-    background: green;
     width: 43%;
     display: flex;
     justify-content: space-between;
-    margin-left: 6px;
+    margin-left: 10px;
+    margin-top: 28px;
 }
 
 .body {
     width: 100%;
     height: 90%;
     font-family: "Mulish";
+    margin-top: 25px;
+    margin-left: 10px;
 }
+
+.body > h1 {
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.body > p {
+    margin-top: 15px;
+    line-height: 5px;
+}
+ .time{
+    font-weight: 700;
+ }
 
 .carrousel {
     overflow: auto;
     contain: content;
     display: flex;
-    column-gap: 20px;
-    background: yellow;
+    column-gap: 40px;
+    overflow-y:hidden;
 }
 
 img {
-    filter: grayscale(80%)
+    filter: grayscale(95%)
 }
 
 img:hover {
     filter: grayscale(0%)
 }
 
-
+.DaysCarrousel {
+    overflow-y: hidden;
+    overflow-x: auto;
+    contain: content;
+    display: flex;
+}
 
 footer{
 
-    background-color: #c3c3c3;
+    background-color: #dddddd;
     bottom:0%;
     width: 100%;
 }
@@ -191,8 +443,12 @@ footer{
     
 }
 
-.mobile-navbar {
-   /* display: none; */
+.container-mobile {
+   display: none;
+}
+
+.monthsMobile {
+    display: none;
 }
 
 @media only screen and (max-width: 900px) {
@@ -200,11 +456,20 @@ footer{
       display: none;
     }
 
-    .mobile-navbar {
+    .container-mobile {
         display: block;
     }
 
-    .desktop-navbar {
+    .menu {
         display: none;
     }
+
+    .monthsMobile {
+        display: block;
+    }
+
+    .monthsDefault{
+        display: none;
+    }
+
 }

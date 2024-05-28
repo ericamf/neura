@@ -14,44 +14,10 @@
 </head>
 <body>
 
-  <nav class="mobile-navbar navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
 
-  <div class="desktop-navbar menu">
-    <div class="container">
+<header>
+  <div class="menu">
+    <div class="containerM">
     <div class="menu-container d-flex justify-content-between align-items-center">
 
        <div class="cityAndArrow1">
@@ -62,7 +28,7 @@
             <a href="#">MADRID</a>
             <a href="#">PARIS</a>
           </div>
-          <img src="images/ARROW.svg" class="arrow1" alt="Arrow" width="10" height="10">
+          <img src="Imagens\Menu\Polygon.svg" class="arrow1" alt="Arrow" width="10" height="10">
         </div>
        </div>
 
@@ -76,411 +42,622 @@
 
           <div class="LanguageAndArrow d-flex align-items-center">
           <div class="lupa">
-            <img src="images/LUPA.svg" class="search-icon" alt="Lupa" width="20" height="20" style="cursor: pointer;">
+            <img src="Imagens\Menu\lupa.svg" class="search-icon" alt="Lupa" width="20" height="20" style="cursor: pointer;">
           </div>
           <div class="dropdown ms-2">
             <a href="#" class="dropbtn">EN</a>
             <div class="dropdown-content">
               <a href="#">PT</a>
             </div>
-            <img src="images/ARROW.svg" class="arrow1" alt="Arrow" width="10" height="10">
+            <img src="Imagens\Menu\Polygon.svg" class="arrow1" alt="Arrow" width="10" height="10">
           </div>
          </div>
     </div>
     <div class="linha"></div>
-</div>
-</div>
+    </div>
+  </div>
 
-<main>
+<div class="container-mobile">
+  <nav class="navbarmobile">
+    <div class="logo">
+      <img src="Imagens\Menu\LOGO_mobile.svg" alt="">
+    </div>
 
-    <div class="grid">
-      
-      <div class="row m-0 gap-3 justify-content-center">
-        <button class="buttonfilter rounded-2 p-2 col-2">MUSIC</button>
-        <button class="buttonfilter rounded-2 p-2 col-2">SHOWS</button>
-        <button class="buttonfilter rounded-2 p-2 col-2">SPORTS</button>
-        <button class="buttonfilter rounded-2 p-2 col-2">ART</button>
-        <button class="buttonfilter rounded-2 p-2 col-2">FOOD</button>
-        <button class="buttonfilter rounded-2 p-2 col-2">DIDACTIC</button>
+    <div class="icons col-auto">
+      <div class="lupa">
+        <img src="Imagens\Menu\lupamobile.svg" class="search-icon" alt="Lupa" width="20" height="20" style="cursor: pointer;">
       </div>
-    
-      <div class="row m-0 justify-content-center mt-4">
-          <button class="buttonMoreFilters rounded-3"> more filters </button>
+      <div class="log in">
+        <img src="Imagens\Menu\logIn.svg" class="search-icon" alt="Lupa" width="20" height="20">
       </div>
     </div>
-    
-    <div class="text-center mt-3 ">
-      <h6 class="results">30 RESULTS</h6>
+
+    <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </div>
 
-    <section class="agenda m-0 row text-center mt-5">
-      <div class="calendar">
-          <div class="months col">
-              <button class="buttonMonth rounded-3 mx-5">APRIL</button>
-              <button class="buttonMonth rounded-3 mx-5">MAY</button>
-              <button class="buttonMonth rounded-3 mx-5">JUNE</button>
-              <button class="buttonMonth rounded-3 mx-5">JULY</button>
-              <button class="buttonMonth rounded-3 mx-5">AUGUST</button>
-              <button class="buttonMonth rounded-3 mx-5">SEPTEMBER</button>
-          </div>
-          <div class="days col mt-5">
-              <button class="buttonDay "> <h5 class="dayofmonthB">01</h5> <p class="dayofweekB"> MON</p></button>
-              <button class="buttonDay  "> <h5 class="dayofmonthB">02</h5> <p class="dayofweekB"> TUE</p></button>
-              <button class="buttonDay "> <h5 class="dayofmonthB">03</h5> <p class="dayofweekB"> WED</p></button>
-          </div>
+    <div class="menumobile">
+        <a href="#home">AGENDA</a>
+        <a href="#about">INFO</a>
+        <a href="#services">UPDATES</a>
+        <a href="#contact">NEWSLETTER</a>
+
+        <div class="lupa">
+          <img src="Imagens\Menu\lupa.svg" class="search-icon" alt="Lupa" width="20" height="20" style="cursor: pointer;">
+        </div>
+
+        <a class="socialmedia-menu" href="#">
+          <img src="Imagens\Menu\INSTAGRAM_M_MOBILE.svg" alt="">
+          <img src="Imagens\Menu\TIKTOK_M_MOBILE.svg" alt="">
+          <img src="Imagens\Menu\X_M_MOBILE.svg" alt="">
+        </a>
+    </div> 
+  </div>
+</nav>
+
+</header>
+
+
+
+
+<main class="mt-5">
+
+  <div class="grid filters">
+    
+    <div class="principalFilters row m-0 gap-3 justify-content-center">
+      <button class="buttonfilter rounded-2 p-2 col-2">MUSIC</button>
+      <button class="buttonfilter rounded-2 p-2 col-2">SHOWS</button>
+      <button class="buttonfilter rounded-2 p-2 col-2">SPORTS</button>
+      <button class="buttonfilter rounded-2 p-2 col-2">ART</button>
+      <button class="buttonfilter rounded-2 p-2 col-2">FOOD</button>
+      <button class="buttonfilter rounded-2 p-2 col-2">DIDACTIC</button>
     </div>
-  </section>        
   
-  <section class="AgendaGeral mt-4">
+    <div class=" moreFilters row m-0 justify-content-center mt-5">
+        <button class="buttonMoreFilters rounded-3"> more filters </button>
+    </div>
+
+  </div>
   
-      <div class="Schedule Row">
-        <div class="TitleSchedule mb-3">
-          morning
+  <div class=" m-0 text-center mt-3 mb-4 ">
+    <h6 class="results">30 RESULTS</h6>
+  </div>
+
+  <section class="calendarMonths m-0 text-center mt-5 ms-5">
+    <div class="monthsDefault col m-0">
+        <button class="col buttonMonth rounded-1 mx-5">APRIL</button>
+        <button class="col buttonMonth rounded-1 mx-5">MAY</button>
+        <button class="col buttonMonth rounded-1 mx-5">JUNE</button>
+        <button class="col buttonMonth rounded-1 mx-5">JULY</button>
+        <button class="col buttonMonth rounded-1 mx-5">AUGUST</button>
+        <button class="col buttonMonth rounded-1 mx-5">SEPTEMBER</button>
+    </div>
+</section>
+
+<section class="calendarMonthsMobile m-0 text-center mt-5 ms-4">
+      <div class="monthsMobile">
+        <div class="dropdownMobile">
+          <button class="monthsMobileButton rounded-2">
+          <a href="#" class="dropbtnM">APRIL</a>
+          <div class="dropdown-contentMobile rounded-2">
+            <a href="#">MAY</a>
+            <a href="#">JUNE</a>
+            <a href="#">JULY</a>
+            <a href="#">AUGUST</a>
+            <a href="#">SEMPTEMBER</a>
+          </div>
+          <img src="Imagens\Outros\Polygon 2.svg" class="arrow1" alt="Arrow" width="10" height="10">
         </div> 
-  
-  
-  
-  
-      <div class="carrousel">
-        <!-- Card -->
-        <div class="containerEvent">
-          <div class="image-container">
-              <img src="Imagens\imagensEventos\evento 7.jpg">
-              <h1>DIDACTIC</h1>
-          </div>
-        <div class="label-container">
-          <div class="header">
-            <div class="content-zone">
-              <p>10H30</p>
-               <p>2H</p>
-            </div>
-          </div>
-          <div class="body">
-            <h1>WORKSHOP CERAMICS</h1>
-            <p>Serralves Museum, Foz do Douro</p>
-          </div>
+      </button>
+       </div>
+  </div>
+</section>
+
+<div class="lineMonth m-0 mt-3 ms-5"></div>
+
+<section class="calendarDays m-0 row mt-5 ms-5">
+  <div class="DaysCarrousel">
+      <div class="buttonDay"> <h5 class="dayofmonthB">01</h5> <p class="dayofweekB"> MON</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">02</h5> <p class="dayofweekB"> TUE</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">03</h5> <p class="dayofweekB"> WED</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">04</h5> <p class="dayofweekB"> MON</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">05</h5> <p class="dayofweekB"> TUE</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">06</h5> <p class="dayofweekB"> WED</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">07</h5> <p class="dayofweekB"> MON</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">08</h5> <p class="dayofweekB"> TUE</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">09</h5> <p class="dayofweekB"> WED</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">10</h5> <p class="dayofweekB"> MON</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">11</h5> <p class="dayofweekB"> TUE</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">12</h5> <p class="dayofweekB"> WED</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">13</h5> <p class="dayofweekB"> MON</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">14</h5> <p class="dayofweekB"> TUE</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">15</h5> <p class="dayofweekB"> WED</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">16</h5> <p class="dayofweekB"> MON</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">17</h5> <p class="dayofweekB"> TUE</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">18</h5> <p class="dayofweekB"> WED</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">19</h5> <p class="dayofweekB"> MON</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">20</h5> <p class="dayofweekB"> TUE</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">21</h5> <p class="dayofweekB"> WED</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">22</h5> <p class="dayofweekB"> MON</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">23</h5> <p class="dayofweekB"> TUE</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">24</h5> <p class="dayofweekB"> WED</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">25</h5> <p class="dayofweekB"> TUE</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">26</h5> <p class="dayofweekB"> WED</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">27</h5> <p class="dayofweekB"> MON</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">28</h5> <p class="dayofweekB"> TUE</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">29</h5> <p class="dayofweekB"> WED</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">30</h5> <p class="dayofweekB"> TUE</p></div>
+      <div class="buttonDay"> <h5 class="dayofmonthB">31</h5> <p class="dayofweekB"> WED</p></div>
+  </div>
+</section>   
+
+<section class="AgendaGeral m-0 mt-5 ms-5">
+
+  <div class="Row">
+    <div class="TitleSchedule mb-3">
+      morning
+    </div> 
+
+  <div class="carrousel m-0">
+    <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 7.jpg">
+          <h1>DIDACTIC</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p class="time">10H30</p>
+           <p>2H</p>
         </div>
-        </div>
-      
-        <!-- Card -->
-        <div class="containerEvent">
-          <div class="image-container"><img src="Imagens\imagensEventos\evento 7.jpg"></div>
-        <div class="label-container">
-          <div class="header">
-            <div class="content-zone">
-              <p>10H30</p>
-               <p>2H</p>
-            </div>
-          </div>
-          <div class="body">
-            <h1>WORKSHOP CERAMICS</h1>
-            <p>Serralves Museum, Foz do Douro</p>
-          </div>
-        </div>
-        </div>
-      
-        <!-- Card -->
-        <div class="containerEvent">
-          <div class="image-container"><img src="Imagens\imagensEventos\evento 7.jpg"></div>
-        <div class="label-container">
-          <div class="header">
-            <div class="content-zone">
-              <p>10H30</p>
-               <p>2H</p>
-            </div>
-          </div>
-          <div class="body">
-            <h1>WORKSHOP CERAMICS</h1>
-            <p>Serralves Museum, Foz do Douro</p>
-          </div>
-        </div>
-      
-          </div>
-      
-           <!-- Card -->
-        <div class="containerEvent">
-          <div class="image-container"><img src="Imagens\imagensEventos\evento 7.jpg"></div>
-        <div class="label-container">
-          <div class="header">
-            <div class="content-zone">
-              <p>10H30</p>
-               <p>2H</p>
-            </div>
-          </div>
-          <div class="body">
-            <h1>WORKSHOP CERAMICS</h1>
-            <p>Serralves Museum, Foz do Douro</p>
-          </div>
-        </div>
-      
-          </div>
-      
-           <!-- Card -->
-        <div class="containerEvent">
-          <div class="image-container">
-              <img src="Imagens\imagensEventos\evento 7.jpg">
-          </div>
-        <div class="label-container">
-          <div class="header">
-            <div class="content-zone">
-              <p>10H30</p>
-               <p>2H</p>
-            </div>
-          </div>
-          <div class="body">
-            <h1>WORKSHOP CERAMICS</h1>
-            <p>Serralves Museum, Foz do Douro</p>
-          </div>
-        </div>
-      
-          </div> <!--Div class containerEvent-->
+      </div>
+      <div class="body">
+        <h1>WORKSHOP CERAMICS</h1>
+        <p>Serralves Museum </p>
+        <p> Foz do Douro</p>
+      </div>
+    </div>
+    </div>
   
-              <!-- Card -->
-        <div class="containerEvent">
-          <div class="image-container">
-              <img src="Imagens\imagensEventos\evento 7.jpg">
-          </div>
-        <div class="label-container">
-          <div class="header">
-            <div class="content-zone">
-              <p>10H30</p>
-               <p>2H</p>
-            </div>
-          </div>
-          <div class="body">
-            <h1>WORKSHOP CERAMICS</h1>
-            <p>Serralves Museum, Foz do Douro</p>
-          </div>
-        </div>
-      
-          </div> <!--Div class containerEvent-->
-  
-              <!-- Card -->
-        <div class="containerEvent">
-          <div class="image-container">
-              <img src="Imagens\imagensEventos\evento 7.jpg">
-          </div>
-        <div class="label-container">
-          <div class="header">
-            <div class="content-zone">
-              <p>10H30</p>
-               <p>2H</p>
-            </div>
-          </div>
-          <div class="body">
-            <h1>WORKSHOP CERAMICS</h1>
-            <p>Serralves Museum, Foz do Douro</p>
-          </div>
-        </div>
-      
-          </div> <!--Div class containerEvent-->
-      </div> <!--Div class Carrousel-->
-  
-    </div> <!--Div do Schedule ROW-->
-  
-    <!-------------------------------------------------------------------------------------------------------------------------------->
-  
-    <!---EVENTOS À TARDE--------------------------------------------->
-    
-    <div class="Schedule Row mt-5">
-      <div class="TitleSchedule mb-3">
-        afernoon
-      </div> 
-  
-    <div class="carrousel">
-      <!-- Card -->
-      <div class="containerEvent">
-        <div class="image-container">
-            <img src="Imagens\imagensEventos\evento 7.jpg">
-            <h1>Didatic</h1>
-        </div>
+    <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+        <img src="Imagens\imagensEventos\evento 3.jpg">
+        <h1>ART</h1>
+      </div>
       <div class="label-container">
         <div class="header">
           <div class="content-zone">
-            <p>10H30</p>
-             <p>2H</p>
+            <p class="time">10H - 19H</p>
+            <p></p>
           </div>
         </div>
         <div class="body">
-          <h1>WORKSHOP CERAMICS</h1>
-          <p>Serralves Museum, Foz do Douro</p>
+          <h1>EXHIBITION HELENA ALMEIDA</h1>
+          <p>Serralves Museum </p>
+          <p> Foz do Douro</p>
         </div>
       </div>
+    </div>
+  
+    <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+        <img src="Imagens\imagensEventos\evento 9.jpg">
+        <h1>DIDACTIC</h1>
       </div>
-    
-      <!-- Card -->
-      <div class="containerEvent">
-        <div class="image-container"><img src="Imagens\imagensEventos\evento 7.jpg"></div>
-      <div class="label-container">
-        <div class="header">
-          <div class="content-zone">
-            <p>10H30</p>
-             <p>2H</p>
-          </div>
-        </div>
-        <div class="body">
-          <h1>WORKSHOP CERAMICS</h1>
-          <p>Serralves Museum, Foz do Douro</p>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p class="time">10H30</p>
+           <p>2H</p>
         </div>
       </div>
+      <div class="body">
+        <h1>ACTIVITY PAPER HOUSES</h1>
+        <p>Serralves Museum </p>
+        <p> Foz do Douro</p>
       </div>
-    
-      <!-- Card -->
-      <div class="containerEvent">
-        <div class="image-container"><img src="Imagens\imagensEventos\evento 7.jpg"></div>
-      <div class="label-container">
-        <div class="header">
-          <div class="content-zone">
-            <p>10H30</p>
-             <p>2H</p>
-          </div>
-        </div>
-        <div class="body">
-          <h1>WORKSHOP CERAMICS</h1>
-          <p>Serralves Museum, Foz do Douro</p>
+    </div>
+  
+      </div>
+  
+       <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+        <img src="Imagens\imagensEventos\evento 10.jpg">
+        <h1>DIDACTIC</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p class="time">10H30</p>
+           <p>2H</p>
         </div>
       </div>
-    
+      <div class="body">
+        <h1>WORKSHOP MANUAL BLINDING</h1>
+        <p>Serralves Museum </p>
+        <p> Foz do Douro</p>
+      </div>
+    </div>
+  
+      </div>
+  
+       <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 7.jpg">
+          <h1>DIDACTIC</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>10H30</p>
+           <p>2H</p>
         </div>
-    
+      </div>
+      <div class="body">
+        <h1>WORKSHOP CERAMICS</h1>
+        <p>Serralves Museum </p>
+        <p> Foz do Douro</p>
+      </div>
+    </div>
+  
+      </div> <!--Div class containerEvent-->
+
+          <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 7.jpg">
+          <h1>DIDACTIC</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>10H30</p>
+           <p>2H</p>
+        </div>
+      </div>
+      <div class="body">
+        <h1>WORKSHOP CERAMICS</h1>
+        <p>Serralves Museum </p>
+        <p> Foz do Douro</p>
+      </div>
+    </div>
+  
+      </div> <!--Div class containerEvent-->
+
+          <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 7.jpg">
+          <h1>DIDACTIC</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>10H30</p>
+           <p>2H</p>
+        </div>
+      </div>
+      <div class="body">
+        <h1>WORKSHOP CERAMICS</h1>
+        <p>Serralves Museum </p>
+        <p> Foz do Douro</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+
+  </div> <!--Div class Carrousel-->
+
+<!---EVENTOS À TARDE--------------------------------------------->
+
+  <div class="TitleSchedule mb-3 mt-4">
+        afternoon
+  </div> 
+
+  <div class="carrousel">
+      
+    <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 4.webp">
+          <h1>ART</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>14H30</p>
+           <p>1H</p>
+        </div>
+      </div>
+      <div class="body">
+        <h1>PERFORMANCE SHIP BODY</h1>
+        <p>Mira Galleries </p>
+        <p>Campanhã</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+      
+       <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 2.jpg">
+          <h1>ART</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>16H30</p>
+        </div>
+      </div>
+      <div class="body">
+        <h1>EXHIBITION “FEMININO DE NINGUÉM”</h1>
+        <p>Mira Galleries </p>
+        <p>Campanhã</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+
+    <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 1.jpeg">
+          <h1>ART</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>19H30</p>
+        </div>
+      </div>
+      <div class="body">
+        <h1>BOOK REALASE “PARADISE”</h1>
+        <p>Mira Galleries </p>
+        <p>Campanhã</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+
+     <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 11.jpg">
+          <h1>ART</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>14H - 20H</p>
+        </div>
+      </div>
+      <div class="body">
+        <h1>MULTIPLE EXHIBITIONS</h1>
+        <p>Street Miguel Lombarda </p>
+        <p>Porto</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+
          <!-- Card -->
-      <div class="container">
-        <div class="image-container"><img src="Imagens\imagensEventos\evento 7.jpg"></div>
-      <div class="label-container">
-        <div class="header">
-          <div class="content-zone">
-            <p>10H30</p>
-             <p>2H</p>
-          </div>
-        </div>
-        <div class="body">
-          <h1>WORKSHOP CERAMICS</h1>
-          <p>Serralves Museum, Foz do Douro</p>
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 7.jpg">
+          <h1>DIDACTIC</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>10H30</p>
+           <p>2H</p>
         </div>
       </div>
-    
-        </div>
-    
+      <div class="body">
+        <h1>WORKSHOP CERAMICS</h1>
+        <p>Serralves Museum </p>
+        <p> Foz do Douro</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+
          <!-- Card -->
-      <div class="containerEvent">
-        <div class="image-container">
-            <img src="Imagens\imagensEventos\evento 7.jpg">
-        </div>
-      <div class="label-container">
-        <div class="header">
-          <div class="content-zone">
-            <p>10H30</p>
-             <p>2H</p>
-          </div>
-        </div>
-        <div class="body">
-          <h1>WORKSHOP CERAMICS</h1>
-          <p>Serralves Museum, Foz do Douro</p>
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 7.jpg">
+          <h1>DIDACTIC</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>10H30</p>
+           <p>2H</p>
         </div>
       </div>
-    
-        </div> <!--Div class containerEvent-->
-  
-            <!-- Card -->
-      <div class="containerEvent">
-        <div class="image-container">
-            <img src="Imagens\imagensEventos\evento 7.jpg">
-        </div>
-      <div class="label-container">
-        <div class="header">
-          <div class="content-zone">
-            <p>10H30</p>
-             <p>2H</p>
-          </div>
-        </div>
-        <div class="body">
-          <h1>WORKSHOP CERAMICS</h1>
-          <p>Serralves Museum, Foz do Douro</p>
+      <div class="body">
+        <h1>WORKSHOP CERAMICS</h1>
+        <p>Serralves Museum </p>
+        <p> Foz do Douro</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+
+  </div>
+<!-----------------------EVENTOS À NOITE---------------------------------------------------------------------------->
+
+<div class="TitleSchedule mb-3 mt-4">
+        nigth
+  </div> 
+
+  <div class="carrousel">
+      
+    <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 4.webp">
+          <h1>ART</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>14H30</p>
+           <p>1H</p>
         </div>
       </div>
-    
-        </div> <!--Div class containerEvent-->
-  
-            <!-- Card -->
-      <div class="containerEvent">
-        <div class="image-container">
-            <img src="Imagens\imagensEventos\evento 7.jpg">
-        </div>
-      <div class="label-container">
-        <div class="header">
-          <div class="content-zone">
-            <p>10H30</p>
-             <p>2H</p>
-          </div>
-        </div>
-        <div class="body">
-          <h1>WORKSHOP CERAMICS</h1>
-          <p>Serralves Museum, Foz do Douro</p>
+      <div class="body">
+        <h1>PERFORMANCE SHIP BODY</h1>
+        <p>Mira Galleries </p>
+        <p>Campanhã</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+      
+       <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 2.jpg">
+          <h1>ART</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>16H30</p>
         </div>
       </div>
-    
-        </div> <!--Div class containerEvent-->
-    </div> <!--Div class Carrousel-->
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div> <!--Div do Schedule ROW-->
-  
-  </section>
+      <div class="body">
+        <h1>EXHIBITION “FEMININO DE NINGUÉM”</h1>
+        <p>Mira Galleries </p>
+        <p>Campanhã</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+
+    <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 1.jpeg">
+          <h1>ART</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>19H30</p>
+        </div>
+      </div>
+      <div class="body">
+        <h1>BOOK REALASE “PARADISE”</h1>
+        <p>Mira Galleries </p>
+        <p>Campanhã</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+
+     <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 11.jpg">
+          <h1>ART</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>14H - 20H</p>
+        </div>
+      </div>
+      <div class="body">
+        <h1>MULTIPLE EXHIBITIONS</h1>
+        <p>Street Miguel Lombarda </p>
+        <p>Porto</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+
+         <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 7.jpg">
+          <h1>DIDACTIC</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>10H30</p>
+           <p>2H</p>
+        </div>
+      </div>
+      <div class="body">
+        <h1>WORKSHOP CERAMICS</h1>
+        <p>Serralves Museum </p>
+        <p> Foz do Douro</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+
+         <!-- Card -->
+    <div class="containerEvent">
+      <div class="image-container">
+          <img src="Imagens\imagensEventos\evento 7.jpg">
+          <h1>DIDACTIC</h1>
+      </div>
+    <div class="label-container">
+      <div class="header">
+        <div class="content-zone">
+          <p>10H30</p>
+           <p>2H</p>
+        </div>
+      </div>
+      <div class="body">
+        <h1>WORKSHOP CERAMICS</h1>
+        <p>Serralves Museum </p>
+        <p> Foz do Douro</p>
+      </div>
+    </div>
+      </div> <!--Div class containerEvent-->
+
+  </div>
+
+</section>
+
+
 </main>
-
-
-  
 <footer>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid footer">
-          <a class="navbar-brand neurafooter ms-5" href="#"><img src="Imagens/footer/LOGO.svg" alt="" width="117" height="17"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-4 me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"> <img src="Imagens/footer/instaFooter.svg" alt="" width="15" height="15"></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><img src="Imagens/footer/Vector.svg" alt="" width="15" height="14"></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><img src="Imagens/footer/twitter Footer.svg" alt="" width="15" height="15"></a>
-              </li>
-            </ul>
-            <form class="d-flex " role="search">
-              <div class="politicas me-5 mt-2">
-                <h6>Política de Privacidade</h6>
-              </div>
-              <div class="politicas me-5 mt-2">
-                <h6>Política de Cookies</h6>
-              </div>
-              <div class="politicas mt-2">
-                <h6>Política de Termos e Condições</h6>
-              </div>
-            </form>
-          </div>
+  <nav class="navbar navbar-expand-lg mt-5">
+      <div class="container-fluid footer">
+        <a class="navbar-brand neurafooter ms-5" href="#"><img src="Imagens/footer/LOGO.svg" alt="" width="117" height="17"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-4 me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"> <img src="Imagens/footer/instaFooter.svg" alt="" width="15" height="15"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="Imagens/footer/Vector.svg" alt="" width="15" height="14"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="Imagens/footer/twitter Footer.svg" alt="" width="15" height="15"></a>
+            </li>
+          </ul>
+          <form class="d-flex " role="search">
+            <div class="politicas me-5 mt-2">
+              <h6>Política de Privacidade</h6>
+            </div>
+            <div class="politicas me-5 mt-2">
+              <h6>Política de Cookies</h6>
+            </div>
+            <div class="politicas mt-2">
+              <h6>Política de Termos e Condições</h6>
+            </div>
+          </form>
         </div>
-      </nav>
+      </div>
+    </nav>
 </footer>
+
 
 </body>
 </html>
