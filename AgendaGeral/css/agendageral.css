@@ -56,9 +56,11 @@ body {
     text-align: left;
 }
 .dropdown-content a:hover {color:#9F97CA;}
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 .dropdown:hover .dropbtn {
     color:#9F97CA;
 }
@@ -120,6 +122,13 @@ body {
     text-align: center;
 }
  
+.iconsAndHamburguer{
+    margin-top: 15px;
+    display: flex;
+    min-width: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
 .hamburger {
     cursor: pointer;
     display: flex;
@@ -133,8 +142,8 @@ body {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    margin: 20px;
-    width: 25px;
+    margin: 5px;
+    width: 55px;
     height: 25px;
 }
  
@@ -142,6 +151,14 @@ body {
     width: 25px;
     height: 3px;
     background-color: #FF6711;
+}
+
+.linhaMobile {
+    background-color: #FF6711;
+    height: 2px;
+    width: 95%;
+    margin-left: 15px;
+    margin-right: 15px;
 }
  
 @media (min-width: 768px) {
@@ -166,7 +183,7 @@ body {
 }
 
 
-/* FILTROS */
+/* FILTERS */
 .buttonfilter{
     border: none;
     background-color:  #FF6711;
@@ -178,15 +195,23 @@ body {
     font-weight: 600;
 }
 
+.buttonfilter:hover {
+color:#9F97CA
+}
+
 .buttonMoreFilters{
     border: none;
     background-color:  #FF6711;
-    width: 100px;
-    height: 28px;
+    width: 115px;
+    height: 29px;
     font-family: "Mulish";
     color: white;
     font-size: 14px;
     font-weight: 300;
+}
+
+.buttonMoreFilters:hover{
+    color:#424242
 }
 
 .results{
