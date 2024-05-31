@@ -17,6 +17,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: Panchang-Semibold;
+    background-color: #ffffff;
  
 }
 
@@ -500,7 +501,7 @@ img:hover {
     font-weight: 700;
  } 
 
- 
+
   .modal-content {
     background-color: #ffffff;
     margin: auto;
@@ -731,5 +732,6 @@ footer{
     .monthsDefault{
         display: none;
     }
+
 
 }
