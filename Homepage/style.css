@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: 'Mulish';
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    padding-top: 15px;
+    background-image: linear-gradient(#424242,#15161B);
+}
+
+.linha {
+    background-color: #FF6711;
+    height: 1.5px;
+    width: 90%;
+    margin-left: 65px;
+    margin-top: 9px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    font-family: Panchang-Semibold;
+    background-color: #424242;
+
+}
+
+.containerM {
+    width: 100%;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.menu a {
+    color: #FF6711;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.dropdown {
+    position: relative;
+    font-family: Panchang-Light;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    font-family: Panchang-Light;
+    background-color: #424242;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: #FF6711;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {color:#9F97CA;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    color:#9F97CA;
+}
+
+.menu-container a:hover {color:#9F97CA;}
+
+.arrow1:hover {
+    filter: invert(62%) sepia(84%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(91%);
+}
+
+.search-box {
+    display: none;
+}
+.search-box.active {
+    display: block;
+}
+
+.search-icon:hover {
+    filter: invert(62%) sepia(84%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(91%);
+}
+
+.cityAndArrow1 {
+    justify-content: flex-start;
+    margin-left: 45px;
+}
+
+.LanguageAndArrow {
+    justify-content: flex-start;
+    margin-right: 90px;
+}
+
+.navbar-mobile {
+    font-family: Panchang-Semibold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #424242;
+    color: #424242;
+}
+
+.menu-mobile {
+    font-family: Panchang-Semibold;
+    display: none;
+    flex-direction: column;
+    background-color: #424242;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.menu-mobile a {
+    padding: 10px;
+    text-decoration: none;
+    color: #424242;
+    text-align: center;
+}
+
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 25px;
+}
+
+
+.icons {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+    min-width: 120px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #FF6711;
+}
+
+@media (min-width: 900px) {
+    .menu-mobile {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+
+    .menu-hamburger {
+        display: flex;
+    }
+
+    .menu-hamburger.active {
+        display: flex;
+    }
+    
+    .menu-mobile a {
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+}
+
+.Scrolling-Text1{
+    font-family: Panchang-Semibold;
+    font-size: 75px;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 1px #FF6711;
+
+}
+
+.titleHoje{
+    color:#FF6711;
+}
+
+.titleAmanhã{
+    color:#FF6711;
+}
+.neuraname{
+    padding: 75px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.socialmedia {
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.mw-100 {
+    margin: 10px;
+}
+
+.apresentation {
+    margin-top: 175px;
+}
+
+.botaoseeagenda{
+    text-align: end;
+}
+.seeagenda {
+    background-color: #FF6711;
+    font-family: 'Mulish';
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    padding: 8px 75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+
+.seeagenda:hover {
+    background-color: #9F97CA;
+    color: #ffffff;
+}
+
+.seeagenda:active {
+    background-color: #ffffff;
+    color: #FF6711;
+    border: 2px solid #FF6711;
+}
+
+.video1 {
+    object-fit: cover;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    width: 100%;
+}
+
+
+
+.titletoday {
+    color: #FF6711;
+    font-family: Panchang-Bold;
+    font-size: 25px;
+    padding-top: 75px;
+    padding-bottom: 25px;
+}
+
+.titletomorrow {
+    color: #FF6711;
+    font-family: Panchang-Bold;
+    font-size: 25px;
+    padding-top: 100px;
+    justify-content: end;
+    padding-bottom: 25px;
+}
+
+.carrousel1 {
+    overflow: auto;
+    overflow-y: hidden;
+    contain: content;
+    display: flex;
+    column-gap: 30px;
+    margin-left: 112px;
+}
+
+.carrousel2 {
+    overflow: auto;
+    overflow-y: hidden;
+    contain: content;
+    display: flex;
+    column-gap: 30px;
+    margin-right: 112px;
+}
+
+.card {
+    height: 340px;
+    background-color: #D4D1E6;
+    border-radius: 10px;
+    flex: 0 0 auto;
+    width: 300px;
+}
+
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    filter: grayscale(100%);
+    object-fit: cover;
+    width: 100%;
+    height: 50%;
+}
+
+.card-img-top:hover {
+    filter: grayscale(0%);
+}
+
+.card-title {
+    font-family: 'Mulish';
+    font-weight: 800;
+    font-size: 20px;
+    color:#424242;
+    padding-top: 5px;
+}
+
+.card-text {
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size: 20px;
+    color:#424242;
+}
+
+.btn:hover {
+    filter: invert(17%) sepia(85%) saturate(15%) hue-rotate(24deg) brightness(102%) contrast(82%);
+}
+
+.Scrolling-Updates2 {
+    font-size: 40px;
+    font-family: Panchang-Bold;
+    color: #424242;
+    height: 60px;
+
+}
+
+.line2 {
+    height: 60px;
+}
+
+.updates {
+    background-color: #FF6711;
+}
+
+.updates-events {
+    height: 400px;
+    overflow: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    contain: content;
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.updates-events::-webkit-scrollbar {
+    display: none;
+}
+
+.containerEventDateChange {
+    min-width: 417px;
+    height: 350px;
+    margin-left: 20px;
+}
+.containerEventCancel {
+    min-width: 320px;
+    height: 350px;
+    margin-left: 20px;
+}
+
+.image-container1 {
+    width: 298px;
+    height: 250px;
+    transform: translateY(3.4rem);
+    border-radius: 10px;
+    contain: content;
+    filter: grayscale(100%);
+}
+
+.image-container1>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container1:hover {
+    filter: grayscale(0%);
+}
+
+.image-container2 {
+    width: 298px;
+    height: 250px;
+    border-radius: 10px;
+    contain: content;
+    filter: grayscale(100%);
+}
+
+.image-container2>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container2:hover {
+    filter: grayscale(0%);
+}
+
+.label-container1 {
+    width: 250px;
+    height: 70%;
+    transform: translateY(-15.7rem) translateX(6rem);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 30% 35%, 0 35%);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.label-container2 {
+    width: 250px;
+    height: 70%;
+    transform: translateY(-12rem) translateX(-3rem);
+    clip-path: polygon(0 0, 70% 0, 70% 65%, 100% 65%, 100% 100%, 0 100%);
+    border-radius: 10px;
+    background-color: #424242;
+}
+
+.content-zone {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    font-family: Panchang-Semibold;
+    color: #FF6711;
+    font-size: 18px;
+}
+
+.body-card1{
+    color: #FF6711;
+    font-family: 'Mulish';
+    font-weight: 300;
+    font-size: 15px;
+
+}
+
+.body-card1>h5 {
+    width: 200px;
+    margin-left: 95px;
+    padding-top: 20px;
+    color: #FF6711;
+    font-family: 'Mulish';
+    font-weight: 700;
+}
+
+.body-card1>p {
+    color: #FF6711;
+    width: 250px;
+    margin-left: 95px;
+    width: 150px;
+    font-family: 'Mulish';
+    font-weight: 300;
+}
+
+.header1 {
+    padding-top: 30px;
+}
+
+.body-card2{
+    color: #FF6711;
+    font-family: 'Mulish';
+    font-weight: 300;
+    font-size: 15px;
+
+}
+
+.body-card2>h5 {
+    width: 150px;
+    margin-left: 20px;
+    padding-top: 20px;
+    color: #FF6711;
+    font-family: 'Mulish';
+    font-weight: 700;
+}
+
+.body-card2>p {
+    color: #FF6711;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 150px;
+    font-family: 'Mulish';
+    font-weight: 300;
+}
+
+.header2 {
+    height: 100px;
+    margin-top: 43px;
+    margin-left: 14px;
+}
+
+
+
+.newsletter {
+    background-color: #424242;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.newslettertitle {
+    color: #FF6711;
+    font-family: Panchang-Bold;
+    font-size: 30px;
+    align-content: center;
+}
+
+.form-email {
+    align-content: center;
+}
+
+.form-control {
+    font-family: 'Mulish';
+    color: #424242;
+    border-radius: 8px;
+}
+
+.form-check-label {
+    font-family: 'Mulish';
+    font-weight: 300;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.btn-nl {
+    font-family: 'Mulish';
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #FF6711;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    justify-content: end;
+    align-content: center;
+}
+
+.btn-nl:hover {
+    background-color: #9F97CA;
+    color: #ffffff;~
+}
+
+.btn-nl:active {
+    background-color: #ffffff;
+    color: #FF6711;
+    border: 2px solid #FF6711;
+}
+
+
+
+
+
+
+
+ul{
+    list-style-type: none;
+}
+ 
+footer{
+    background-color: #c3c3c3;
+    bottom: 0;
+    width: 100%;
+}
+ 
+.navbar{
+    background-color: #d9d9d9;
+    font-family: "Mulish";
+    font-size: 10px;
+}
+ 
+.neurafooter{
+    font-family: "Panchang";
+    font-weight: 700;
+    color:#8D8D8D;
+    font-size: 25px;
+}
+ 
+.politicas{
+    h6{
+        font-family: "Mulish";
+        font-size: 14px;
+        color:#8D8D8D;
+        font-weight: 500;
+    }
+}
+
+.container-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    footer {
+      display: none;
+    }
+
+    .container-mobile {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .titletoday {
+        margin-left: 20px;
+    }
+
+    .carrousel1 {
+        margin-left: 30px;
+    }
+
+    .titletomorrow {
+        margin-right: 25px;
+    }
+
+    .carrousel2 {
+        margin-right: 30px;
+    }
+
+    .titletomorrow {
+        display: flex;
+        text-align: end;
+    }
+
+}
+
+
+
