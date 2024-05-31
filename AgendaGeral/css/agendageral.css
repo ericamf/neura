@@ -155,7 +155,7 @@ body {
     margin-right: 15px;
 }
  
-@media (min-width: 768px) {
+@media (min-width: 910px) {
     .menu-mobile {
         display: flex;
         flex-direction: row;
@@ -439,6 +439,247 @@ img:hover {
     display: flex;
 }
 
+/* CSS DO MODAL*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+
+  #myBtn{
+    border: none;
+    background-color: #ffffff;
+  }
+
+
+  #myBtn > .header {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.content-zone {
+    width: 43%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 28px;
+}
+
+.body {
+    width: 100%;
+    height: 90%;
+    font-family: "Mulish";
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.body > h1 {
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.body > p {
+    margin-top: 15px;
+    line-height: 5px;
+}
+ .time{
+    font-weight: 700;
+ } 
+
+ 
+  .modal-content {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 95%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* CSS DO MODAL EVENTO SINGULAR */
+
+body {
+    font-family: 'Mulish';
+    color: #424242, 
+}
+
+
+
+
+.title { text-decoration: solid;
+         font-weight: 700;
+         color: #424242;
+}
+
+
+.containerevent {
+    display: grid;
+    background-color: #D9D5EA;
+    height: 650px;
+    width: 1200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin-bottom: 40px;
+}
+
+.imageEventX > img{
+    filter: grayscale(0%)
+}
+
+
+.buttonX {
+    background-color:#D9D5EA;
+    border: none;
+}
+
+.event {
+    height: 500px;
+}
+
+.eventpart1{
+    contain: content;
+}
+
+.imageEventX{
+    width: 100% ;
+    height:330px ;
+    contain: content;
+}
+
+.imageEventX > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.buttonsGoandTickets{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 18px;
+    left: 5px;
+
+}
+
+.goTickets {
+    background-color: #FF6711;
+    border: none;
+    height: 45px;
+    width: 230px;
+    color: white;
+    font-family: 'Mulish';
+    font-weight: 800;
+    box-shadow: 0px 2px 4px #7c7c7c;
+}
+
+.button1 {
+    border: none;
+    background-color: white;
+    padding: 0%;
+}
+
+h4{
+    color: #FF6711;
+    font-weight: 400;
+    font-size: 12px;
+    font-weight: 600;
+}
+p{
+    font-size: 10px;
+}
+
+
+
+/*coluna direita- informaçao*/
+.eventpart2{
+ contain: content;
+}
+
+.infoAndButtonsViews{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between
+    
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info > p {
+    font-size: 14px;
+
+}
+
+.buttonsviews{
+    display: flex;
+}
+
+.textevent > p {
+    font-family: "Mulish";
+    font-size: 15px;
+    margin: 0;
+}
+
+.textevent > h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contactsEventText{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactsEventText > p {
+    font-size:15px;
+}
+
+.textevent2 > p {
+    font-size:15px;
+}
+
+.moredates > p {
+    font-size:11px;
+    margin: 0;
+}
+
+
+/*FOOTER + MEDIA QUERIES */
 footer{
 
     background-color: #dddddd;
