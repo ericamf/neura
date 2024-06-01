@@ -38,7 +38,9 @@ body {
     text-align: center;
 }
 
-.logoneuraM {filter: ;}
+.logoneuraM:hover {
+    filter: invert(62%) sepia(84%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(91%);
+}
 
 .dropdown {
     position: relative;
@@ -453,7 +455,7 @@ ul{
 /* CSS DO MODAL*/
 
 .modal {
-    display: flex; /* Hidden by default */
+    display: none; /* Hidden by default */
     justify-content: center;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -703,11 +705,20 @@ footer{
     bottom:0%;
     width: 100%;
 }
+
+.logoFooter{
+    filter: grayscale(100%);
+}
 .neurafooter{
     font-family: "Panchang";
     font-weight: 700;
     color:#8D8D8D;
     font-size: 25px;
+}
+
+.buttonsFooter{
+    border: none;
+    background-color: #dddddd;
 }
 
 .politicas{

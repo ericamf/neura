@@ -588,6 +588,11 @@ footer{
     font-size: 25px;
 }
  
+.buttonsFooter{
+    border: none;
+    background-color: #dddddd;
+}
+
 .politicas{
     h6{
         font-family: "Mulish";
