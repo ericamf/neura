@@ -204,6 +204,76 @@
     <div class=" moreFilters row m-0 justify-content-center mt-5">
         <button class="buttonMoreFilters rounded-3"> more filters </button>
     </div>
+    
+    <div class="container openMoreFilters text-center mt-3">
+
+      <div class="containerPrice">
+        <div class="slider-value">
+          <h2 id="title-min" class="slider-value_title"> 0 </h2>
+          <h2 id="title-max" class="slider-value_title"> 50 </h2>
+        </div>
+        <div class="double-slider">
+          <div class="double-slider__body">
+            <div class="double-slider__track">
+              <div class="double-slider__range"></div>
+              <div id="dot-left" class="
+              double-slider__dot
+              double-slider__dot--left"></div>
+              <div id="dot-right" class="
+              double-slider__dot
+              double-slider__dot--right"></div>
+            </div>
+            <input id="input-left" min="0" max="200" value="50" type="range" class="double-slider__input">
+            <input id="input-right" min="0" max="200" value="150" type="range" class="double-slider__input">
+          </div>
+        </div>
+      </div>
+       
+        <div class="row justify-content-center">  
+        <div class="ageFilters">
+          <button class="age rounded-3"> 
+            <p> 0-5 </p>
+            <p> years</p>
+          </button>
+          <button class="age rounded-3"> 
+            <p> 6-13 </p>
+            <p> years</p>
+          </button>
+          <button class="age rounded-3"> 
+            <p> 14-18 </p>
+            <p> years</p>
+          </button>
+          <button class="age rounded-3"> 
+            <p> 18+ </p>
+            <p> years</p>
+          </button>
+          <button class="age rounded-3"> 
+            <p> 67+ </p>
+            <p> years</p>
+          </button>
+        </div>
+        </div>
+
+        <div class="ageFiltersMobile m-0 text-center mt-5 ms-4">
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              0-5 YEARS
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">6-13 YEARS</a></li>
+              <li><a class="dropdown-item" href="#">14-18 YEARS</a></li>
+              <li><a class="dropdown-item" href="#">18+ YEARS</a></li>
+              <li><a class="dropdown-item" href="#">67+ YEARS</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+    </div>
+
+      </div>
+    </div>
+
 
   </div>
   
@@ -213,12 +283,12 @@
 
   <section class="calendarMonths m-0 text-center mt-5 ms-5">
     <div class="monthsDefault col m-0">
-        <button class="col buttonMonth rounded-1 mx-5">APRIL</button>
-        <button class="col buttonMonth rounded-1 mx-5">MAY</button>
-        <button class="col buttonMonth rounded-1 mx-5">JUNE</button>
-        <button class="col buttonMonth rounded-1 mx-5">JULY</button>
-        <button class="col buttonMonth rounded-1 mx-5">AUGUST</button>
-        <button class="col buttonMonth rounded-1 mx-5">SEPTEMBER</button>
+        <button class="col buttonMonth">APRIL</button>
+        <button class="col buttonMonth">MAY</button>
+        <button class="col buttonMonth">JUNE</button>
+        <button class="col buttonMonth">JULY</button>
+        <button class="col buttonMonth">AUGUST</button>
+        <button class="col buttonMonth">SEPTEMBER</button>
     </div>
 </section>
 
@@ -240,8 +310,6 @@
        </div>
   </div>
 </section>
-
-<div class="lineMonth m-0 mt-3 ms-5"></div>
 
 <section class="calendarDays m-0 row mt-5 ms-5">
   <div class="DaysCarrousel">
@@ -287,6 +355,8 @@
     </div> 
 
   <div class="carrousel m-0">
+
+      <!-- Card -->
       <div class="containerEvent" id="myBtn">
         <div class="image-container">
             <img src="Imagens\imagensEventos\evento 5.jpg">
@@ -295,7 +365,7 @@
       <div class="label-container">
         <div class="header">
           <div class="content-zone">
-            <p>21H</p>
+            <p class="time">21H</p>
              <p>2H</p>
           </div>
         </div>
@@ -479,7 +549,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>14H30</p>
+          <p class="time">14H30</p>
            <p>1H</p>
         </div>
       </div>
@@ -500,7 +570,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>16H30</p>
+          <p class="time">16H30</p>
         </div>
       </div>
       <div class="body">
@@ -520,7 +590,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>19H30</p>
+          <p class="time">19H30</p>
         </div>
       </div>
       <div class="body">
@@ -540,7 +610,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>14H - 20H</p>
+          <p class="time">14H - 20H</p>
         </div>
       </div>
       <div class="body">
@@ -560,7 +630,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>10H30</p>
+          <p class="time">10H30</p>
            <p>2H</p>
         </div>
       </div>
@@ -581,7 +651,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>10H30</p>
+          <p class="time">10H30</p>
            <p>2H</p>
         </div>
       </div>
@@ -611,7 +681,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>21H</p>
+          <p class="time">21H</p>
            <p>2H</p>
         </div>
       </div>
@@ -632,7 +702,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>21H</p>
+          <p class="time">21H</p>
            <p>2H</p>
         </div>
       </div>
@@ -653,7 +723,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>23H-04</p>
+          <p class="time">23H-04</p>
         </div>
       </div>
       <div class="body">
@@ -673,7 +743,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>00H - 05H</p>
+          <p class="time">00H - 05H</p>
         </div>
       </div>
       <div class="body">
@@ -693,7 +763,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>10H30</p>
+          <p class="time">10H30</p>
            <p>2H</p>
         </div>
       </div>
@@ -714,7 +784,7 @@
     <div class="label-container">
       <div class="header">
         <div class="content-zone">
-          <p>10H30</p>
+          <p class="time">10H30</p>
            <p>2H</p>
         </div>
       </div>
@@ -729,9 +799,8 @@
   </div>
 
 </section>
-
-
 </main>
+
 <footer>
   <nav class="navbar navbar-expand-lg mt-5">
       <div class="container-fluid footer">
