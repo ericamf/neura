@@ -1,0 +1,973 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: 'Mulish';
+    color: #424242;
+}
+/* NAVBARS */
+
+.linha {
+    background-color: #FF6711;
+    height: 1.5px;
+    width: 90%;
+    margin-left: 65px;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    font-family: Panchang-Semibold;
+    background-color: #ffffff;
+ 
+}
+
+.containerM {
+    width: 100%;
+    margin-top: 10px;
+
+}
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.menu a {
+    color: #FF6711;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.logoneuraM:hover {
+    filter: invert(62%) sepia(84%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(91%);
+}
+
+.dropdown {
+    position: relative;
+    font-family: Panchang-Light;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    font-family: Panchang-Light;
+    background-color: #ffffff;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: #FF6711;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {color:#9F97CA;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color:#9F97CA;
+}
+ 
+.menu-container a:hover {color:#9F97CA;}
+
+ 
+.arrow1:hover {
+    filter: invert(62%) sepia(84%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(91%);
+}
+ 
+.search-box {
+    display: none;
+}
+.search-box.active {
+    display: block;
+}
+ 
+.search-icon:hover {
+    filter: invert(62%) sepia(84%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(91%);
+}
+ 
+.cityAndArrow1 {
+    justify-content: flex-start;
+    margin-left: 45px;
+}
+ 
+.LanguageAndArrow {
+    justify-content: flex-start;
+    margin-right: 90px;
+}
+ 
+.navbarmobile {
+    font-family: Panchang-Semibold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #FF6711;
+}
+ 
+.menumobile {
+    font-family: Panchang-Semibold;
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+ 
+.menu-mobile a {
+    padding: 10px;
+    text-decoration: none;
+    color: #FF6711;
+    text-align: center;
+}
+ 
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 25px;
+}
+ 
+.icons {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+    min-width: 100px;
+    align-items: center;
+}
+ 
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #FF6711;
+}
+
+.linhaMobile {
+    background-color: #FF6711;
+    height: 2px;
+    width: 95%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+.Space{
+    height: 50px;
+}
+ 
+@media (min-width: 910px) {
+    .menu-mobile {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+ 
+    .menu-mobile a {
+        padding: 10px 20px;
+    }
+ 
+    .hamburger {
+        display: none;
+    }
+ 
+    .icons {
+        display: none;
+    }
+}
+
+
+/* FILTERS */
+.buttonfilter{
+    border: none;
+    background-color:  #FF6711;
+    width: 150px;
+    height: 28px;
+    font-family: "Panchang";
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.buttonfilter:hover {
+color:#9F97CA
+}
+
+.buttonMoreFilters{
+    border: none;
+    background-color:  #FF6711;
+    width: 115px;
+    height: 29px;
+    font-family: "Mulish";
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.buttonMoreFilters:hover{
+    color:#424242
+}
+
+
+.containerPrice{
+    width: 750px;
+}
+
+.slider-value{
+    padding-bottom: 10px;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+.slider-value_title{
+    font-family: "Mulish";
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.double-slider{
+    position: relative;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 1opx;
+}
+
+.double-slider__body{
+    position: relative;
+    padding: 20px 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.double-slider__input{
+    
+    position: absolute;
+    padding: 0 10px;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    pointer-events: none;
+    z-index: 4;
+    cursor: pointer;
+    opacity: 0;
+
+}
+
+.double-slider__input::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 40px;
+    height: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    background-color: red;
+
+}
+.double-slider__input::-moz-range-thumb {
+    pointer-events: all;
+    width: 40px;
+    height: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    background-color: red;
+
+}
+.double-slider__input::-ms-thumb {
+    pointer-events: all;
+    width: 40px;
+    height: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    background-color: red;
+
+}
+.double-slider__input::-webkit-slider-runnable-track{
+    pointer-events: none;
+
+}
+
+.double-slider__track{
+    position: relative;
+    width: 100%;
+    height: 15px;
+    border-radius: 10px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+}
+
+.double-slider__range{
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    background-color: #FF6711;
+    z-index: 2;
+    border-radius: 10px;
+
+}
+
+.double-slider__dot{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(21, 46, 21);
+    z-index: 3;
+
+}
+
+.double-slider__dot--left{
+    left: 25%;
+    transform: translateX(-50%);
+    
+}
+.double-slider__dot--right{
+    left: 25%;
+    transform: translateX(50%);
+    
+}
+
+.age{
+    border: none;
+    min-height: 65px;
+    background-color: #D4D0E5;
+    padding: 0px 15px;
+    margin: 2px
+    justify-content: center;
+}
+.age > p {
+    font-size: 13px;
+    margin: 0;
+    }
+
+.age:hover{
+    background-color: #9F97CA;
+}
+
+.openMoreFilters{
+    display: ;
+}
+
+.dropdown {
+    position: relative;
+    font-family: Panchang-Light;
+    display: inline-block;
+}
+
+.dropdown > button {
+    background-color: #D9D5EA;
+    color:#FF6711
+}
+
+.dropdown > button:hover {
+    background-color:#9F97CA;
+    color:#424242;
+}
+
+.dropdown-menu{
+    background-color: #D9D5EA;
+    color:#FF6711
+}
+    
+.dropdown-menu > a:hover {
+background-color: #9F97CA;
+    
+}
+
+
+.results{
+    font-family: "Mulish";
+    color:#424242;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/*CALENDARIO*/
+
+.calendarMonths{
+    min-width: 750px;
+}
+
+.monthsDefault{
+    display: flex;
+}
+
+.buttonMonth{
+    line-height:2px;
+    margin: 0px;
+    min-width: 60px;
+    min-height: 65px;
+    border-bottom: 2px solid #424242;
+    border-right-width: 0px ;
+    border-left-width: 0px;
+    padding: 15px;
+    background-color: white;
+    font-family:"Panchang";
+    font-size: 16px;
+    font-weight: 600;
+    color:#424242;
+
+}
+.buttonMonth:hover {
+    border: none;
+    border-top: 2px solid #424242;
+    border-left: 2px solid #424242;
+    border-right: 2px solid #424242;
+    background-color: white;
+    font-family:"Panchang";
+    font-size: 16px;
+    font-weight: 600;
+    color:#FF6711;
+}
+
+.lineMonth {
+    background-color: #424242;
+    height: 2px;
+    width: 95%;
+    margin-left: 65px;
+    margin-top: 9px;
+}
+
+.buttonDay{
+    border: none;
+    background-color: white;
+    min-width: 60px;
+    border-right: 2px solid;
+    border-color: #FF6711;
+    text-align: center;
+    color:#424242;
+    padding: 0px 20px;
+    display: grid;
+    justify-content: center;
+
+}
+
+.buttonDay > h5, .buttonDay > p {
+margin: 0;
+}
+
+.buttonDay:hover{
+    color:#FF6711
+}
+
+.dayofmonthB{
+    font-size: 16px;
+    font-weight: 700;
+}
+.dayofweekB{
+    font-size: 15px;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
+.dropdownMobile {
+    position: relative;
+    font-family: Panchang-Light;
+    display: inline-block;
+}
+.dropdown-contentMobile {
+    width: 370px;
+    display: none;
+    position: absolute;
+    font-family: Panchang-Light;
+    background-color: #ffffff;
+    min-width: 180px;
+    z-index: 1;
+}
+.dropdown-contentMobile a {
+    color: #FF6711;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+.dropdown-contentMobile a:hover {color:#9F97CA;}
+
+.dropdownMobile:hover .dropdown-contentMobile {
+    display: block;
+}
+
+.dropbtnM{
+    color:#ffffff;
+    text-decoration: none;
+}
+.dropdownMobile:hover .dropbtnM {
+    text-decoration: none;
+    color:#9F97CA;
+}
+
+.monthsMobileButton {
+    border: none;
+    background-color:  #FF6711;
+    width: 335px;
+    height: 29px; 
+    font-family: "Panchang";
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+.ageFiltersMobile{
+    display: none;
+}
+
+/*AGENDA*/
+
+
+.TitleSchedule{
+    font-family: "Panchang";
+    color: #FF6711;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+
+.containerEvent {
+    min-width: 300px;
+    height: 350px;
+
+}
+
+.containerEvent > p {
+    font-family: "Mulish";
+    font-size: 13px;
+}
+
+.image-container {
+    width: 100%;
+    height: 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 53% 98%, 53% 70%, 0 70%);
+    border-radius: 15px;
+    contain: content;
+}
+
+.image-container > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter:grayscale(95%)
+}
+
+.image-container > img:hover {
+    filter: grayscale(0%)
+}
+
+
+.image-container > h1 {
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+    color: white;
+    font-size: 22px;
+    display: none;
+    font-family: "Panchang";
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.image-container:hover > h1 {
+    display: block;
+}
+
+
+.label-container {
+    background-color: #D9D5EA;
+    width: 100%;
+    height: 50%;
+    transform: translateY(-50px);
+    clip-path: polygon(0 4%, 50% 4%, 50% 32%, 100% 32%, 100% 100%, 0 100%);
+    border-radius:15px
+}
+
+.header {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.content-zone {
+    width: 43%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 28px;
+}
+
+.content-zone > p {
+    font-size: 14px;
+}
+
+.body {
+    width: 100%;
+    height: 90%;
+    font-family: "Mulish";
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.body > h1 {
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.body > p {
+    margin-top: 15px;
+    line-height: 5px;
+    font-size: 15px;
+}
+ .time{
+    font-weight: 700;
+ }
+
+.carrousel {
+    overflow: auto;
+    contain: content;
+    display: flex;
+    column-gap: 40px;
+    overflow-y:hidden;
+}
+
+.DaysCarrousel {
+    overflow-y: hidden;
+    overflow-x: auto;
+    contain: content;
+    display: flex;
+}
+
+/* CSS DO MODAL*/
+
+.modal {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* MODAL CONTENT */
+
+  #myBtn{
+    border: none;
+    background-color: #ffffff;
+  }
+
+
+  #myBtn > .header {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+
+.content-zone {
+    width: 43%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 28px;
+}
+
+.body {
+    width: 100%;
+    height: 90%;
+    font-family: "Mulish";
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.body > h1 {
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.body > p {
+    margin-top: 15px;
+    line-height: 5px;
+}
+ .time{
+    font-weight: 700;
+ } 
+
+
+  .modal-content {
+    display:flex;
+    align-items: center;
+    background-color: #D9D5EA;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 95%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* CSS DO MODAL EVENTO SINGULAR */
+
+body {
+    font-family: 'Mulish';
+    color: #424242, 
+}
+
+
+.title { text-decoration: solid;
+         font-weight: 700;
+         color: #424242;
+}
+
+
+.containerevent {
+    display: grid;
+    background-color: #D9D5EA;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin-bottom: 40px;
+}
+
+.imageEventX > img{
+    filter: grayscale(0%)
+}
+
+
+.buttonX {
+    background-color:#D9D5EA;
+    border: none;
+}
+
+.eventpart1{
+    contain: content;
+}
+
+.imageEventX{
+    width: 100% ;
+    height:330px ;
+    contain: content;
+}
+
+.imageEventX > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.buttonsGoandTickets{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 18px;
+    left: 5px;
+
+}
+
+.goTickets {
+    background-color: #FF6711;
+    border: none;
+    height: 45px;
+    width: 230px;
+    color: white;
+    font-family: 'Mulish';
+    font-weight: 800;
+    box-shadow: 0px 2px 4px #7c7c7c;
+}
+
+.goTickets:hover{
+    background-color: #9F97CA;
+}
+
+.button1 {
+    border: none;
+    background-color: white;
+    padding: 0%;
+}
+
+.button1:hover{
+    filter: opacity(90%);
+}
+
+h4{
+    color: #FF6711;
+    font-weight: 400;
+    font-size: 12px;
+    font-weight: 600;
+}
+.model-content > p{
+    font-size: 10px;
+}
+
+
+
+/*coluna direita- informaçao*/
+.eventpart2{
+ contain: content;
+}
+
+.infoAndButtonsViews{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between
+    
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info > p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.buttonsviews{
+    display: flex;
+}
+
+.textevent > p {
+    font-family: "Mulish";
+    font-size: 15px;
+    margin: 0;
+}
+
+.textevent > h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contactsEventText{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactsEventText > p {
+    font-size:15px;
+}
+
+.textevent2 > p {
+    font-size:15px;
+}
+
+.moredates > p {
+    font-size:11px;
+    margin: 0;
+}
+
+
+/*FOOTER + MEDIA QUERIES */
+footer{
+    background-color: #dddddd;
+    bottom:0%;
+    width: 100%;
+}
+
+.logoFooter{
+    filter: grayscale(100%);
+}
+.neurafooter{
+    font-family: "Panchang";
+    font-weight: 700;
+    color:#8D8D8D;
+    font-size: 25px;
+}
+
+.buttonsFooter{
+    border: none;
+    background-color: #dddddd;
+}
+
+.politicas{
+    h6{
+        font-family: "Mulish";
+        font-size: 14px;
+        color:#8D8D8D;
+        font-weight: 500;
+    }
+    
+}
+
+.container-mobile {
+   display: none;
+}
+
+.monthsMobile {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    footer {
+      display: none;
+    }
+
+    .container-mobile {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .monthsMobile {
+        display: block;
+    }
+
+    .monthsDefault{
+        display: none;
+    }
+
+
+}
