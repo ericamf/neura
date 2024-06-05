@@ -6,6 +6,22 @@ body {
     overflow-x: hidden;
 }
 
+/*PARA ESCONDER AS BARRAS PRINCIPAIS DO BROWSER*/
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(255, 255, 255);  /* creates padding around scroll thumb */
+  }
+
+
 header {
     padding-top: 15px;
     background-image: linear-gradient(#424242,#15161B);
@@ -14,7 +30,7 @@ header {
 .linha {
     background-color: #FF6711;
     height: 1.5px;
-    width: 90%;
+    width: 92%;
     margin-left: 65px;
     margin-top: 9px;
 }
@@ -182,6 +198,8 @@ header {
     }
 }
 
+/*VIDEO*/ 
+
 .Scrolling-Text1{
     font-family: Panchang-Semibold;
     font-size: 75px;
@@ -215,6 +233,23 @@ header {
 
 .apresentation {
     margin-top: 175px;
+}
+
+
+
+.video {
+    width: 100%;
+    height: 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 84% 90%, 84% 100%, 0 100%);
+    border-radius: 15px;
+    contain: content;
+}
+
+.image-container > video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter:grayscale(95%)
 }
 
 .botaoseeagenda{
@@ -253,6 +288,67 @@ header {
     width: 100%;
 }
 
+.botaoseeagenda{
+        display: flex;
+        justify-content: end;
+        position: relative;
+        bottom: 45px;
+}
+
+/*EVENTOS HOJE E AMANHÃ*/ 
+
+/*barra do carrousseis personalizada*/ 
+.carrousel1::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #CCCCCC;
+}
+.carrousel1::-webkit-scrollbar-button {
+   background-color: #ffffff;
+}
+.carrousel1::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+.carrousel1::-webkit-scrollbar-track-piece {
+    background: #ffffff;
+}
+.carrousel1::-webkit-scrollbar-thumb {
+    background: #CECECE;
+    border-radius: 5px;
+}
+.carrousel1::-webkit-scrollbar-corner {
+    background: #ffffff;
+    border-radius: 5px;
+}
+.carrousel1 textarea::-webkit-resizer {
+    border: 1px #ffffff dashed;
+}
+
+.carrousel2::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #CCCCCC;
+}
+.carrousel2::-webkit-scrollbar-button {
+   background-color: #ffffff;
+}
+.carrousel2::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+.carrousel2::-webkit-scrollbar-track-piece {
+    background: #ffffff;
+}
+.carrousel2::-webkit-scrollbar-thumb {
+    background: #CECECE;
+    border-radius: 5px;
+}
+.carrousel2::-webkit-scrollbar-corner {
+    background: #ffffff;
+    border-radius: 5px;
+}
+.carrousel2 textarea::-webkit-resizer {
+    border: 1px #ffffff dashed;
+}
 
 
 .titletoday {
@@ -267,7 +363,7 @@ header {
     color: #FF6711;
     font-family: Panchang-Bold;
     font-size: 25px;
-    padding-top: 100px;
+    padding-top: 90px;
     justify-content: end;
     padding-bottom: 25px;
 }
@@ -506,6 +602,7 @@ header {
     background-color: #424242;
     padding-top: 75px;
     padding-bottom: 75px;
+    margin-top: 120px;
 }
 
 .newslettertitle {

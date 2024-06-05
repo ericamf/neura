@@ -17,7 +17,7 @@
 <div id="myModal" class="modal">
 
     <!-- Modal content -->
-    <div class="modal-content ">
+    <div class="modal-content  ">
       <p>
           <div class="containerevent m-0 rounded-3">
               <div class="container m-0 ">
@@ -206,30 +206,16 @@
     </div>
     
     <div class="container openMoreFilters text-center mt-3">
-
-      <div class="containerPrice">
-        <div class="slider-value">
-          <h2 id="title-min" class="slider-value_title"> 0 </h2>
-          <h2 id="title-max" class="slider-value_title"> 50 </h2>
-        </div>
-        <div class="double-slider">
-          <div class="double-slider__body">
-            <div class="double-slider__track">
-              <div id= "slider-ranger" class="double-slider__range"></div>
-              <div id="dot-left" class="
-              double-slider__dot
-              double-slider__dot--left"></div>
-              <div id="dot-right" class="
-              double-slider__dot
-              double-slider__dot--right"></div>
-            </div>
-            <input id="input-left" min="0" max="200" value="50" type="range" class="double-slider__input">
-            <input id="input-right" min="0" max="200" value="150" type="range" class="double-slider__input">
-          </div>
-        </div>
-      </div>
+  
+     <div class="barraprice">
+       <range-selector id="range-selector" min-range="0" max-range="200"  hide-legend
+       slider-color="#D4D0E5"
+       circle-color="#FF6711"
+       circle-border-color="#FF6711"
+       circle-focus-border-color="#9F97CA" />
+     </div>
        
-        <div class="row justify-content-center">  
+    <div class="row justify-content-center">  
         <div class="ageFilters">
           <button class="age rounded-3"> 
             <p> 0-5 </p>
@@ -281,7 +267,7 @@
     <h6 class="results">30 RESULTS</h6>
   </div>
 
-  <section class="calendarMonths m-0 text-center mt-5 ms-5">
+  <section class="calendarMonths m-0 text-center mt-5">
     <div class="monthsDefault col m-0">
         <button class="col buttonMonth">APRIL</button>
         <button class="col buttonMonth">MAY</button>
@@ -292,7 +278,7 @@
     </div>
 </section>
 
-<section class="calendarMonthsMobile m-0 text-center mt-5 ms-4">
+<section class="calendarMonthsMobile m-0 text-center mt-3 ms-4">
       <div class="monthsMobile">
         <div class="dropdownMobile">
           <button class="monthsMobileButton rounded-2">
@@ -311,7 +297,7 @@
   </div>
 </section>
 
-<section class="calendarDays m-0 row mt-5 ms-5">
+<section class="calendarDays m-0 row ms-5 mt-3">
   <div class="DaysCarrousel">
       <div class="buttonDay"> <h5 class="dayofmonthB">01</h5> <p class="dayofweekB"> MON</p></div>
       <div class="buttonDay"> <h5 class="dayofmonthB">02</h5> <p class="dayofweekB"> TUE</p></div>
@@ -836,7 +822,7 @@
     </nav>
 </footer>
 
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/maxshuty/accessible-web-components@latest/dist/simpleRange.min.js"></script>
 <script src="agendageralSCRIP.js"></script>
 
 </body>

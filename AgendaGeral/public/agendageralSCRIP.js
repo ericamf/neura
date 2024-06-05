@@ -26,47 +26,14 @@ window.onclick = function(event) {
 
 // SLIDER BARRA DO PREÇO //
 
-var titleMin = document.getElementById('title-min');
-var titleMax = document.getElementById('title-max');
+function setRange() {
+  const event = new CustomEvent('range-set', {
+    detail: {
+      sliderId: 'yourSliderIdHere',
+      minValue: 0, // The minimum value you want to set the slider to
+      maxValue: 200, // The maximum value you want to set the slider to
+    }
+  });
 
-var inputLeft = document.getElementById('input-left');
-var inputRight = document.getElementById('input-right');
-
-var dotLeft = document.getElementById('dot-left');
-var dotRight = document.getElementById('dot-right');
-
-var sliderRange = document.getElementById('slider-ranger');
-
-function setLeftValue()
-{
-  let value = this.value;
-  let min = parseInt(this.min);
-  let max = parseInt(this.max);
-
-  value = Math.min(parseInt(value), parseInt(inputRight.value) -1);
-
-  let percent = ((value - min) / (max - min)) * 100;
-  
-  sliderRange.style.left = percent + '%';
-  dotLeft.style.left = percent + '%';
-  titleMin.innerText = value;
-
+  document.dispatchEvent(event);
 }
-
-function setRightValue()
-{
-  let value = this.value;
-  let min = parseInt(this.min);
-  let max = parseInt(this.max);
-
-  value = Math.max(parseInt(value), parseInt(inputLeft.value) +1);
-
-  let percent = ((value - min) / (max - min)) * 100;
-  
-  sliderRange.style.left = (100 - percent) + '%';
-  dotRight.style.right = (100 - percent)  + '%';
-  titleMax.innerText = value;
-}
-
-inputLeft.addEventListener('input', setLeftValue );
-inputRight.addEventListener('input', setRightValue );
