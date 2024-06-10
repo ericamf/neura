@@ -2,14 +2,21 @@
 var modal = document.getElementById("myModal");
 
 const modalTitle = document.getElementById('modal-title');
+const modallocalName = document.getElementById('modal-localName');
+const modallocalSubname = document.getElementById('modal-localSubname');
+const modalemail = document.getElementById('modal-email');
+const modalcontact = document.getElementById('modal-contact');
+const modaleventInfo = document.getElementById('modal-eventInfo');
+const modalImage = document.getElementById('modal-image');
+const modaldate1 = document.getElementById('modal-date1');
+const modaldate2 = document.getElementById('modal-date2');
+const modaltime = document.getElementById('modal-time');
+const modalduration = document.getElementById('modal-duration');
+
+
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
- modal.style.display = "flex";
-}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -23,10 +30,10 @@ window.onclick = function(event) {
   }
 }
 
-//GETTING OS EVENTOS DE 1 DE ABRIL DE MANHÃ//
+//GETTING OS EVENTOS//
 function populateMorningEvents(events) {
     const morningContainer = document.getElementById('carrousel-morning');
-    const aftermoonContainer = document.getElementById('carrousel-aftermoon');
+    const afternoonContainer = document.getElementById('carrousel-afternoon');
     const nightContainer = document.getElementById('carrousel-night');
 
     console.log("Cheguei aqui")
@@ -44,13 +51,13 @@ function populateMorningEvents(events) {
             <div class="header">
               <div class="content-zone">
                 <p class="time">${eventTime.getHours()}H${eventTime.getMinutes()}</p>
-                <p>2H</p>
+                <p>${events[i].dateTime.duration}</p>
               </div>
             </div>
             <div class="body">
               <h1>${events[i].title}</h1>
-              <p></p>
-              <p>Porto</p>
+              <p>${events[i].subtitle1}</p>
+              <p>${events[i].subtitle2}</p>
             </div>
           </div>
     `;
@@ -58,20 +65,34 @@ function populateMorningEvents(events) {
     if(eventTime.getHours() > 20) {
       nightContainer.appendChild(cardElement);
     }else if(eventTime.getHours() > 13) {
-      aftermoonContainer.appendChild(cardElement);
+      console.log(events[i])
+      afternoonContainer.appendChild(cardElement);
     }else {
       morningContainer.appendChild(cardElement);
     }
-
-    carrouselContainer.appendChild(cardElement);
 
     cardElement.addEventListener('click', () => {
         modal.style.display = "flex";
 
         modalTitle.innerHTML = events[i].title;
+        modalImage.src = events[i].image;
+        modallocalName.innerHTML = events[i].localInfo.localName;
+        modallocalSubname.innerHTML = events[i].localInfo.localSubname;
+        modalemail.innerHTML = events[i].localInfo.email;
+        modalcontact.innerHTML = events[i].localInfo.contact;
+        modaleventInfo.innerHTML = events[i].eventInfo
+        modaldate1.innerHTML = events[i].datesInfo.date1;
+        modaldate2.innerHTML = events[i].datesInfo.date2;
+        modaltime.innerHTML = events[i].dateTime.time;
+        modalduration.innerHTML = events[i].dateTime.duration;
     })
     }
 }
+
+
+
+
+
 
 
 fetch("http://localhost:3000/events").then(function (response) {
