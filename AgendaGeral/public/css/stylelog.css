@@ -130,14 +130,74 @@ header {
 }
 
 
-.hamburger {
-    cursor: pointer;
+
+/*.hamburger {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
     justify-content: space-around;
     width: 25px;
     height: 25px;
-}
+  }*/
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+  
+  .bar {
+    width: 35px !important;
+    height: 5px !important;
+    background-color: #333 !important;
+    margin: 6px 0 !important;
+    transition: 0.4s !important;
+  }
+  
+  
+  .sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s;
+    z-index: 999;
+  }
+  
+  .sidebar-content {
+    padding: 20px;
+  }
+  
+  .main-content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    transition: margin-left 0.3s;
+  }
+  
+  .sidebar.show {
+    left: 0;
+  }
+  
+  .main-content.shifted {
+    margin-left: 250px;
+  }
+
+
 
 
 .icons {
@@ -268,6 +328,14 @@ header {
 }
 
 
+
+section{
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 ul{
     list-style-type: none;
 }
@@ -317,6 +385,13 @@ footer{
     .menu {
         display: none;
     }
+    
+    .btn1{
+        margin: 3px;
+    }
 
+    .btn2{
+        margin: 3px;
+    }
 }
 

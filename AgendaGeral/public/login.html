@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <div class="menu fixed-top">
+        <div class="menu fixed-top mb-3">
           <div class="containerM">
           <div class="menu-container d-flex justify-content-between align-items-center">
   
@@ -71,10 +71,20 @@
             <div class="log in">
               <img src="imagesLogIn\pessoa_grey.svg" class="search-icon" alt="Lupa" width="22" height="22">
             </div>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger-menu">
               <div class="bar rounded-2"></div>
               <div class="bar rounded-2"></div>
               <div class="bar rounded-2"></div>
+          </div>
+          <div class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+              <h2>Sidebar Content</h2>
+              <p>This is some content inside the sidebar.</p>
+            </div>
+          </div>
+          <div class="main-content">
+            <h1>Main Content</h1>
+            <p>This is the main content of the page.</p>
           </div>
           </div>
         </div>
@@ -102,6 +112,7 @@
     <div class="space"> </div>
     <main>
       <section>
+
         <div class="row">
         <div class="container-1 col m-5">
             <div class="empresa">
@@ -177,6 +188,6 @@
           </div>
         </nav>
   </footer>
-
+  <script src="logInFrontEnd.js"></script>
 </body>
 </html>

@@ -51,22 +51,22 @@ function agendaEvents(events) {
 
     const DaysCarrouselContainer = document.getElementById('DaysCarrouselC');
 
-    for(let i=0; i < 31; i++) {
+    /*for(let i=0; i < 31; i++) {
 
       let buttonDay = document.createElement('button');
       buttonDay.className = "buttonDay";
       buttonDay.innerHTML += ` 
       <button onClick="getData('April 01, 2024')" class="buttonDay" id="data-day1"> <h5 class="dayofmonthB">01 </h5> <p class="dayofweekB"> MON</p></button> `;
       DaysCarrouselContainer.appendChild(buttonDay);
-    }
+    }*/
 
-   /*for (let i = 0; i < 31; i++) {
+   for (let i = 0; i < 31; i++) {
       let buttonDay = document.createElement('button');
       buttonDay.className = "buttonDay";
       buttonDay.innerHTML = `<h5 class="dayofmonthB">${i+1}</h5> <p class="dayofweekB"> MON</p>`;
       buttonDay.setAttribute('onClick', `getData('April ${String(i+1).padStart(2, '0')}, 2024')`);
       DaysCarrouselContainer.appendChild(buttonDay);
-  }*/
+  }
 
 
     for(let i=0; i < events.length; i++) {
