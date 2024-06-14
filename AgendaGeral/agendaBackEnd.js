@@ -36,14 +36,29 @@ const event = mongoose.model('Event', eventSchema);
 
 //OPERAÇÃO GET PARA COLLETION EVENTOS DE MANHÃ DIA 1 DE ABRIL//
 
-app.get('/events', function (req, res) {
+app.get('/events', function (req, res) {    
+
     event.find().then(function (events) {
-        res.send(events)
+        let querySet = events;
+
+        const dateTime = req.query.dateTime
+        const category = req.query.category
+
+        if(dateTime) {
+            querySet = querySet.filter((event) => new Date(event.dateTime.time).getDate() === new Date(dateTime).getDate())
+        }
+
+        res.send(querySet)
     })
     .catch(function(err){
         res.status(500).send ({ message: "Error getting events", error: err})
     })
 })
+
+//app.get('/events', function (req, res) {
+
+ 
+//})
 
 
 app.listen(3000, function () {

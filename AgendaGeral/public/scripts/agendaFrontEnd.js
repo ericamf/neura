@@ -1,5 +1,26 @@
+
+//ABRIR BOTÃO MOREFILTERS //
+function showDivs() {
+  var divs = document.getElementById('additionalDivs');
+  divs.classList.toggle('show');
+}
+
+
+//MODAL
 // Get the modal
 var modal = document.getElementById("myModal");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 const modalTitle = document.getElementById('modal-title');
 const modallocalName = document.getElementById('modal-localName');
@@ -15,28 +36,39 @@ const modalduration = document.getElementById('modal-duration');
 
 
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
 //GETTING OS EVENTOS//
-function populateMorningEvents(events) {
+function agendaEvents(events) {
     const morningContainer = document.getElementById('carrousel-morning');
     const afternoonContainer = document.getElementById('carrousel-afternoon');
     const nightContainer = document.getElementById('carrousel-night');
 
-    console.log("Cheguei aqui")
+    morningContainer.innerHTML = '';
+    afternoonContainer.innerHTML = '';
+    nightContainer.innerHTML = '';
+    
+
+
+    const DaysCarrouselContainer = document.getElementById('DaysCarrouselC');
+
+    for(let i=0; i < 31; i++) {
+
+      let buttonDay = document.createElement('button');
+      buttonDay.className = "buttonDay";
+      buttonDay.innerHTML += ` 
+      <button onClick="getData('April 01, 2024')" class="buttonDay" id="data-day1"> <h5 class="dayofmonthB">01 </h5> <p class="dayofweekB"> MON</p></button> `;
+      DaysCarrouselContainer.appendChild(buttonDay);
+    }
+
+   /*for (let i = 0; i < 31; i++) {
+      let buttonDay = document.createElement('button');
+      buttonDay.className = "buttonDay";
+      buttonDay.innerHTML = `<h5 class="dayofmonthB">${i+1}</h5> <p class="dayofweekB"> MON</p>`;
+      buttonDay.setAttribute('onClick', `getData('April ${String(i+1).padStart(2, '0')}, 2024')`);
+      DaysCarrouselContainer.appendChild(buttonDay);
+  }*/
+
+
     for(let i=0; i < events.length; i++) {
       const eventTime = new Date(events[i].dateTime.time);
 
@@ -71,7 +103,7 @@ function populateMorningEvents(events) {
       morningContainer.appendChild(cardElement);
     }
 
-    cardElement.addEventListener('click', () => {
+    cardElement.addEventListener('onClick', () => {
         modal.style.display = "flex";
 
         modalTitle.innerHTML = events[i].title;
@@ -89,18 +121,36 @@ function populateMorningEvents(events) {
     }
 }
 
+function getData(date) {
+  console.log("estou aqui")
+  fetch(`http://localhost:3000/events?dateTime=${date}`).then(function (response) {
+      return response.json();
+  })
+  .then(function (events){
+    agendaEvents(events)
+  })
+  .catch(function (error){
+    console.error('Error:', error)
+  })
+}
+
+function getData(date) {
+  console.log("Fetching data for date: " + date);
+  fetch(`http://localhost:3000/events?dateTime=${date}`)
+      .then(response => response.json())
+      .then(events => agendaEvents(events))
+      .catch(error => console.error('Error:', error));
+}
 
 
-
-
-
-
-fetch("http://localhost:3000/events").then(function (response) {
-    return response.json();
-})
-.then(function (events){
-    populateMorningEvents(events)
-})
-.catch(function (error){
-  console.error('Error:', error)
-})
+// Função para filtrar os eventos por data
+function filterEventsByDate(events, selectedDate) {
+  for (let i = 0; i < events.length; i++) {
+      const eventDate = new Date(events[i].dateTime.time);
+      if (eventDate.getDate() === selectedDate.getDate() && 
+          eventDate.getMonth() === selectedDate.getMonth() && 
+          eventDate.getFullYear() === selectedDate.getFullYear()) {
+          console.log("Evento encontrado para o dia selecionado:", events[i].title);
+      }
+  }
+}

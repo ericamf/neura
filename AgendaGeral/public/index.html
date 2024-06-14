@@ -11,6 +11,8 @@
     
     <link rel="stylesheet" type="text/css" href="./css/agendageral.css">
     <link rel="stylesheet" type="text/css" href="./css/panchang.css">
+
+    <script src="agendaFrontEnd.js"></script>
 </head>
 
 
@@ -44,10 +46,16 @@
          
                      <div class="buttonsGoandTickets ">
                          <div>
-                            <button class="button1 rounded-2"><img src=".\Imagens\Modal\Group 101.svg" alt="" width="40" height="47"></button>
+                            <button class="button1 rounded-2">
+                              <img src=".\Imagens\Modal\Group 101.svg" alt="" width="40" height="47">
+                              <span class="button-text">I'M GOING</span> 
+                            </button>
                         </div>
                         <div>
-                            <button class="button1 rounded-2 ms-1"><img src=".\Imagens\Modal\Group 102.svg" alt="" width="40" height="47"></button>
+                            <button class="button1 rounded-2 ms-1">
+                              <img src=".\Imagens\Modal\Group 102.svg" alt="" width="40" height="47">
+                              <span class="button-text">SAVE THIS EVENT</span> 
+                            </button>
                          </div>
                          <div>
                              <button class="goTickets rounded-3 ms-3"> GO FOR YOUR TICKETS </button>
@@ -115,11 +123,11 @@
        </div>
 
         <div class="center-menu d-none d-md-flex">
-            <a href="agendageral.html">AGENDA</a>
+            <a href="index.html">AGENDA</a>
             <a href="#">INFO</a>
-            <a href="./../HomePage/home.html"><img src="Imagens\Menu\LOGO.svg" class="logoneuraM" alt="LOGO" width="90" height=""></a>
+            <a href="home.html"><img src="Imagens\Menu\LOGO.svg" class="logoneuraM" alt="LOGO" width="120" height=""></a>
             <a href="#">UPDATES</a>
-            <a href="#">LOG IN</a>
+            <a href="login.html">LOG IN</a>
         </div>
 
 
@@ -203,67 +211,63 @@
       <button class="buttonfilter rounded-2 col-2">DIDACTIC</button>
     </div>
   
-    <div class=" moreFilters row m-0 justify-content-center mt-5">
-        <button class="buttonMoreFilters rounded-3"> more filters </button>
-    </div>
-    
-    <div class="container openMoreFilters text-center mt-3">
-  
-     <div class="barraprice">
-       <range-selector id="range-selector" min-range="0" max-range="200"  hide-legend
-       slider-color="#D4D0E5"
-       circle-color="#FF6711"
-       circle-border-color="#FF6711"
-       circle-focus-border-color="#9F97CA" />
-     </div>
-       
-    <div class="row justify-content-center">  
-        <div class="ageFilters">
-          <button class="age rounded-3"> 
-            <p> 0-5 </p>
-            <p> years</p>
-          </button>
-          <button class="age rounded-3"> 
-            <p> 6-13 </p>
-            <p> years</p>
-          </button>
-          <button class="age rounded-3"> 
-            <p> 14-18 </p>
-            <p> years</p>
-          </button>
-          <button class="age rounded-3"> 
-            <p> 18+ </p>
-            <p> years</p>
-          </button>
-          <button class="age rounded-3"> 
-            <p> 67+ </p>
-            <p> years</p>
-          </button>
-        </div>
-        </div>
+   <div class=" moreFilters row m-0 justify-content-center mt-5">
 
-        <div class="ageFiltersMobile m-0 text-center mt-5 ms-4">
-          <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              0-5 YEARS
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">6-13 YEARS</a></li>
-              <li><a class="dropdown-item" href="#">14-18 YEARS</a></li>
-              <li><a class="dropdown-item" href="#">18+ YEARS</a></li>
-              <li><a class="dropdown-item" href="#">67+ YEARS</a></li>
-            </ul>
+
+    <button class="buttonMoreFilters rounded-3" onclick="showDivs()">more filters</button>
+      <div class="hidden-divs row justify-content-center" id="additionalDivs">
+
+          <div class="inner-div row justify-content-center">
+            <div class="barraprice">
+              <range-selector id="range-selector" min-range="0" max-range="200"  hide-legend
+              slider-color="#D4D0E5"
+              circle-color="#FF6711"
+              circle-border-color="#FF6711"
+              circle-focus-border-color="#9F97CA" />
+            </div>
           </div>
-      </div>
-    </div>
+          <div class="inner-divAge ">
+              <div class="ageFilters">
+                <button class="age rounded-3"> 
+                  <p> 0-5 </p>
+                  <p> years</p>
+                </button>
+                <button class="age rounded-3"> 
+                  <p> 6-13 </p>
+                  <p> years</p>
+                </button>
+                <button class="age rounded-3"> 
+                  <p> 14-18 </p>
+                  <p> years</p>
+                </button>
+                <button class="age rounded-3"> 
+                  <p> 18+ </p>
+                  <p> years</p>
+                </button>
+                <button class="age rounded-3"> 
+                  <p> 67+ </p>
+                  <p> years</p>
+                </button>
+              </div>
+            
+              <div class="ageFiltersMobile m-0 text-center mt-5 ms-4">
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    0-5 YEARS
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">6-13 YEARS</a></li>
+                    <li><a class="dropdown-item" href="#">14-18 YEARS</a></li>
+                    <li><a class="dropdown-item" href="#">18+ YEARS</a></li>
+                    <li><a class="dropdown-item" href="#">67+ YEARS</a></li>
+                  </ul>
+                </div>
+            </div>
+          </div><!--innerdiv-->
+      </div> <!--hiddenDivs-->
 
-    </div>
-
-      </div>
-    </div>
-
-
-  </div>
+</div><!--morefilters-->
+</div> <!--gridFilters-->
   
   <div class=" m-0 text-center mt-3 mb-4 ">
     <h6 class="results">30 RESULTS</h6>
@@ -271,12 +275,12 @@
 
   <section class="calendarMonths m-0 text-center mt-5">
     <div class="monthsDefault col m-0">
-        <button class="col buttonMonth">APRIL</button>
-        <button class="col buttonMonth">MAY</button>
-        <button class="col buttonMonth">JUNE</button>
-        <button class="col buttonMonth">JULY</button>
-        <button class="col buttonMonth">AUGUST</button>
-        <button class="col buttonMonth">SEPTEMBER</button>
+        <button class="col buttonMonth" id="data-month">APRIL</button>
+        <button class="col buttonMonth" id="data-month">MAY</button>
+        <button class="col buttonMonth" id="data-month">JUNE</button>
+        <button class="col buttonMonth" id="data-month">JULY</button>
+        <button class="col buttonMonth" id="data-month">AUGUST</button>
+        <button class="col buttonMonth" id="data-month">SEPTEMBER</button>
     </div>
 </section>
 
@@ -284,13 +288,13 @@
       <div class="monthsMobile">
         <div class="dropdownMobile">
           <button class="monthsMobileButton rounded-2">
-          <a href="#" class="dropbtnM">APRIL</a>
+          <a href="#" class="dropbtnM" id="data-month">APRIL</a>
           <div class="dropdown-contentMobile rounded-2">
-            <a href="#">MAY</a>
-            <a href="#">JUNE</a>
-            <a href="#">JULY</a>
-            <a href="#">AUGUST</a>
-            <a href="#">SEMPTEMBER</a>
+            <a href="#" class="buttonMonthDrop" id="data-month" >MAY</a>
+            <a href="#" class="buttonMonthDrop" id="data-month" >JUNE</a>
+            <a href="#" class="buttonMonthDrop" id="data-month">JULY</a>
+            <a href="#" class="buttonMonthDrop" id="data-month">AUGUST</a>
+            <a href="#" class="buttonMonthDrop" id="data-month">SEMPTEMBER</a>
           </div>
           <img src="Imagens\Outros\Polygon 2.svg" class="arrow1" alt="Arrow" width="10" height="10">
         </div> 
@@ -300,38 +304,10 @@
 </section>
 
 <section class="calendarDays m-0 row ms-5 mt-3">
-  <div class="DaysCarrousel">
-      <div class="buttonDay"> <h5 class="dayofmonthB">01</h5> <p class="dayofweekB"> MON</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">02</h5> <p class="dayofweekB"> TUE</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">03</h5> <p class="dayofweekB"> WED</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">04</h5> <p class="dayofweekB"> MON</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">05</h5> <p class="dayofweekB"> TUE</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">06</h5> <p class="dayofweekB"> WED</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">07</h5> <p class="dayofweekB"> MON</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">08</h5> <p class="dayofweekB"> TUE</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">09</h5> <p class="dayofweekB"> WED</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">10</h5> <p class="dayofweekB"> MON</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">11</h5> <p class="dayofweekB"> TUE</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">12</h5> <p class="dayofweekB"> WED</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">13</h5> <p class="dayofweekB"> MON</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">14</h5> <p class="dayofweekB"> TUE</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">15</h5> <p class="dayofweekB"> WED</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">16</h5> <p class="dayofweekB"> MON</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">17</h5> <p class="dayofweekB"> TUE</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">18</h5> <p class="dayofweekB"> WED</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">19</h5> <p class="dayofweekB"> MON</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">20</h5> <p class="dayofweekB"> TUE</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">21</h5> <p class="dayofweekB"> WED</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">22</h5> <p class="dayofweekB"> MON</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">23</h5> <p class="dayofweekB"> TUE</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">24</h5> <p class="dayofweekB"> WED</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">25</h5> <p class="dayofweekB"> TUE</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">26</h5> <p class="dayofweekB"> WED</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">27</h5> <p class="dayofweekB"> MON</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">28</h5> <p class="dayofweekB"> TUE</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">29</h5> <p class="dayofweekB"> WED</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">30</h5> <p class="dayofweekB"> TUE</p></div>
-      <div class="buttonDay"> <h5 class="dayofmonthB">31</h5> <p class="dayofweekB"> WED</p></div>
+  <div class="DaysCarrousel" id="DaysCarrouselC">
+      <button onClick="getData('April 01, 2024')" class="buttonDay" id="data-day1"> <h5 class="dayofmonthB">01</h5> <p class="dayofweekB"> MON</p></button>
+      <!-- <button onClick="getData('April 02, 2024')" class="buttonDay" id="data-day2"> <h5 class="dayofmonthB">02</h5> <p class="dayofweekB"> TUE</p></button> -->
+     
   </div>
 </section>   
 
@@ -401,7 +377,6 @@
 </footer>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/maxshuty/accessible-web-components@latest/dist/simpleRange.min.js"></script>
-<script src="agendaFrontEnd.js"></script>
 
 </body>
 </html>

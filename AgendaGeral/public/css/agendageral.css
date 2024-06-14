@@ -27,8 +27,9 @@ body::-webkit-scrollbar {
 .linha {
     background-color: #FF6711;
     height: 1.5px;
-    width: 92%;
-    margin-left: 50px;
+    width: 90%;
+    margin-left: 65px;
+    margin-top:8px;
 }
 .menu {
     display: flex;
@@ -207,6 +208,7 @@ body::-webkit-scrollbar {
 
 
 /* FILTERS */
+
 .buttonfilter{
     border: none;
     background-color:  #FF6711;
@@ -219,10 +221,17 @@ body::-webkit-scrollbar {
 }
 
 .buttonfilter:hover {
-color:#9F97CA
+background-color:#9F97CA;
+
 }
 
+.buttonfilter:focus {
+    background-color:#9F97CA;
+    }
+    
+
 .buttonMoreFilters{
+    cursor: pointer;
     border: none;
     background-color:  #FF6711;
     width: 115px;
@@ -237,6 +246,51 @@ color:#9F97CA
     color:#424242
 }
 
+.buttonMoreFilters:focus{
+    background-color: #D9D5EA;
+    color:#424242
+}
+
+
+.hidden-divs {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 1.0s ease-out;
+    background-color: #ffffff;
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.show {
+    max-height: 500px; /* Ajuste conforme necessário */
+    opacity: 2;
+}
+
+.inner-div {
+    background-color: #ffffff;
+    padding: 10px;
+}
+.inner-divAge {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 100%;
+}
+
+.inner-button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
 .barraprice{
     display: flex;
     align-items: center;
@@ -248,6 +302,7 @@ color:#9F97CA
     min-width: 330px;
     min-height: 60px;
 }
+
 
 .age{
     border: none;
@@ -266,9 +321,6 @@ color:#9F97CA
     background-color: #9F97CA;
 }
 
-.openMoreFilters{
-    display: ;
-}
 
 .dropdown {
     position: relative;
@@ -377,14 +429,21 @@ background-color: #9F97CA;
     color:#FF6711;
 }
 
-
-.lineMonth {
-    background-color: #424242;
-    height: 2px;
-    width: 95%;
-    margin-left: 65px;
-    margin-top: 9px;
+.buttonMonth:focus {
+    padding: 8px;
+    border: none;
+    border-top: 2px solid #424242;
+    border-left: 2px solid #424242;
+    border-right: 2px solid #424242;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: white;
+    font-family:"Panchang";
+    font-size: 18px;
+    font-weight: 600;
+    color:#FF6711;
 }
+
 
 .buttonDay{
     border: none;
@@ -407,21 +466,26 @@ margin: 0;
 }
 
 .buttonDay:hover{
-    color:#FF6711
+    color:#FF6711;
 }
+
+.buttonDay:focus{
+    color:#9F97CA !important; 
+}
+
 
 .dayofmonthB{
     font-size: 19px;
     font-weight: 700;
 }
+
 .dayofweekB{
     font-size: 18px;
 }
 
 
-ul{
-    list-style-type: none;
-}
+
+
 
 .dropdownMobile {
     position: relative;
@@ -751,8 +815,13 @@ body {
 
 .buttonX {
     background-color:#D9D5EA;
-    border: none;
+    border: none; 
 }
+
+.buttonX :hover {
+    filter: invert(62%) sepia(85%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(60%);
+}
+
 
 .eventpart1{
     contain: content;
@@ -795,14 +864,51 @@ body {
     background-color: #9F97CA;
 }
 
+.goTickets:focus{
+    background-color: #9F97CA;
+    color: #424242;
+}
+
+
 .button1 {
     border: none;
     background-color: white;
     padding: 0%;
+    height: 45px;
+    transition: width 1.5s ease-out;
 }
 
-.button1:hover{
-    filter: opacity(90%);
+.button1 > img{
+    display: block;
+}
+
+.button1:hover > img{
+    display: none;
+}
+
+.button1 > span {
+    overflow: hidden;
+    background-color: #ffffff;
+    font-family: 'Mulish';
+    font-size: 13px ;
+    font-weight: 700;
+    color: #FF6711;
+    display: none;
+}
+
+.button1:hover > span {
+    display: block;
+    padding:10px;
+}
+
+.button1:focus > img{
+    display: none;
+}
+
+.button1:focus > span {
+    display: block;
+    color: #9F97CA;
+    padding:10px;
 }
 
 h4{
@@ -937,6 +1043,5 @@ footer{
     .monthsDefault{
         display: none;
     }
-
 
 }

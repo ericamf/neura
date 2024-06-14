@@ -21,7 +21,7 @@ header {
     height: 1.5px;
     width: 90%;
     margin-left: 65px;
-    margin-top: 9px;
+    margin-top: 8px;
 }
 
 .menu {
@@ -32,6 +32,7 @@ header {
 
 .containerM {
     width: 100%;
+    margin-top: 10px;
 }
 
 .menu-container {
