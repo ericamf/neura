@@ -34,7 +34,7 @@ const modaldate2 = document.getElementById('modal-date2');
 const modaltime = document.getElementById('modal-time');
 const modalduration = document.getElementById('modal-duration');
 
-
+const DaysCarrouselContainer = document.getElementById('DaysCarrouselC');
 
 
 //GETTING OS EVENTOS//
@@ -48,9 +48,6 @@ function agendaEvents(events) {
     nightContainer.innerHTML = '';
     
 
-
-    const DaysCarrouselContainer = document.getElementById('DaysCarrouselC');
-
     /*for(let i=0; i < 31; i++) {
 
       let buttonDay = document.createElement('button');
@@ -59,15 +56,6 @@ function agendaEvents(events) {
       <button onClick="getData('April 01, 2024')" class="buttonDay" id="data-day1"> <h5 class="dayofmonthB">01 </h5> <p class="dayofweekB"> MON</p></button> `;
       DaysCarrouselContainer.appendChild(buttonDay);
     }*/
-
-   for (let i = 0; i < 31; i++) {
-      let buttonDay = document.createElement('button');
-      buttonDay.className = "buttonDay";
-      buttonDay.innerHTML = `<h5 class="dayofmonthB">${i+1}</h5> <p class="dayofweekB"> MON</p>`;
-      buttonDay.setAttribute('onClick', `getData('April ${String(i+1).padStart(2, '0')}, 2024')`);
-      DaysCarrouselContainer.appendChild(buttonDay);
-  }
-
 
     for(let i=0; i < events.length; i++) {
       const eventTime = new Date(events[i].dateTime.time);
@@ -97,14 +85,15 @@ function agendaEvents(events) {
     if(eventTime.getHours() > 20) {
       nightContainer.appendChild(cardElement);
     }else if(eventTime.getHours() > 13) {
-      console.log(events[i])
       afternoonContainer.appendChild(cardElement);
     }else {
       morningContainer.appendChild(cardElement);
     }
 
-    cardElement.addEventListener('onClick', () => {
+    cardElement.addEventListener('click', () => {
         modal.style.display = "flex";
+
+        console.log("cliquei")
 
         modalTitle.innerHTML = events[i].title;
         modalImage.src = events[i].image;
@@ -122,7 +111,6 @@ function agendaEvents(events) {
 }
 
 function getData(date) {
-  console.log("estou aqui")
   fetch(`http://localhost:3000/events?dateTime=${date}`).then(function (response) {
       return response.json();
   })
@@ -134,14 +122,15 @@ function getData(date) {
   })
 }
 
-function getData(date) {
-  console.log("Fetching data for date: " + date);
-  fetch(`http://localhost:3000/events?dateTime=${date}`)
-      .then(response => response.json())
-      .then(events => agendaEvents(events))
-      .catch(error => console.error('Error:', error));
+function populateDays() {
+  for (let i = 0; i < 31; i++) {
+    let buttonDay = document.createElement('button');
+    buttonDay.className = "buttonDay";
+    buttonDay.innerHTML = `<h5 class="dayofmonthB">${i+1}</h5> <p class="dayofweekB"> MON</p>`;
+    buttonDay.setAttribute('onClick', `getData('April ${String(i+1).padStart(2, '0')}, 2024')`);
+    DaysCarrouselContainer.appendChild(buttonDay);
 }
-
+}
 
 // Função para filtrar os eventos por data
 function filterEventsByDate(events, selectedDate) {
@@ -150,7 +139,16 @@ function filterEventsByDate(events, selectedDate) {
       if (eventDate.getDate() === selectedDate.getDate() && 
           eventDate.getMonth() === selectedDate.getMonth() && 
           eventDate.getFullYear() === selectedDate.getFullYear()) {
-          console.log("Evento encontrado para o dia selecionado:", events[i].title);
       }
   }
 }
+
+function formatDate(date) {
+  const options = { month: 'long', day: '2-digit', year: 'numeric' };
+  return new Intl.DateTimeFormat('en-US', options).format(date);
+}
+
+populateDays()
+
+const today = new Date('April 01, 2024')
+getData(formatDate(today))

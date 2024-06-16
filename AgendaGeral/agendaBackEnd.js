@@ -42,7 +42,6 @@ app.get('/events', function (req, res) {
         let querySet = events;
 
         const dateTime = req.query.dateTime
-        const category = req.query.category
 
         if(dateTime) {
             querySet = querySet.filter((event) => new Date(event.dateTime.time).getDate() === new Date(dateTime).getDate())
@@ -54,11 +53,6 @@ app.get('/events', function (req, res) {
         res.status(500).send ({ message: "Error getting events", error: err})
     })
 })
-
-//app.get('/events', function (req, res) {
-
- 
-//})
 
 
 app.listen(3000, function () {

@@ -100,121 +100,157 @@ header {
     margin-right: 90px;
 }
 
+/* MOBILE MENU HAMBURGUER ABERTO */
+
+.container-mobile {
+    position: relative;
+}
+
 .navbar-mobile {
-    font-family: Panchang-Semibold;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    font-family: Panchang-Semibold;
+    justify-content: space-between;
     padding: 10px 20px;
     color: #424242;
+    z-index: 1000; /* Certifique-se de que a navbar está acima de outros elementos */
+}
+
+.logo {
+    width: 40%;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 25px;
+    min-width: 90px;
+    position: fixed;
+    right: 5px;
+}
+
+.hamburger {
+    cursor: pointer;
+    z-index: 1001;
+    width: 25px;
+    height: 25px;
+}
+
+.bar {
+    width: 25px;
+    height: 4px;
+    margin: 4px auto;
+    background-color: #333;
+    transition: all 0.3s;
+}
+
+.hamburger.active .bar:first-child {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.sidebar {
+    position: fixed;
+    top: 66px; /* Ajuste a posição conforme necessário */
+    right: -100%;
+    width: 100%;
+    height: calc(100% - 66px); /* Ajuste para deixar espaço para a navbar */
+    background: linear-gradient(to bottom, #D0CAE2 0%, #FDB38B 100%);
+    color: #fff;
+    transition: right 0.3s;
+    z-index: 999;
+}
+
+.sidebar.show {
+    right: 0;
+}
+
+.sidebar-content {
+    padding: 15px;
+}
+
+.main-content {
+    transition: margin-right 0.3s;
+    display: none; /* Initially hidden */
+}
+
+.main-content.show {
+    display: block; /* Show when toggled */
+  }
+
+.hidden {
+    display: none;
 }
 
 .menu-mobile {
     font-family: Panchang-Semibold;
-    display: none;
+    display: flex;
     flex-direction: column;
-    background-color: #424242;
+    color: #424242;
     position: absolute;
     top: 50px;
     right: 20px;
-    width: 200px;
+    width: 250px;
     border-radius: 5px;
     overflow: hidden;
+    justify-content: space-between;
+    text-align: end;
+    height: 90%;
+}
+
+.menumobileA{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+}
+
+.otherInfoMobile {
+
+    margin-top: 100px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    justify-content: space-between;
+    text-align: end;
+    padding: 10px;
+    height: 40%;
+}
+.socialmedia-menu{
+    margin-top: 20px;
+    width: 200px;
+    justify-content: space-around;
+}
+
+.newslettermobile {
+    font-family: "Panchang";
+    font-weight: 400 !important;
+}
+
+.newslettermobile > button {
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    color: #424242;
 }
 
 .menu-mobile a {
     padding: 10px;
     text-decoration: none;
-    color: #424242;
-    text-align: center;
+    color: #424242; /* Mudança para branco para contraste com o fundo escuro */
 }
 
-
-
-/*.hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-    justify-content: space-around;
-    width: 25px;
-    height: 25px;
-  }*/
-  
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-  }
-  
-  .bar {
-    width: 35px !important;
-    height: 5px !important;
-    background-color: #333 !important;
-    margin: 6px 0 !important;
-    transition: 0.4s !important;
-  }
-  
-  
-  .sidebar {
-    width: 250px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    background-color: #333;
-    color: white;
-    transition: left 0.3s;
-    z-index: 999;
-  }
-  
-  .sidebar-content {
-    padding: 20px;
-  }
-  
-  .main-content {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    transition: margin-left 0.3s;
-  }
-  
-  .sidebar.show {
-    left: 0;
-  }
-  
-  .main-content.shifted {
-    margin-left: 250px;
-  }
-
-
-
-
-.icons {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    height: 25px;
-    min-width: 120px;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #424242;
-}
+/*MAIN */ 
 
 .empresa {
     color: #424242;
