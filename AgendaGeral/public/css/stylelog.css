@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: 'Mulish';
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom, #D0CAE2 0%, #FDB38B 100%);
+}
+
+header {
+    padding-top: 15px;
+}
+
+.space {
+    height: 100px;
+}
+
+.linha {
+    background-color: #424242;
+    height: 1.5px;
+    width: 90%;
+    margin-left: 65px;
+    margin-top: 8px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    font-family: Panchang-Semibold;
+    z-index: 0 !important;
+}
+
+.containerM {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.menu a {
+    color: #424242;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.dropdown {
+    position: relative;
+    font-family: Panchang-Light;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    font-family: Panchang-Light;
+    background-color: #D0CAE2;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: #424242;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {color:#9F97CA;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    color:#9F97CA;
+}
+
+.menu-container a:hover {color:#9F97CA;}
+
+.arrow1:hover {
+    filter: invert(62%) sepia(84%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(91%);
+}
+
+.search-box {
+    display: none;
+}
+.search-box.active {
+    display: block;
+}
+
+.search-icon:hover {
+    filter: invert(62%) sepia(84%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(91%);
+}
+
+.cityAndArrow1 {
+    justify-content: flex-start;
+    margin-left: 45px;
+}
+
+.LanguageAndArrow {
+    justify-content: flex-start;
+    margin-right: 90px;
+}
+
+/* MOBILE MENU HAMBURGUER ABERTO */
+
+.container-mobile {
+    position: relative;
+}
+
+.navbar-mobile {
+    display: flex;
+    align-items: center;
+    font-family: Panchang-Semibold;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: #424242;
+    z-index: 1000; /* Certifique-se de que a navbar está acima de outros elementos */
+}
+
+.logo {
+    width: 40%;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 25px;
+    min-width: 90px;
+    position: fixed;
+    right: 5px;
+}
+
+.lupa-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-icon {
+    z-index: 1001;
+}
+
+.search-input {
+    font-family: "Mulish";
+    font-size: 14px;;
+    margin-right: 10px;
+    display: none;
+    border: none;
+    border-bottom: 1px solid #424242;
+    background: none;
+    color: #424242;
+    outline: none;
+    padding: 5px;
+    margin-left: 5px;
+    transition: width 0.3s ease;
+    width: 0;
+}
+
+.search-input.show {
+    display: inline-block;
+    width: 130px; /* Ajuste o valor conforme necessário */
+}
+
+.hamburger {
+    cursor: pointer;
+    z-index: 1001;
+    width: 25px;
+    height: 25px;
+}
+
+.bar {
+    width: 25px;
+    height: 4px;
+    margin: 4px auto;
+    background-color: #333;
+    transition: all 0.3s;
+}
+
+.hamburger.active .bar:first-child {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.sidebar {
+    position: fixed;
+    top: 66px; /* Ajuste a posição conforme necessário */
+    right: -100%;
+    width: 100%;
+    height: calc(100% - 66px); /* Ajuste para deixar espaço para a navbar */
+    background: linear-gradient(to bottom, #D0CAE2 0%, #FDB38B 100%);
+    color: #fff;
+    transition: right 0.3s;
+    z-index: 999;
+}
+
+.sidebar.show {
+    right: 0;
+    height: 100vh;
+    margin-top: -66px;
+}
+
+.sidebar-content {
+    padding: 15px;
+}
+
+.main-content {
+    transition: margin-right 0.3s;
+    display: none; /* Initially hidden */
+}
+
+.main-content.show {
+    display: block; /* Show when toggled */
+  }
+
+.hidden {
+    display: none;
+}
+
+.menu-mobile {
+    font-family: Panchang-Semibold;
+    display: flex;
+    flex-direction: column;
+    color: #424242;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+    justify-content: space-between;
+    text-align: end;
+    height: 90%;
+}
+
+.menumobileA{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    font-size: 22px;
+    margin-top: 80px;
+}
+
+.menumobileA :hover{
+    color:#FF6711
+}
+
+.otherInfoMobile {
+
+    margin-top: 100px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    justify-content: space-between;
+    padding: 10px;
+    height: 40%;
+}
+.socialmedia-menu{
+    margin-top: 20px;
+    text-align: end;
+    justify-content: end;
+}
+
+.newslettermobile {
+    font-family: "Panchang";
+    font-weight: 400 !important;
+}
+
+.newslettermobile > button {
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    color: #424242;
+}
+
+.menu-mobile a {
+    padding: 10px;
+    text-decoration: none;
+    color: #424242; /* Mudança para branco para contraste com o fundo escuro */
+}
+
+/*MAIN */ 
+
+.empresa {
+    color: #424242;
+    text-align: center;
+}
+
+.empresa>h3 {
+    font-family: Panchang-Semibold;
+    font-size: 25px;
+}
+
+.personal {
+    color:#424242;
+    text-align: center;
+}
+
+.personal>h3 {
+    font-family: Panchang-Semibold;
+    font-size: 25px;
+}
+
+
+.bts-empresa {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.btn1, .btn2 {
+    font-family: 'Mulish';
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #424242;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 2px solid #424242;
+    border-radius: 8px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn1:hover {
+    border: 2px solid #9F97CA;
+    background-color: #9F97CA;
+    color: #ffffff;
+}
+
+.btn1:focus {
+    color: #424242;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn2:hover {
+    border: 2px solid #9F97CA;
+    background-color: #9F97CA;
+    color: #ffffff;
+}
+
+.btn2:focus {
+    background-color: #ffffff;
+    color: #424242;
+    border: 2px solid #ffffff;
+}
+
+
+@media (min-width: 900px) {
+    .menu-mobile {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+
+    .menu-hamburger {
+        display: flex;
+    }
+
+    .menu-hamburger.active {
+        display: flex;
+    }
+    
+    .menu-mobile a {
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+}
+
+
+
+section{
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    list-style-type: none;
+}
+ 
+footer{
+    position: fixed;
+    bottom: 0%;
+    background-color: #c3c3c3;
+    z-index: 0 !important;
+    width: 100%;
+}
+
+ 
+.navbar{
+    background-color: #d9d9d9;
+    font-family: "Mulish";
+    font-size: 10px;
+}
+ 
+.neurafooter{
+    font-family: "Panchang";
+    font-weight: 700;
+    color:#8D8D8D;
+    font-size: 25px;
+}
+ 
+.politicas{
+    h6{
+        font-family: "Mulish";
+        font-size: 14px;
+        color:#8D8D8D;
+        font-weight: 500;
+    }
+}
+
+.container-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    footer {
+      display: none;
+    }
+
+    .container-mobile {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+    
+    .btn1{
+        margin: 3px;
+    }
+
+    .btn2{
+        margin: 3px;
+    }
+}
+
+/* CSS DO MODAL*/
+ 
+.modal {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    position: fixed;
+    align-items: center; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+ 
+  /* MODAL CONTENT */
+ 
+.modal-content {
+    background-color: #D9D5EA;
+    font-family: 'Mulish';
+    font-size: 14px;
+    font-weight: 500;
+    margin: auto;
+    padding: 20px;
+    width: 55%;
+}
+ 
+.close {
+    border:none;
+    background-color: #D9D5EA;
+}
+ 
+.buttonClose {
+    text-align: end;
+    padding-right: 10px;
+}
+ 
+.form {
+    font-family: 'Mulish';
+    color: #424242;
+    border-radius: 8px;
+}
+ 
+.title>h5 {
+    color: #FF6711;
+    font-family: Panchang-Bold;
+    font-size: 25px;
+}
+ 
+.title>p {
+    color: #424242;
+    font-family: 'Mulish';
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+ 
+.btn-form {
+    font-family: 'Mulish';
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #FF6711;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    justify-content: end;
+    align-content: center;
+}
+ 
+.btn-form:hover {
+    background-color: #9F97CA;
+    color: #ffffff;
+}
+ 
+.btn-form:active {
+    background-color: #ffffff;
+    color: #FF6711;
+    border: 2px solid #FF6711;
+}

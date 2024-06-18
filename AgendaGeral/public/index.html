@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eneura_agendaGeral</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="./css/agendageral.css">
+    <link rel="stylesheet" type="text/css" href="./css/panchang.css">
+
+</head>
+
+
+<body class="body">
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content  ">
+      <p>
+          <div class="containerevent m-0 rounded-3">
+              <div class="container m-0 ">
+                
+                 <div class="buttonClose row justify-content-end">
+                     <div class="col-1">
+                         <button class="close buttonX mt-3"><img src=".\Imagens\Modal\Group 104.svg" alt="" width="40" height="30"></button>
+                     </div>
+                 </div>
+         
+         
+                 <div class="event row p-3">
+                   <div class="eventpart1 col-12 col-md-6">
+         
+                     <div class="title mb-3" id="modal-title">
+                         X-TENSE CONCERT
+                     </div>
+                     <div class="imageEventX">
+                         <img src="Imagens\imagensEventos\evento 5.jpg" id="modal-image" class="rounded-3" alt=" width="" height="">
+                     </div>
+         
+         
+                     <div class="buttonsGoandTickets ">
+                         <div>
+                            <button class="button1 rounded-2">
+                              <img src=".\Imagens\Modal\Group 101.svg" alt="" width="40" height="47">
+                              <span class="button-text">I'M GOING</span> 
+                            </button>
+                        </div>
+                        <div>
+                            <button class="button1 rounded-2 ms-1">
+                              <img src=".\Imagens\Modal\Group 102.svg" alt="" width="40" height="47">
+                              <span class="button-text">SAVE THIS EVENT</span> 
+                            </button>
+                         </div>
+                         <div>
+                             <button class="goTickets rounded-3 ms-3"> GO FOR YOUR TICKETS </button>
+                         </div>
+                     </div>
+         
+                   </div>
+         
+                   <div class="eventpart2 col-12 col-md-6">
+                     <div class="infoAndButtonsViews">
+                         <div class="info">
+                             <p id="modal-time">21H</p>  
+                             <p class="ms-3" id="modal-duration">DURAÇÃO | 2H</p>
+                         </div>
+                         <div class="buttonsviews">
+                             <img src=".\Imagens\Modal\Group 114.svg" alt="" width="45" height="35">
+                             <img src=".\Imagens\Modal\Group 113.svg" class="ms-2" alt="" width="45" height="35">
+                         </div>
+                     </div>
+         
+         
+                     <div class="textevent">
+                         <h3 id="modal-localName">Hardclub</h3>
+                         <p id="modal-localSubname"> Praça do Infante D. Henrique, Porto </p>
+                           <div class="contactsEventText">
+                              <p id="modal-email">geral@hardclubporto.com </p>                    
+                              <p id="modal-contact">(+351) 220 101 186</p> 
+                           </div>
+                     </div>
+                     <div class="textevent2 mt-2" id="modal-eventInfo">
+                         <p id="modal-eventInfo">X-TENSE (ou Pablo) apresenta no Porto o seu novo concerto P DE PABLITO. O ano de 2019 foi o muito produtivo para o rapper da Pontinha com o lançamento dos 
+                         singles "Asi" , "Bolero", "Hambre", "Yolanda" e "P de Pablito", que chegaram ao Top 5 do Youtube; com a sua estreia no palco LG no MEO SUDOESTE e os inúmeros 
+                         concertos que deu pelo país.</p>
+                     </div>
+                     <div class="moredates mt-5">
+                         <h4>MORE DATES</h4>
+                         <p id="modal-date1">FRIDAY 26/04 | Lisbon</p>
+                         <p id="modal-date2">SATURDAY 27/04 | Lisbon</p>
+                     </div>
+                   </div>
+                 </div>
+                 
+              </div>
+             </div>       
+      </p>
+    </div>
+  
+  </div>
+
+<header>
+  <div class="menu fixed-top mb-3">
+    <div class="containerM">
+    <div class="menu-container d-flex justify-content-between align-items-center">
+
+       <div class="cityAndArrow1">
+        <div class="dropdown">
+          <a href="#" class="dropbtn">PORTO</a>
+          <div class="dropdown-content">
+            <a href="#">LISBOA</a>
+            <a href="#">MADRID</a>
+            <a href="#">PARIS</a>
+          </div>
+          <img src="Imagens\Menu\Polygon.svg" class="arrow1" alt="Arrow" width="10" height="10">
+        </div>
+       </div>
+
+        <div class="center-menu d-none d-md-flex">
+            <a href="index.html">AGENDA</a>
+            <a href="#">INFO</a>
+            <a href="home.html"><img src="Imagens\Menu\LOGO.svg" class="logoneuraM" alt="LOGO" width="120" height=""></a>
+            <a href="#">UPDATES</a>
+            <a href="login.html">LOG IN</a>
+        </div>
+
+
+          <div class="LanguageAndArrow d-flex align-items-center">
+            <div class="lupa-container">
+              <img src="Imagens/Menu/lupa.svg" class="search-icon" id="search-icon" alt="Lupa" width="22" height="22" style="cursor: pointer;">
+              <input type="text" class="search-input" id="search-input" placeholder="Search...">
+            </div>
+          <div class="dropdown ms-2">
+            <a href="#" class="dropbtn">EN</a>
+            <div class="dropdown-content">
+              <a href="#">PT</a>
+            </div>
+            <img src="Imagens\Menu\Polygon.svg" class="arrow1" alt="Arrow" width="10" height="10">
+          </div>
+         </div>
+    </div>
+    <div class="linha"></div>
+    </div>
+  </div>
+
+ <!---menuMOBILE--> 
+
+ <div class="container-mobile">
+  <nav class="navbar-mobile fixed-top" id="navbarMobile">
+      <div class="logo">
+        <a href="home.html"><img src="Imagens/Menu/LOGO_mobile.svg" alt=""></a>
+      </div>
+
+      <div class="icons">
+        <div class="lupa-container">
+          <img src="Imagens/Menu/lupamobile.svg" class="search-icon" id="search-iconM" alt="Lupa" width="22" height="22" style="cursor: pointer;">
+          <input type="text" class="search-input" id="search-inputM" placeholder="Search...">
+        </div>
+          <div class="log in">
+            <a href="login.html"><img src="images/LOGIN_MOBILE.svg" class="search-icon" alt="Lupa" width="22" height="22"></a>
+          </div>
+
+          <div class="hamburger" id="hamburger-menu">
+              <div class="bar rounded-2"></div>
+              <div class="bar rounded-2"></div>
+              <div class="bar rounded-2"></div>
+          </div>
+      </div>
+  </nav>
+
+  <div class="sidebar" id="sidebar">
+      <div class="sidebar-content">
+          <p></p>
+      </div>
+      <div class="main-content hidden" id="main-content">
+        <div class="menu-mobile">
+          <div class="menumobileA">
+            <a href="index.html">AGENDA</a>
+            <a href="#about">INFO</a>
+            <a href="#services">UPDATES</a>
+          </div>
+
+
+          <div class="otherInfoMobile"> 
+            <div class="newslettermobile">
+               <button> NEWSLETTER </button>
+            </div>
+
+            <div class="cityAndArrow1">
+              <div class="dropdown">
+                <a href="#" class="dropbtn">PORTO</a>
+                <div class="dropdown-content">
+                  <a href="#">LISBOA</a>
+                  <a href="#">MADRID</a>
+                  <a href="#">PARIS</a>
+                </div>
+                <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+              </div>
+             </div>
+
+            <div class="dropdown">
+              <a href="#" class="dropbtn">EN</a>
+              <div class="dropdown-content">
+                <a href="#">PT</a>
+              </div>
+              <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+            </div>
+            
+            <a class="socialmedia-menu" href="#">
+                <img src="imagesLogIn/INSTAGRAM_M_MOBILE.svg" alt="">
+                <img src="imagesLogIn/TIKTOK_M_MOBILE.svg" alt="">
+                <img src="imagesLogIn/X_M_MOBILE.svg" alt="">
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  <!--div do containerMobile-->
+
+</header>
+
+<div class="Space mt-5 mb-5"></div>
+
+
+<main class="mt-2">
+
+  <div class="grid filters">
+    
+    <div class="principalFilters row gap-3 justify-content-center">
+      <button class="buttonfilter rounded-2 col-2">MUSIC</button>
+      <button class="buttonfilter rounded-2 col-2">SHOWS</button>
+      <button class="buttonfilter rounded-2 col-2">SPORTS</button>
+      <button class="buttonfilter rounded-2 col-2">ART</button>
+      <button class="buttonfilter rounded-2 col-2">FOOD</button>
+      <button class="buttonfilter rounded-2 col-2">DIDACTIC</button>
+    </div>
+  
+   <div class=" moreFilters row m-0 justify-content-center mt-5">
+
+
+    <button class="buttonMoreFilters rounded-3" onclick="showDivs()">more filters</button>
+      <div class="hidden-divs row justify-content-center" id="additionalDivs">
+
+          <div class="inner-div row justify-content-center">
+            <div class="barraprice">
+              <range-selector id="range-selector" min-range="0" max-range="200"  hide-legend
+              slider-color="#D4D0E5"
+              circle-color="#FF6711"
+              circle-border-color="#FF6711"
+              circle-focus-border-color="#9F97CA" />
+            </div>
+          </div>
+          <div class="inner-divAge ">
+              <div class="ageFilters">
+                <button class="age rounded-3"> 
+                  <p> 0-5 </p>
+                  <p> years</p>
+                </button>
+                <button class="age rounded-3"> 
+                  <p> 6-13 </p>
+                  <p> years</p>
+                </button>
+                <button class="age rounded-3"> 
+                  <p> 14-18 </p>
+                  <p> years</p>
+                </button>
+                <button class="age rounded-3"> 
+                  <p> 18+ </p>
+                  <p> years</p>
+                </button>
+                <button class="age rounded-3"> 
+                  <p> 67+ </p>
+                  <p> years</p>
+                </button>
+              </div>
+            
+              <div class="ageFiltersMobile m-0 text-center mt-5 ms-4">
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    0-5 YEARS
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">6-13 YEARS</a></li>
+                    <li><a class="dropdown-item" href="#">14-18 YEARS</a></li>
+                    <li><a class="dropdown-item" href="#">18+ YEARS</a></li>
+                    <li><a class="dropdown-item" href="#">67+ YEARS</a></li>
+                  </ul>
+                </div>
+            </div>
+          </div><!--innerdiv-->
+      </div> <!--hiddenDivs-->
+
+</div><!--morefilters-->
+</div> <!--gridFilters-->
+  
+  <div class=" m-0 text-center mt-3 mb-4 ">
+    <h6 class="results">30 RESULTS</h6>
+  </div>
+
+  <section class="calendarMonths m-0 text-center mt-5">
+    <div class="monthsDefault col m-0">
+        <button class="col buttonMonth" id="data-month">APRIL</button>
+        <button class="col buttonMonth" id="data-month">MAY</button>
+        <button class="col buttonMonth" id="data-month">JUNE</button>
+        <button class="col buttonMonth" id="data-month">JULY</button>
+        <button class="col buttonMonth" id="data-month">AUGUST</button>
+        <button class="col buttonMonth" id="data-month">SEPTEMBER</button>
+    </div>
+</section>
+
+<section class="calendarMonthsMobile m-0 text-center mt-3 ms-4">
+      <div class="monthsMobile">
+        <div class="dropdownMobile">
+          <button class="monthsMobileButton rounded-2">
+          <a href="#" class="dropbtnM" id="data-month">APRIL</a>
+          <div class="dropdown-contentMobile rounded-2">
+            <a href="#" class="buttonMonthDrop" id="data-month" >MAY</a>
+            <a href="#" class="buttonMonthDrop" id="data-month" >JUNE</a>
+            <a href="#" class="buttonMonthDrop" id="data-month">JULY</a>
+            <a href="#" class="buttonMonthDrop" id="data-month">AUGUST</a>
+            <a href="#" class="buttonMonthDrop" id="data-month">SEMPTEMBER</a>
+          </div>
+          <img src="Imagens\Outros\Polygon 2.svg" class="arrow1" alt="Arrow" width="10" height="10">
+        </div> 
+      </button>
+       </div>
+  </div>
+</section>
+
+<section class="calendarDays m-0 row ms-5 mt-3">
+  <div class="DaysCarrousel" id="DaysCarrouselC">
+      <!-- <button onClick="getData('April 02, 2024')" class="buttonDay" id="data-day2"> <h5 class="dayofmonthB">02</h5> <p class="dayofweekB"> TUE</p></button> -->
+     
+  </div>
+</section>   
+
+<section class="AgendaGeral m-0 mt-5 ms-5">
+
+  <div class="Row">
+    <div class="TitleSchedule mb-3">
+      morning
+    </div> 
+
+  <div id="carrousel-morning" class="carrousel m-0">
+  </div> <!--Div class Carrousel-->
+
+<!---EVENTOS À TARDE--------------------------------------------->
+
+  <div class="TitleSchedule mb-3 mt-4">
+        afternoon
+  </div> 
+
+  <div id="carrousel-afternoon" class="carrousel">
+  </div>
+<!-----------------------EVENTOS À NOITE---------------------------------------------------------------------------->
+
+<div class="TitleSchedule mb-3 mt-4">
+        nigth
+  </div> 
+
+  <div id="carrousel-night" class="carrousel">
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <nav class="navbar navbar-expand-lg mt-5">
+      <div class="container-fluid footer">
+        <a class="navbar-brand neurafooter ms-5" href="#"><img src="Imagens/footer/LOGO.svg" class="logoFooter" alt="" width="117" height="17"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-4 me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"> <img src="Imagens/footer/instaFooter.svg" alt="" width="15" height="15"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="Imagens/footer/Vector.svg" alt="" width="15" height="14"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="Imagens/footer/twitter Footer.svg" alt="" width="15" height="15"></a>
+            </li>
+          </ul>
+          <form class="d-flex " role="search">
+            <div class="politicas me-5 mt-2">
+              <button class="buttonsFooter"><h6>Política de Privacidade</h6></button>
+            </div>
+            <div class="politicas me-5 mt-2">
+              <button  class="buttonsFooter"><h6>Política de Cookies</h6></button>
+            </div>
+            <div class="politicas mt-2">
+              <button  class="buttonsFooter"><h6>Política de Termos e Condições</h6></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+</footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/maxshuty/accessible-web-components@latest/dist/simpleRange.min.js"></script>
+<script src="./scripts/agendaFrontEnd.js"></script>
+</body>
+</html>

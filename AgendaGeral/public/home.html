@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eneura_homepage</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link rel="stylesheet" type="text/css" href="./css/panchang.css">
+
+</head>
+<body>
+ 
+    <header>
+      <div class="menu fixed-top">
+        <div class="containerM">
+        <div class="menu-container d-flex justify-content-between align-items-center">
+
+           <div class="cityAndArrow1">
+            <div class="dropdown">
+              <a href="#" class="dropbtn">PORTO</a>
+              <div class="dropdown-content">
+                <a href="#">LISBOA</a>
+                <a href="#">MADRID</a>
+                <a href="#">PARIS</a>
+              </div>
+              <img src="images/ARROW.svg" class="arrow1" alt="Arrow" width="10" height="10">
+            </div>
+           </div>
+
+            <div class="center-menu d-none d-md-flex">
+                <a href="index.html">AGENDA</a>
+                <a href="#">INFO</a>
+                <a href="#">UPDATES</a>
+                <a href="login.html">LOG IN</a>
+            </div>
+
+
+              <div class="LanguageAndArrow d-flex align-items-center">
+                <div class="lupa-container">
+                  <img src="imagesLogIn/LUPA.svg" class="search-icon" id="search-icon" alt="Lupa" width="22" height="22" style="cursor: pointer;">
+                  <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                </div>
+              <div class="dropdown ms-2">
+                <a href="#" class="dropbtn">EN</a>
+                <div class="dropdown-content">
+                  <a href="#">PT</a>
+                </div>
+                <img src="images/ARROW.svg" class="arrow1" alt="Arrow" width="10" height="10">
+              </div>
+             </div>
+        </div>
+        <div class="linha"></div>
+        </div>
+      </div>
+
+
+      <div class="container-mobile">
+        <nav class="navbar-mobile fixed-top">
+            <div class="logo">
+              <a href="home.html"><img src="imagesLogIn/LOGO_MOBILE.svg" alt=""></a>
+            </div>
+    
+            <div class="icons">
+              <div class="lupa-container">
+                <img src="imagesLogIn/LUPA.svg" class="search-icon" id="search-iconM" alt="Lupa" width="22" height="22" style="cursor: pointer;">
+                <input type="text" class="search-input" id="search-inputM" placeholder="Search...">
+              </div>
+                <div class="log in">
+                  <a href="login.html"><img src="imagesLogIn/LOGIN_MOBILE.svg" class="search-icon" alt="Lupa" width="22" height="22"></a>
+                </div>
+    
+                <div class="hamburger" id="hamburger-menu">
+                    <div class="bar rounded-2"></div>
+                    <div class="bar rounded-2"></div>
+                    <div class="bar rounded-2"></div>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <p></p>
+            </div>
+            <div class="main-content hidden" id="main-content">
+              <div class="menu-mobile">
+                <div class="menumobileA">
+                  <a href="index.html">AGENDA</a>
+                  <a href="#about">INFO</a>
+                  <a href="#services">UPDATES</a>
+                </div>
+
+
+                <div class="otherInfoMobile"> 
+                  <div class="newslettermobile">
+                     <button> NEWSLETTER </button>
+                  </div>
+
+                  <div class="cityAndArrow1">
+                    <div class="dropdown">
+                      <a href="#" class="dropbtn">PORTO</a>
+                      <div class="dropdown-content">
+                        <a href="#">LISBOA</a>
+                        <a href="#">MADRID</a>
+                        <a href="#">PARIS</a>
+                      </div>
+                      <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+                    </div>
+                   </div>
+
+                  <div class="dropdown">
+                    <a href="#" class="dropbtn">EN</a>
+                    <div class="dropdown-content">
+                      <a href="#">PT</a>
+                    </div>
+                    <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+                  </div>
+                  
+                  <a class="socialmedia-menu" href="#">
+                      <img src="imagesLogIn/INSTAGRAM_M_MOBILE.svg" alt="">
+                      <img src="imagesLogIn/TIKTOK_M_MOBILE.svg" alt="">
+                      <img src="imagesLogIn/X_M_MOBILE.svg" alt="">
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>  <!--div do containerMobile-->
+
+
+        <div class="container text-center mt-4">
+            <div class="apresentation">
+        
+            <div class="neuraname">
+                <img src="images/LOGO.svg" alt="Descrição da Imagem" class="img-fluid">
+            </div>
+            </div>
+        </div>
+            <div class="container1 my-5">
+            <div class="socialmedia row justify-content-center">
+                <div class="col-auto">
+                <img class="mw-100 "src="images/INSTAGRAM.svg" alt="Descrição da Imagem" href="link da página" width="30" height="30" class="mx-2">
+                <img class="mw-100 "src="images/TIKTOK.svg" alt="Descrição da Imagem" href="link da página" width="30" height="30" class="mx-2">
+                <img class="mw-100 "src="images/REDEX.svg" alt="Descrição da Imagem" href="link da página" width="30" height="30" class="mx-2">
+                </div>
+            </div>
+            </div>
+
+            <div class="slogan">
+                <section class="Content-Section relative block md:block lg:block padding-bottom-lg" data-background-color="page-bg--light">
+                  <div class="">
+                      <div class="Scrolling-Text1">
+                        <marquee class="line leading-none uppercase -mb-1 md:mb-[44px]" behavior="scroll" scrolldelay="0" scrollamount="10" direction="right"><p>CULTURAL AGENDA <span class="outline-text"> </span></p></marquee>
+                        <marquee class="line leading-none uppercase -mb-1 md:mb-[44px]" behavior="scroll" scrolldelay="0" scrollamount="10" direction="left"><p>UNLEASH YOUR CULTURAL RADAR! <span class="outline-text"></span></p></marquee>
+                      </div>  
+                  </div>
+                </section>
+                <!--PEDAÇO DE CODIGO COPIADO DO SITE COM FRASE CRUZADA-->
+            </div>
+    </header>
+ 
+    <main>
+      <section class="videoebotao">
+          <div class="video">
+            <video class="video1" width="1920" height="480" controls autoplay loop muted poster="C:\Users\ritaa\OneDrive\Ambiente de Trabalho\WEB DESIGN\PROJETO WEB\NEURA\neura\images\4916813-hd_1920_1080_30fps.mp4">
+              <source src="C:\Users\ritaa\OneDrive\Ambiente de Trabalho\WEB DESIGN\PROJETO WEB\NEURA\neura\images\4916813-hd_1920_1080_30fps.mp4" type="video/mp4">
+              <source src="C:\Users\ritaa\OneDrive\Ambiente de Trabalho\WEB DESIGN\PROJETO WEB\NEURA\neura\images\4916813-hd_1920_1080_30fps.mp4" type="video/ogg">
+              <source src="C:\Users\ritaa\OneDrive\Ambiente de Trabalho\WEB DESIGN\PROJETO WEB\NEURA\neura\images\4916813-hd_1920_1080_30fps.mp4" type="video/webm">
+              Seu navegador não suporta a tag de vídeo.
+          </video>
+          </div>
+          <div class="botaoseeagenda row">
+            <div class=" buttonagenda col">
+              <a href="index.html"><button class="seeagenda"> see agenda </button></a>
+          </div>
+          </div>
+      </section>
+ 
+
+      <section class="updates my-5">
+        <section class="Content-Section relative block md:block lg:block" data-background-color="page-bg--light">
+            <div class="">
+                <div class="Scrolling-Updates2">
+                    <marquee class="line2 leading-none uppercase -mb-1 md:mb-[44px]" behavior="scroll" scrolldelay="0"
+                        scrollamount="10" direction="right">
+                        <p>UPDATES UPDATES UPDATES UPDATES UPDATES UPDATES UPDATES UPDATES<span class="outline-text">
+                            </span></p>
+                    </marquee>
+                </div>
+            </div>
+        </section>
+
+        <div class="updates-events">
+            <div class="containerEventDateChange">
+                <div class="image-container1">
+                    <img src="images\pexels-photo-787961.webp">
+                </div>
+                <div class="label-container1">
+                    <div class="header1">
+                        <div class="content-zone">
+                            <p>DATE CHANGE</p>
+                        </div>
+                    </div>
+                    <div class="body-card1">
+                        <h5>PARTY</h5>
+                        <p>Today's event has been changed to a new date.</p>
+                        <p>27/04</p>
+                    </div>
+                </div>
+            </div>
+            <div class="containerEventCancel">
+                <div class="image-container2">
+                    <img src="images\pexels-photo-375892.jpeg">
+                </div>
+                <div class="label-container2">
+
+                    <div class="body-card2">
+                        <h5>FLEAMARKET</h5>
+                        <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                    </div>
+
+                    <div class="header2">
+                      <div class="content-zone">
+                          <p>CANCELLED</p>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="containerEventDateChange">
+                <div class="image-container1">
+                    <img src="images\pexels-photo-358010.webp">
+                </div>
+                <div class="label-container1">
+                    <div class="header1">
+                        <div class="content-zone">
+                            <p>TIME CHANGE</p>
+                        </div>
+                    </div>
+                    <div class="body-card1">
+                        <h5>THEATRE</h5>
+                        <p>Today</p>
+                        <p>New schedule</p>
+                        <p>22h</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerEventCancel">
+                <div class="image-container2">
+                    <img src="images\pexels-photo-2526878.jpeg">
+                </div>
+                <div class="label-container2">
+
+                    <div class="body-card2">
+                        <h5>RACE</h5>
+                        <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                    </div>
+
+                    <div class="header2">
+                      <div class="content-zone">
+                          <p>CANCELLED</p>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="containerEventDateChange">
+                <div class="image-container1">
+                    <img src="images\pexels-kseniachernaya-3965543.jpg">
+                </div>
+                <div class="label-container1">
+                    <div class="header1">
+                        <div class="content-zone">
+                            <p>TIME CHANGE</p>
+                        </div>
+                    </div>
+                    <div class="body-card1">
+                        <h5>THEATRE</h5>
+                        <p>Today</p>
+                        <p>New schedule</p>
+                        <p>22h</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerEventCancel">
+                <div class="image-container2">
+                    <img src="images\pexels-joshsorenson-995301.jpg">
+                </div>
+                <div class="label-container2">
+
+                    <div class="body-card2">
+                        <h5>CONCERT</h5>
+                        <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                    </div>
+
+                    <div class="header2">
+                      <div class="content-zone">
+                          <p>CANCELLED</p>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+
+        <section>
+            <div class="">
+                <div class="Scrolling-Updates2">
+                    <marquee class="line2 leading-none uppercase -mb-1 md:mb-[44px]" behavior="scroll" scrolldelay="0"
+                        scrollamount="10" direction="left">
+                        <p>UPDATES UPDATES UPDATES UPDATES UPDATES UPDATES UPDATES UPDATES<span class="outline-text">
+                            </span></p>
+                    </marquee>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </section>
+
+
+ 
+      <section class="EventosHoje my-5">
+
+        <div class="container">
+          <div class="titletoday">
+              <p>LAST CALL FOR TODAY</p>
+          </div>
+        </div>
+
+
+        <div class="carrousel1">
+
+          <div class="card" style="width: 17rem;">
+            <img src="images\helena aleidacoll.jpg" class="card-img-top" alt="...">
+            <div class="cardtextarrow">
+              <div class="card-body">
+              <h5 class="card-title">HELENA ALMEIDA</h5>
+              <p class="card-text">Casa São Roque <br> 20/04 - 31/08</p>
+              </div>
+              <div class="arrowcard text-end">
+              <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+              </div>
+            </div>
+          </div>
+
+
+            <div class="card" style="width: 17rem;">
+                <img src="images\pexels-cottonbro-6692610.jpg" class="card-img-top" alt="..." class="img-fluid">
+                <div class="cardtextarrow">
+                <div class="card-body">
+                  <h5 class="card-title">WORKSHOP CERAMICS</h5>
+                  <p class="card-text">NU Studio<br> 20/04 | 10h30</p>
+                </div>
+                <div class="arrowcard d-flex justify-content-end">
+                  <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+                </div>
+                </div>
+              </div>
+
+
+              <div class="card" style="width: 17rem;">
+                <img src="images\pexels-photo-1049690.webp" class="card-img-top" alt="...">
+                <div class="cardtextarrow">
+                <div class="card-body">
+                  <h5 class="card-title">JAZZ JAM</h5>
+                  <p class="card-text">Casa da Música<br> 20/04 | 17h30</p>
+                </div>
+                <div class="arrowcard d-flex justify-content-end">
+                  <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+                </div>
+                </div>
+              </div>
+
+
+              <div class="card" style="width: 17rem;">
+                <img src="images\pexels-photo-167636.webp" class="card-img-top" alt="...">
+                <div class="cardtextarrow">
+                <div class="card-body">
+                  <h5 class="card-title">ORNATOS VIOLETA</h5>
+                  <p class="card-text">Hard Club<br> 20/04 | 21h30</p>
+                </div>
+                <div class="arrowcard d-flex justify-content-end">
+                  <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+                </div>
+                </div>
+              </div>
+
+        
+              <div class="card" style="width: 17rem;">
+                <img src="images\pexels-photo-801863.webp" class="card-img-top" alt="...">
+                <div class="cardtextarrow">
+                <div class="card-body">
+                  <h5 class="card-title">ELETRO FEST</h5>
+                  <p class="card-text">Pérola Negra<br> 20/04 | 23h30</p>
+                </div>
+                <div class="arrowcard d-flex justify-content-end">
+                  <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+                </div>
+                </div>
+              </div>
+          
+
+
+              <div class="card" style="width: 17rem;">
+                <img src="images\moullinex.jpg" class="card-img-top" alt="...">
+                <div class="cardtextarrow">
+                <div class="card-body">
+                  <h5 class="card-title">MOULLINEX</h5>
+                  <p class="card-text">Plano B<br> 20/04 | 00h30</p>
+                </div>
+                <div class="arrowcard d-flex justify-content-end">
+                  <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+                </div>
+                </div>
+              </div>
+
+
+          </div>
+
+      </section>
+ 
+ 
+      <section class="EventosAmanha my-5">
+        <div class="container">
+        <div class="titletomorrow d-flex flex-row-reverse">
+            <p>DON'T FORGET TOMORROW</p>
+        </div>
+        </div>
+
+
+          <div class="carrousel2">
+              <div class="card" style="width: 17rem;">
+                <img src="images\230307_feira_feita_62-1600x1066.jpg" class="card-img-top" alt="...">
+                <div class="cardtextarrow">
+                  <div class="card-body">
+                  <h5 class="card-title">BEE MARKET</h5>
+                  <p class="card-text">Cordoaria Garden <br> 21/04 | 10h -19h </p>
+                  </div>
+                  <div class="arrowcard text-end">
+                    <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card" style="width: 17rem;">
+                <img src="images\1651584863-JWueYk27zX.jpeg" class="card-img-top" alt="...">
+                <div class="cardtextarrow">
+                <div class="card-body">
+                  <h5 class="card-title">YOGA CLASS</h5>
+                  <p class="card-text">Parque da Cidade<br> 21/04 | 10h</p>
+                </div>
+                <div class="arrowcard d-flex justify-content-end">
+                  <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+                </div>
+                </div>
+              </div>
+
+
+              <div class="card" style="width: 17rem;">
+                <img src="images\unnamed (1).webp" class="card-img-top" alt="...">
+                <div class="cardtextarrow">
+                <div class="card-body">
+                  <h5 class="card-title">YAYOI KUSAMA</h5>
+                  <p class="card-text">Serralves Museum<br> 21/04 - 29/09</p>
+                </div>
+                <div class="arrowcard d-flex justify-content-end">
+                  <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+                </div>
+                </div>
+              </div>
+        
+
+              <div class="card" style="width: 17rem;">
+                <img src="images\Corrida-Dia-do-Pai-Matosinhos-810x537.jpg" class="card-img-top" alt="...">
+                <div class="cardtextarrow">
+                <div class="card-body">
+                  <h5 class="card-title">APRIL RACE</h5>
+                  <p class="card-text">Matosinhos<br> 21/04 | 14h</p>
+                </div>
+                <div class="arrowcard d-flex justify-content-end">
+                  <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+                </div>
+                </div>
+              </div>
+
+
+
+              <div class="card" style="width: 17rem;">
+                <img src="images\565fefc1-9ab8-4192-9bc7-d535cdbbff47.jpg" class="card-img-top" alt="...">
+                <div class="cardtextarrow">
+                <div class="card-body">
+                  <h5 class="card-title">PINK MARKET</h5>
+                  <p class="card-text">Edifício Transparente<br> 21/04 | 14h</p>
+                </div>
+                <div class="arrowcard d-flex justify-content-end">
+                  <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+                </div>
+                </div>
+              </div>
+
+
+              <div class="card" style="width: 17rem;">
+                <img src="images\38418_shutterstock-575601265.webp" class="card-img-top" alt="...">
+                <div class="cardtextarrow">
+                <div class="card-body">
+                  <h5 class="card-title">SUNSET PARTY</h5>
+                  <p class="card-text">Xiringuito<br> 21/04 | 16h</p>
+                </div>
+                <div class="arrowcard d-flex justify-content-end">
+                  <img src="images/ARROW_CARDS.svg" href="#" class="btn" alt="A" width="50" height="50">
+                </div>
+                </div>
+              </div>
+
+
+          </div>
+
+
+      </section>
+ 
+ 
+
+       
+ <!--
+        <section class="animationtopic">
+          
+ 
+ 
+            <section class="Section Section--hover_slider">
+                <section class="Slider">
+ 
+                    <div class="Slider-header">
+                        <a class="Slider-pageLink" href="https://rodastenkonsthall.se/utstallningar/">Kommande utställningar</a>
+                    </div>
+                   
+                    <div class="Slider-wrapper js-sliderWrapper" style="grid-template-columns: 33.33% 33.33% 33.33%;">
+                      <article class="Slider-slide js-sliderSlide">
+                          <div class="Slider-overlay"></div>
+                          <a class="Slider-link" href="https://rodastenkonsthall.se/utstallningar/examensutstallning/"></a>
+                          <div class="Slider-contentWrap">
+                             <h3 class="Slider-artist">food festivals, tastings, typical local food </h3>
+                             <a href="https://rodastenkonsthall.se/utstallningar/examensutstallning/" class="Slider-arrow"></a>
+                          </div>
+ 
+                          <figure class="Slider-image">
+                             <img width="1920" height="1080" src="https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/1920x1080.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy" srcset="https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/1920x1080.jpg 1920w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/1920x1080-300x169.jpg 300w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/1920x1080-1024x576.jpg 1024w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/1920x1080-768x432.jpg 768w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/1920x1080-1536x864.jpg 1536w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/1920x1080-100x56.jpg 100w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/1920x1080-1500x844.jpg 1500w" sizes="(max-width: 1920px) 100vw, 1920px">
+                          </figure>
+                          <div class="Slider-titleWrap banner-animation --short">
+                             <h2 class="Slider-title" style="animation-duration: 14.6667s;">
+                                <span class="">FOOD</span>
+                                <span>—</span>
+                             </h2>
+                             <h2 class="Slider-title" style="animation-duration: 14.6667s;">
+                                <span class="">FOOD</span>
+                                <span>—</span>
+                             </h2>
+                             <h2 class="Slider-title" style="animation-duration: 14.6667s;">
+                                <span class="">FOOD</span>
+                                <span>—</span>
+                             </h2>
+                             <h2 class="Slider-title" style="animation-duration: 14.6667s;">
+                                <span class="">FOOD</span>
+                                <span>—</span>
+                             </h2>
+                             <h2 class="Slider-title" style="animation-duration: 14.6667s;">
+                                <span class="">FOOD</span>
+                                <span>—</span>
+                             </h2>
+                             <h2 class="Slider-title" style="animation-duration: 14.6667s;">
+                                <span class="">FOOD</span>
+                                <span>—</span>
+                            </h2>
+                          </div>
+                     </article>
+                   
+                     <article class="Slider-slide js-sliderSlide">
+                          <div class="Slider-overlay"></div>
+                          <a class="Slider-link" href="https://rodastenkonsthall.se/utstallningar/sommarutstallningen-2024/"></a>
+                          <div class="Slider-contentWrap">
+                              <h3 class="Slider-artist">Stand Up, Outside Cinema, Theater, Circus </h3>
+                              <a href="https://rodastenkonsthall.se/utstallningar/sommarutstallningen-2024/" class="Slider-arrow"></a>
+                          </div>
+                       
+                          <figure class="Slider-image"><img width="1920" height="1080" src="https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Sommarutstallningen.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy" srcset="https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Sommarutstallningen.jpg 1920w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Sommarutstallningen-300x169.jpg 300w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Sommarutstallningen-1024x576.jpg 1024w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Sommarutstallningen-768x432.jpg 768w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Sommarutstallningen-1536x864.jpg 1536w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Sommarutstallningen-100x56.jpg 100w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Sommarutstallningen-1500x844.jpg 1500w" sizes="(max-width: 1920px) 100vw, 1920px">
+                          </figure>
+                       
+                          <div class="Slider-titleWrap banner-animation --short">
+                              <h2 class="Slider-title" style="animation-duration: 20s;">
+                                <span class="">SHOWS</span>
+                                <span>—</span>
+                              </h2>
+                              <h2 class="Slider-title" style="animation-duration: 20s;">
+                                <span class="">SHOWS</span>
+                                <span>—</span>
+                              </h2>
+                              <h2 class="Slider-title" style="animation-duration: 20s;">
+                                <span class="">SHOWS</span>
+                                <span>—</span>
+                              </h2>
+                              <h2 class="Slider-title" style="animation-duration: 20s;">
+                                <span class="">SHOWS</span>
+                                <span>—</span>
+                              </h2>
+                              <h2 class="Slider-title" style="animation-duration: 20s;">
+                                <span class="">SHOWS</span>
+                                <span>—</span>
+                              </h2>
+                              <h2 class="Slider-title" style="animation-duration: 20s;">
+                                <span class="">SHOWS</span>
+                                <span>—</span>
+                              </h2>
+                          </div>
+                     </article>
+                   
+                    <article class="Slider-slide js-sliderSlide">
+                        <div class="Slider-overlay"></div>
+                        <a class="Slider-link" href="https://rodastenkonsthall.se/utstallningar/hostutstallningen/"></a>
+                        <div class="Slider-contentWrap">
+                            <h3 class="Slider-artist">Clubs, Concerts, Festivals</h3>
+                            <a href="https://rodastenkonsthall.se/utstallningar/hostutstallningen/" class="Slider-arrow"></a>
+                        </div>
+                       
+                        <figure class="Slider-image"><img width="1920" height="1080" src="https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Hostutstallningen.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy" srcset="https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Hostutstallningen.jpg 1920w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Hostutstallningen-300x169.jpg 300w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Hostutstallningen-1024x576.jpg 1024w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Hostutstallningen-768x432.jpg 768w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Hostutstallningen-1536x864.jpg 1536w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Hostutstallningen-100x56.jpg 100w, https://rodastenkonsthall.se/wordpress/wp-content/uploads/2023/11/Hostutstallningen-1500x844.jpg 1500w" sizes="(max-width: 1920px) 100vw, 1920px">
+                        </figure>
+                        <div class="Slider-titleWrap banner-animation --short">
+                            <h2 class="Slider-title" style="animation-duration: 17.6667s;">
+                                <span class="">MUSIC</span>
+                                <span>—</span>
+                            </h2>
+                            <h2 class="Slider-title" style="animation-duration: 17.6667s;">
+                                <span class="">MUSIC</span>
+                                <span>—</span>
+                            </h2>
+                            <h2 class="Slider-title" style="animation-duration: 17.6667s;">
+                                <span class="">MUSIC</span>
+                                <span>—</span>
+                            </h2>
+                            <h2 class="Slider-title" style="animation-duration: 17.6667s;">
+                                <span class="">MUSIC</span>
+                                <span>—</span>
+                            </h2>
+                            <h2 class="Slider-title" style="animation-duration: 17.6667s;">
+                                <span class="">MUSIC</span>
+                                <span>—</span>
+                            </h2>
+                            <h2 class="Slider-title" style="animation-duration: 17.6667s;">
+                                <span class="">MUSIC</span>
+                                <span>—</span>
+                            </h2>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+        </section> section da minha section minha animação-->
+ 
+        <section class="newsletter">
+          <div class="container">
+            <div class="conteudo-nl row">
+            <div class="newslettertitle col">
+                <div class="nl-title"><p>KEEP UP TO DATE WITH OUR NEWSLETTER</p></div>
+            </div>
+            <div class="form-email col">
+              <form>
+              <div class="mb-3">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label"></label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email*">
+                </div>  
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">I agree to the Terms of Use and the Privacy Policy.</label>
+                <div class="button-subs d-flex justify-content-end">
+                <button type="submit" class="btn-nl">subscribe</button>
+              </div>
+              </div>
+
+            </form>
+            </div>
+          </div>
+        </div>
+        </section>
+ 
+    </main>
+ 
+    <footer>
+      <nav class="navbar navbar-expand-lg ">
+          <div class="container-fluid footer">
+            <a class="navbar-brand neurafooter ms-5" href="#"><img src="Images/LOGO_FOOTER.svg" class="logoFooter" alt="" width="117" height="17"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-4 me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"> <img src="Images/instaFooter.svg" alt="" width="15" height="15"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="Images/Vector.svg" alt="" width="15" height="14"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="Images/twitter Footer.svg" alt="" width="15" height="15"></a>
+                </li>
+              </ul>
+              <form class="d-flex " role="search">
+                <div class="politicas me-5 mt-2">
+                  <button class="buttonsFooter"><h6>Política de Privacidade</h6></button>
+                </div>
+                <div class="politicas me-5 mt-2">
+                  <button  class="buttonsFooter"><h6>Política de Cookies</h6></button>
+                </div>
+                <div class="politicas mt-2">
+                  <button  class="buttonsFooter"><h6>Política de Termos e Condições</h6></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+    </footer>
+
+
+  <script src="./scripts/homeFrontEnd.js"></script>
+
+   
+</body>
+</html>
