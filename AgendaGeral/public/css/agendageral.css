@@ -7,6 +7,10 @@ body {
     overflow-x: hidden;
 }
 
+.body.show {
+    overflow: hidden;
+}
+
 
 /* NAVBARS */
 
@@ -132,7 +136,7 @@ body {
     height: 25px;
     min-width: 90px;
     position: fixed;
-    right: 5px;
+    right: 30px;
 }
 
 .lupa-container {
@@ -203,10 +207,14 @@ body {
     color: #fff;
     transition: right 0.3s;
     z-index: 999;
+    background: linear-gradient(to bottom, #D0CAE2 0%, #FDB38B 100%);
+
 }
 
 .sidebar.show {
     right: 0;
+    height: 100vh;
+    margin-top: -66px;
 }
 
 .sidebar-content {
@@ -247,6 +255,7 @@ body {
     flex-direction: column;
     height: 60%;
     font-size: 22px;
+    margin-top: 80px;
 }
 
 .menumobileA :hover{
@@ -373,9 +382,9 @@ background-color:#9F97CA;
     justify-content: space-around;
 }
 
-.show {
-    max-height: 500px; /* Ajuste conforme necessário */
-    opacity: 2;
+.hidden-divs.show {
+    max-height: 400px;
+    opacity: 1;
 }
 
 .inner-div {
@@ -686,6 +695,8 @@ margin: 0;
 }
 
 
+/* CARD DOS EVENTOS */
+
 .containerEvent {
     min-width: 300px;
     height: 350px;
@@ -764,7 +775,7 @@ margin: 0;
     font-size: 14px;
 }
 
-.body {
+.titlesEvent {
     width: 100%;
     height: 90%;
     font-family: "Mulish";
@@ -772,12 +783,12 @@ margin: 0;
     margin-left: 10px;
 }
 
-.body > h1 {
+.titlesEvent > h1 {
     font-size: 17px;
     font-weight: 900;
 }
 
-.body > p {
+.titlesEvent > p {
     margin-top: 15px;
     line-height: 5px;
     font-size: 15px;
@@ -844,7 +855,7 @@ margin: 0;
     margin-top: 28px;
 }
 
-.body {
+.titlesEvent {
     width: 100%;
     height: 90%;
     font-family: "Mulish";
@@ -852,12 +863,12 @@ margin: 0;
     margin-left: 10px;
 }
 
-.body > h1 {
+.titlesEvent > h1 {
     font-size: 17px;
     font-weight: 900;
 }
 
-.body > p {
+.titlesEvent > p {
     margin-top: 15px;
     line-height: 5px;
 }
@@ -1152,4 +1163,7 @@ footer{
         display: none;
     }
 
+    .monthsMobileButton{
+        margin-bottom: 15px;
+    }
 }

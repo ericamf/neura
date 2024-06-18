@@ -3,12 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const hamburgerMenu = document.getElementById('hamburger-menu');
   const sidebar = document.getElementById('sidebar');
   const mainContent = document.getElementById('main-content');
+  const bodyOverflow = document.getElementById('body')
 
   hamburgerMenu.addEventListener('click', function () {
       hamburgerMenu.classList.toggle('active');
       sidebar.classList.toggle('show');
       mainContent.classList.toggle('hidden');
       mainContent.classList.toggle('show');
+      bodyOverflow.classList.toggle('show')
   });
 });
 
@@ -98,16 +100,6 @@ function agendaEvents(events) {
     afternoonContainer.innerHTML = '';
     nightContainer.innerHTML = '';
     
-
-    /*for(let i=0; i < 31; i++) {
-
-      let buttonDay = document.createElement('button');
-      buttonDay.className = "buttonDay";
-      buttonDay.innerHTML += ` 
-      <button onClick="getData('April 01, 2024')" class="buttonDay" id="data-day1"> <h5 class="dayofmonthB">01 </h5> <p class="dayofweekB"> MON</p></button> `;
-      DaysCarrouselContainer.appendChild(buttonDay);
-    }*/
-
     for(let i=0; i < events.length; i++) {
       const eventTime = new Date(events[i].dateTime.time);
 
@@ -125,7 +117,7 @@ function agendaEvents(events) {
                 <p>${events[i].dateTime.duration}</p>
               </div>
             </div>
-            <div class="body">
+            <div class="titlesEvent">
               <h1>${events[i].title}</h1>
               <p>${events[i].subtitle1}</p>
               <p>${events[i].subtitle2}</p>
@@ -177,11 +169,12 @@ function populateDays() {
   for (let i = 0; i < 31; i++) {
     let buttonDay = document.createElement('button');
     buttonDay.className = "buttonDay";
-    buttonDay.innerHTML = `<h5 class="dayofmonthB">${i+1}</h5> <p class="dayofweekB"> MON</p>`;
+    buttonDay.innerHTML = `<h5 class="dayofmonthB">${i+1}</h5> <p class="dayofweekB"> MON </p>`;
     buttonDay.setAttribute('onClick', `getData('April ${String(i+1).padStart(2, '0')}, 2024')`);
     DaysCarrouselContainer.appendChild(buttonDay);
 }
 }
+
 
 // Função para filtrar os eventos por data
 function filterEventsByDate(events, selectedDate) {

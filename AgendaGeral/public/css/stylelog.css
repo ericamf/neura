@@ -205,6 +205,8 @@ header {
 
 .sidebar.show {
     right: 0;
+    height: 100vh;
+    margin-top: -66px;
 }
 
 .sidebar-content {
@@ -245,6 +247,7 @@ header {
     flex-direction: column;
     height: 60%;
     font-size: 22px;
+    margin-top: 80px;
 }
 
 .menumobileA :hover{

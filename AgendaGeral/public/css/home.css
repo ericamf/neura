@@ -6,20 +6,9 @@ body {
     overflow-x: hidden;
 }
 
-/*PARA ESCONDER AS BARRAS PRINCIPAIS DO BROWSER*/
-body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: rgb(255, 255, 255);        /* color of the tracking area */
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: rgb(255, 255, 255);    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid rgb(255, 255, 255);  /* creates padding around scroll thumb */
-  }
+.body.show {
+    overflow: hidden;
+}
 
 
 header {
@@ -125,7 +114,8 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
     color: #424242;
-    z-index: 1000; /* Certifique-se de que a navbar está acima de outros elementos */
+    z-index: 1000;
+    
 }
 
 .logo {
@@ -151,7 +141,7 @@ header {
 }
 
 .search-icon {
-    z-index: 1001;
+    z-index: 1005;
 }
 
 .search-input {
@@ -217,6 +207,8 @@ header {
 
 .sidebar.show {
     right: 0;
+    height: 100vh;
+    margin-top: -66px;
 }
 
 .sidebar-content {
@@ -257,6 +249,7 @@ header {
     flex-direction: column;
     height: 60%;
     font-size: 22px;
+    margin-top: 80px;
 }
 
 .menumobileA :hover{

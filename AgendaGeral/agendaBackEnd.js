@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const app = express();
 
+
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -18,7 +19,7 @@ mongoose.connect(uri)
 });
 
 
-//MODELS E SCHEMAS DAS COLLETIONS DA BASE DE DADOS DIA 1 DE ABRIL//
+//MODELS E SCHEMAS DE EVENTS PARA AGENDA//
 
 const eventSchema = new mongoose.Schema({
     category: String,
@@ -34,7 +35,8 @@ const eventSchema = new mongoose.Schema({
 
 const event = mongoose.model('Event', eventSchema);
 
-//OPERAÇÃO GET PARA COLLETION EVENTOS DE MANHÃ DIA 1 DE ABRIL//
+
+//OPERAÇÃO GET PARA OBTER EVENTS NA AGENDA SEGUNDO O DIA//
 
 app.get('/events', function (req, res) {    
 
@@ -53,6 +55,44 @@ app.get('/events', function (req, res) {
         res.status(500).send ({ message: "Error getting events", error: err})
     })
 })
+
+
+// CONEXÃO À DATABSE 'LOGIN' E COLLETION USERS
+const userUri = "mongodb+srv://40230045:neura@neuraagendacultural.yqgw2ak.mongodb.net/LogIn?retryWrites=true&w=majority&appName=NeuraLogIn";
+
+const userConnection = mongoose.createConnection(userUri);
+
+userConnection.on('connected', () => {
+    console.log('Connected to MongoDB - LogIn');
+});
+
+userConnection.on('error', (err) => {
+    console.log('Error connecting to MongoDB - LogIn', err);
+});
+
+// MODELS E SCHEMAS DE USERS PARA LOGIN
+
+const userSchema = new mongoose.Schema({
+    firstName: String,
+    lastName: String,
+    username: String,
+    country: String,
+    city: String
+});
+
+const User = userConnection.model('User', userSchema);
+
+// OPERAÇÃO POST PARA ENVIAR DADOS PARA A BASE DE DADOS
+
+app.post('/users', (req, res) => {
+    const { firstName, lastName, username, country, city } = req.body;
+
+    const newUser = new User({ firstName, lastName, username, country, city });
+
+    newUser.save()
+        .then(() => res.status(201).send('Dados enviados com sucesso'))
+        .catch((err) => res.status(500).send('Erro ao salvar dados: ' + err));
+});
 
 
 app.listen(3000, function () {

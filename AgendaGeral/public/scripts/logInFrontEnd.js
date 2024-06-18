@@ -79,3 +79,41 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 });
+
+
+
+
+/*  ENVIAR DADOS DOS FORMULÁRIOS PARA O BACKEND + BASE DE DADOS */
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('articleForm');
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+  
+      const formData = {
+        firstName: document.getElementById('validationDefault01').value,
+        lastName: document.getElementById('validationDefault02').value,
+        username: document.getElementById('validationDefaultUsername').value,
+        country: document.getElementById('validationDefault03').value,
+        city: document.getElementById('validationDefault04').value
+      };
+  
+      try {
+        const response = await fetch('http://localhost:3000/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+  
+        if (response.ok) {
+          console.log('Dados enviados com sucesso');
+        } else {
+          console.error('Erro ao enviar dados');
+        }
+      } catch (error) {
+        console.error('Erro:', error);
+      }
+    });
+  });
