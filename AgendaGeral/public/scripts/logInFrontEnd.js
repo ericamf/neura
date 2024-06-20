@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 
-  // Função para fechar ambos os modais ao clicar no botão de fechar (X)
+  // Função para fechar ambos os modais ao clicar no botão de fechar
   closeButtons.forEach(button => {
       button.addEventListener('click', function () {
           modal1.style.display = 'none';
@@ -80,8 +80,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-
+  window.location.href = 'userBusiness.html';
+});
 
 /*  ENVIAR DADOS DOS FORMULÁRIOS PARA O BACKEND + BASE DE DADOS */
 

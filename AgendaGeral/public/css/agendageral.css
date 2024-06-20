@@ -515,6 +515,7 @@ background-color: #9F97CA;
 
 
 .buttonMonth{
+    text-transform: uppercase;
     line-height:2px;
     margin: 0px;
     min-width: 50px;
@@ -532,6 +533,7 @@ background-color: #9F97CA;
 
 }
 .buttonMonth:hover {
+    text-transform: uppercase;
     padding: 8px;
     border: none;
     border-top: 2px solid #424242;
@@ -546,7 +548,8 @@ background-color: #9F97CA;
     color:#FF6711;
 }
 
-.buttonMonth:focus {
+.buttonMonth.active {
+    text-transform: uppercase;
     padding: 8px;
     border: none;
     border-top: 2px solid #424242;

@@ -1,3 +1,5 @@
+const TODAY = new Date('April 01, 2024')
+
 /* ABERTURA MENU HABURGUER MOBILE */
 document.addEventListener('DOMContentLoaded', function () {
   const hamburgerMenu = document.getElementById('hamburger-menu');
@@ -88,6 +90,7 @@ const modaltime = document.getElementById('modal-time');
 const modalduration = document.getElementById('modal-duration');
 
 const DaysCarrouselContainer = document.getElementById('DaysCarrouselC');
+const MonthsContainer = document.getElementById("monthsContainer")
 
 
 //GETTING OS EVENTOS//
@@ -165,13 +168,80 @@ function getData(date) {
   })
 }
 
-function populateDays() {
-  for (let i = 0; i < 31; i++) {
+const months = [
+  "Janury",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September"
+]
+
+function onClickMonth(i, currentMonth) {
+  const allMonthButtons = document.getElementsByClassName("buttonMonth");
+  for(let a=0; a<allMonthButtons.length; a++) {
+    allMonthButtons[a].className = "col buttonMonth";
+  }
+
+  const monthButton = document.getElementsByClassName("buttonMonth")[i];
+  monthButton.className += " active"
+
+  populateDays(i+currentMonth)
+}
+
+function populateMonths() {
+
+  const currentMonth = TODAY.getMonth();
+
+  for (let i = 0; i < 6; i++) {
+    let buttonMonth = document.createElement('button');
+    buttonMonth.className = "col buttonMonth";
+    buttonMonth.innerHTML = `${months[i+currentMonth]}`;
+    buttonMonth.setAttribute('onClick', `onClickMonth(${i}, ${currentMonth})`)
+    //buttonDay.setAttribute('onClick', `getData('${months[i+currentMonth]} ${String(i+1).padStart(2, '0')}, 2024')`);
+    MonthsContainer.appendChild(buttonMonth);
+}
+}
+
+
+const daysWeek = [
+  "MON",
+  "TUE",
+  "WED",
+  "THU",
+  "FRI",
+  "SAT",
+  "SUN",
+]
+
+
+function populateDays(month) {
+
+  DaysCarrouselContainer.innerHTML = ""
+
+  let dayscounter = 0
+
+  const daysOfMonth = new Date(2024, month+1, 0).getDate()
+  console.log(daysOfMonth)
+
+  for (let i = 0; i < daysOfMonth; i++) {
     let buttonDay = document.createElement('button');
     buttonDay.className = "buttonDay";
-    buttonDay.innerHTML = `<h5 class="dayofmonthB">${i+1}</h5> <p class="dayofweekB"> MON </p>`;
-    buttonDay.setAttribute('onClick', `getData('April ${String(i+1).padStart(2, '0')}, 2024')`);
+    buttonDay.innerHTML = `<h5 class="dayofmonthB">${i+1}</h5> <p class="dayofweekB"> ${daysWeek[dayscounter]} </p>`;
+    buttonDay.setAttribute('onClick', `getData('${months[month]} ${String(i+1).padStart(2, '0')}, 2024')`);
     DaysCarrouselContainer.appendChild(buttonDay);
+    
+    if (dayscounter == daysWeek.length-1 ) {
+      dayscounter=0
+    }
+    else {
+      dayscounter = dayscounter+1
+    }
+    
+
 }
 }
 
@@ -192,7 +262,6 @@ function formatDate(date) {
   return new Intl.DateTimeFormat('en-US', options).format(date);
 }
 
-populateDays()
-
-const today = new Date('April 01, 2024')
-getData(formatDate(today))
+populateMonths()
+populateDays(TODAY.getMonth())
+getData(formatDate(TODAY))

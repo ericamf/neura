@@ -1,12 +1,16 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
+const multer = require('multer');
 const path = require('path');
 const app = express();
 
 
-app.use(express.static('public'));
+
+app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 const uri = "mongodb+srv://40230045:neura@neuraagendacultural.yqgw2ak.mongodb.net/Agenda?retryWrites=true&w=majority&appName=NeuraAgendaCultural";
 
@@ -17,6 +21,19 @@ mongoose.connect(uri)
 .catch(function (err) {
     console.log('Error connecting to MongoDB', err);
 });
+
+
+// Configurar Multer for file uploads
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'public/uploads/');
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + path.extname(file.originalname));
+    }
+});
+
+const upload = multer({ storage: storage });
 
 
 //MODELS E SCHEMAS DE EVENTS PARA AGENDA//
@@ -46,7 +63,11 @@ app.get('/events', function (req, res) {
         const dateTime = req.query.dateTime
 
         if(dateTime) {
-            querySet = querySet.filter((event) => new Date(event.dateTime.time).getDate() === new Date(dateTime).getDate())
+            querySet = querySet.filter((event) => { 
+                return new Date(event.dateTime.time).getDate() === new Date(dateTime).getDate() &&
+                new Date(event.dateTime.time).getMonth() === new Date(dateTime).getMonth() &&
+                new Date(event.dateTime.time).getFullYear() === new Date(dateTime).getFullYear()
+            })
         }
 
         res.send(querySet)
@@ -55,6 +76,32 @@ app.get('/events', function (req, res) {
         res.status(500).send ({ message: "Error getting events", error: err})
     })
 })
+
+
+
+// OPERAÇÃO POST PARA ADICIONAR UM EVENTO //
+app.post('/events', upload.single('image'), (req, res) => {
+    console.log('Dados recebidos no backend:', req.body);
+    const { category, title, subtitle1, subtitle2, dateTime, localInfo, eventInfo, datesInfo } = req.body;
+    const imagePath = req.file.path.replace('public\\', '');
+    console.log(imagePath)
+    const newEvent = new event({
+        category,
+        title,
+        subtitle1,
+        subtitle2,
+        dateTime: JSON.parse(dateTime), // Convertendo string para objeto
+        image: imagePath,
+        localInfo: JSON.parse(localInfo), // Convertendo string para objeto
+        eventInfo,
+        datesInfo: JSON.parse(datesInfo) // Convertendo string para objeto
+    })
+    
+    newEvent.save().then(() => res.status(201).send('Event added successfully'))
+        .catch((err) => res.status(500).send('Error saving event: ' + err));
+});
+
+
 
 
 // CONEXÃO À DATABSE 'LOGIN' E COLLETION USERS
