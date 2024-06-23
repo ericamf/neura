@@ -36,6 +36,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 
+
 //MODELS E SCHEMAS DE EVENTS PARA AGENDA//
 
 const eventSchema = new mongoose.Schema({
@@ -78,7 +79,6 @@ app.get('/events', function (req, res) {
 })
 
 
-
 // OPERAÇÃO POST PARA ADICIONAR UM EVENTO //
 app.post('/events', upload.single('image'), (req, res) => {
     console.log('Dados recebidos no backend:', req.body);
@@ -100,6 +100,7 @@ app.post('/events', upload.single('image'), (req, res) => {
     newEvent.save().then(() => res.status(201).send('Event added successfully'))
         .catch((err) => res.status(500).send('Error saving event: ' + err));
 });
+
 
 
 
@@ -146,3 +147,45 @@ app.listen(3000, function () {
     console.log('Server running on http://localhost:3000');
 });
 
+
+
+
+// CONEXÃO À DATABSE 'HOME' E COLLETION CARDS
+const cardUri = "mongodb+srv://40230045:neura@neuraagendacultural.yqgw2ak.mongodb.net/HomePage?retryWrites=true&w=majority&appName=NeuraHomePage";
+
+const cardConnection = mongoose.createConnection(cardUri);
+
+cardConnection.on('connected', () => {
+    console.log('Connected to MongoDB - HomePage');
+});
+
+cardConnection.on('error', (err) => {
+    console.log('Error connecting to MongoDB - HomePage', err);
+});
+
+// MODELS E SCHEMAS DE CARDS NA HOMEPAGE
+const cardSchema = new mongoose.Schema({
+    category: String,
+    title: String,
+    subtitle1: String,
+    subtitle2: String,
+    dateTime: Object,
+    image: String,
+    localInfo: Object,
+    eventInfo: String,
+    datesInfo: Object
+});
+
+const card = cardConnection.model('Card', cardSchema);
+
+// OPERAÇÃO GET PARA RETORNAR OS CARDS PARA TODAY E TOMORROW NA HOMEPAGE
+
+app.get('/cards', function(req, res){
+    card.find()
+    .then(function(cards){
+        res.send(cards);
+    })
+    .catch(function (err){
+        res.status(500).send({ message: "Error getting cards", error: err });
+    });
+});

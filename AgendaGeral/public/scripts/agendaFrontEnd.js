@@ -168,6 +168,9 @@ function getData(date) {
   })
 }
 
+
+/*FUNÇÕES PARA FILTRAR POR DIA E MÊS + OS DIAS DA SEMANA NOS BOTOÕES*/
+
 const months = [
   "Janury",
   "February",

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eneura_updates</title>
+
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/updates.css">
+    <link rel="stylesheet" type="text/css" href="./css/panchang.css">
+
+</head>
+<body>
+
+
+<header>
+    <div class="menu fixed-top mb-3">
+      <div class="containerM">
+      <div class="menu-container d-flex justify-content-between align-items-center">
+
+         <div class="cityAndArrow1">
+          <div class="dropdown">
+            <a href="#" class="dropbtn">PORTO</a>
+            <div class="dropdown-content">
+              <a href="#">LISBOA</a>
+              <a href="#">MADRID</a>
+              <a href="#">PARIS</a>
+            </div>
+            <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+          </div>
+         </div>
+
+          <div class="center-menu d-none d-md-flex">
+              <a href="index.html">AGENDA</a>
+              <a href="#">INFO</a>
+              <a href="home.html"><img src="imagesLogIn\LOGO_grey.svg" alt="" width="120" height=""></a>
+              <a href="updates.html">UPDATES</a>
+              <a href="login.html">LOG IN</a>
+          </div>
+
+
+            <div class="LanguageAndArrow d-flex align-items-center">
+              <div class="lupa-container">
+                <img src="imagesLogIn/lupa_grey.svg" class="search-icon" id="search-icon" alt="Lupa" width="22" height="22" style="cursor: pointer;">
+                <input type="text" class="search-input" id="search-input" placeholder="Search...">
+              </div>
+            <div class="dropdown ms-2">
+              <a href="#" class="dropbtn">EN</a>
+              <div class="dropdown-content">
+                <a href="#">PT</a>
+              </div>
+              <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+            </div>
+           </div>
+      </div>
+      <div class="linha"></div>
+      </div>
+    </div>
+
+
+    <div class="container-mobile">
+      <nav class="navbar-mobile fixed-top">
+          <div class="logo">
+            <a href="home.html"><img src="imagesLogIn/LOGO_grey.svg" alt=""></a>
+          </div>
+  
+          <div class="icons">
+            <div class="lupa-container">
+              <img src="imagesLogIn/lupa_grey.svg" class="search-icon" id="search-iconM" alt="Lupa" width="22" height="22" style="cursor: pointer;">
+              <input type="text" class="search-input" id="search-inputM" placeholder="Search...">
+            </div>
+              <div class="log in">
+                <a href="login.html"><img src="imagesLogIn/pessoa_grey.svg" class="search-icon" alt="Lupa" width="22" height="22"></a>
+              </div>
+  
+              <div class="hamburger" id="hamburger-menu">
+                  <div class="bar rounded-2"></div>
+                  <div class="bar rounded-2"></div>
+                  <div class="bar rounded-2"></div>
+              </div>
+          </div>
+      </nav>
+  
+      <div class="sidebar" id="sidebar">
+          <div class="sidebar-content">
+              <p></p>
+          </div>
+          <div class="main-content hidden" id="main-content">
+            <div class="menu-mobile">
+              <div class="menumobileA">
+                <a href="index.html">AGENDA</a>
+                <a href="#about">INFO</a>
+                <a href="updates.html">UPDATES</a>
+              </div>
+
+
+              <div class="otherInfoMobile"> 
+                <div class="newslettermobile">
+                   <button> NEWSLETTER </button>
+                </div>
+
+                <div class="cityAndArrow1">
+                  <div class="dropdown">
+                    <a href="#" class="dropbtn">PORTO</a>
+                    <div class="dropdown-content">
+                      <a href="#">LISBOA</a>
+                      <a href="#">MADRID</a>
+                      <a href="#">PARIS</a>
+                    </div>
+                    <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+                  </div>
+                 </div>
+
+                <div class="dropdown">
+                  <a href="#" class="dropbtn">EN</a>
+                  <div class="dropdown-content">
+                    <a href="#">PT</a>
+                  </div>
+                  <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+                </div>
+                
+                <a class="socialmedia-menu" href="#">
+                    <img src="imagesLogIn/INSTAGRAM_M_MOBILE.svg" alt="">
+                    <img src="imagesLogIn/TIKTOK_M_MOBILE.svg" alt="">
+                    <img src="imagesLogIn/X_M_MOBILE.svg" alt="">
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>  <!--div do containerMobile-->
+</header>
+
+<main class="mt-5">
+    <section class="slider-container">
+        <div class="slider-images">
+            <!--Animation Food-->
+            <div class="slider-img">
+                <img src="Imagens/imagensEventos/1718897189367.jpg" alt="1" />
+                <h1>FOOD</h1>
+                <div class="details">
+
+                    <div class="cards"> 
+                    <!--CARD 1-->
+                    <div class="containerEventDateChange">
+                        <div class="image-container1">
+                            <img src="images/pexels-photo-787961.webp">
+                        </div>
+                        <div class="label-container1">
+                            <div class="header1">
+                                <div class="content-zone">
+                                    <p>DATE CHANGE</p>
+                                </div>
+                            </div>
+                            <div class="body-card1">
+                                <h5>PARTY</h5>
+                                <p>Today's event has been changed to a new date.</p>
+                                <p>27/04</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 2-->
+                    <div class="containerEventDateChange">
+                        <div class="image-container1">
+                            <img src="images/pexels-photo-787961.webp">
+                        </div>
+                        <div class="label-container1">
+                            <div class="header1">
+                                <div class="content-zone">
+                                    <p>DATE CHANGE</p>
+                                </div>
+                            </div>
+                            <div class="body-card1">
+                                <h5>PARTY</h5>
+                                <p>Today's event has been changed to a new date.</p>
+                                <p>27/04</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 3-->
+                    <div class="containerEventDateChange">
+                        <div class="image-container1">
+                            <img src="images/pexels-photo-787961.webp">
+                        </div>
+                        <div class="label-container1">
+                            <div class="header1">
+                                <div class="content-zone">
+                                    <p>DATE CHANGE</p>
+                                </div>
+                            </div>
+                            <div class="body-card1">
+                                <h5>PARTY</h5>
+                                <p>Today's event has been changed to a new date.</p>
+                                <p>27/04</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 4-->
+                    <div class="containerEventDateChange">
+                        <div class="image-container1">
+                            <img src="images/pexels-photo-787961.webp">
+                        </div>
+                        <div class="label-container1">
+                            <div class="header1">
+                                <div class="content-zone">
+                                    <p>DATE CHANGE</p>
+                                </div>
+                            </div>
+                            <div class="body-card1">
+                                <h5>PARTY</h5>
+                                <p>Today's event has been changed to a new date.</p>
+                                <p>27/04</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="titleAnimation"><h2>FOOD</h2></div>
+                </div>
+            </div>
+
+            <!--Animation Sports-->
+            <div class="slider-img">
+                <img src="images/pexels-photo-375892.jpeg" alt="2" />
+                <h1>SPORTS</h1>
+                <div class="details">
+                    <!--CARD 1-->
+                    <div class="containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                    <button class="see-more-button">SEE MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 2-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                    <button class="see-more-button">SEE MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 3-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                    <button class="see-more-button">SEE MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 4-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                    <button class="see-more-button">SEE MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>SPORTS</h2>
+                </div>
+            </div>
+
+            <!--Animation MUSIC-->
+            <div class="slider-img">
+                <img src="Imagens/imagensEventos/1718897189367.jpg" alt="1" />
+                <h1>MUSIC</h1>
+                <div class="details">
+
+                    <div class="cards"> 
+                    <!--CARD 1-->
+                    <div class="containerEventDateChange">
+                        <div class="image-container1">
+                            <img src="images/pexels-photo-787961.webp">
+                        </div>
+                        <div class="label-container1">
+                            <div class="header1">
+                                <div class="content-zone">
+                                    <p>DATE CHANGE</p>
+                                </div>
+                            </div>
+                            <div class="body-card1">
+                                <h5>PARTY</h5>
+                                <p>Today's event has been changed to a new date.</p>
+                                <p>27/04</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 2-->
+                    <div class="containerEventDateChange">
+                        <div class="image-container1">
+                            <img src="images/pexels-photo-787961.webp">
+                        </div>
+                        <div class="label-container1">
+                            <div class="header1">
+                                <div class="content-zone">
+                                    <p>DATE CHANGE</p>
+                                </div>
+                            </div>
+                            <div class="body-card1">
+                                <h5>PARTY</h5>
+                                <p>Today's event has been changed to a new date.</p>
+                                <p>27/04</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 3-->
+                    <div class="containerEventDateChange">
+                        <div class="image-container1">
+                            <img src="images/pexels-photo-787961.webp">
+                        </div>
+                        <div class="label-container1">
+                            <div class="header1">
+                                <div class="content-zone">
+                                    <p>DATE CHANGE</p>
+                                </div>
+                            </div>
+                            <div class="body-card1">
+                                <h5>PARTY</h5>
+                                <p>Today's event has been changed to a new date.</p>
+                                <p>27/04</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 4-->
+                    <div class="containerEventDateChange">
+                        <div class="image-container1">
+                            <img src="images/pexels-photo-787961.webp">
+                        </div>
+                        <div class="label-container1">
+                            <div class="header1">
+                                <div class="content-zone">
+                                    <p>DATE CHANGE</p>
+                                </div>
+                            </div>
+                            <div class="body-card1">
+                                <h5>PARTY</h5>
+                                <p>Today's event has been changed to a new date.</p>
+                                <p>27/04</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="titleAnimation"><h2>MUSIC</h2></div>
+                </div>
+            </div>
+
+            <!--Animation ART-->
+            <div class="slider-img">
+                <img src="images/pexels-photo-375892.jpeg" alt="2" />
+                <h1>ART</h1>
+                <div class="details">
+                    <!--CARD 1-->
+                    <div class="containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 2-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 3-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 4-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>ART</h2>
+                </div>
+            </div>
+
+            <!--Animation SHOWS-->
+            <div class="slider-img">
+                <img src="images/pexels-photo-375892.jpeg" alt="2" />
+                <h1>SHOWS</h1>
+                <div class="details">
+                    <!--CARD 1-->
+                    <div class="containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 2-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 3-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 4-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>SHOWS</h2>
+                </div>
+            </div>
+
+            <!--Animation DIDACTIC-->
+            <div class="slider-img">
+                <img src="images/pexels-photo-375892.jpeg" alt="2" />
+                <h1>DIDACTIC</h1>
+                <div class="details">
+                    <!--CARD 1-->
+                    <div class="containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 2-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 3-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CARD 4-->
+                    <div class="card containerEventCancel">
+                        <div class="image-container2">
+                            <img src="images/pexels-photo-375892.jpeg">
+                        </div>
+                        <div class="label-container2">
+                            <div class="body-card2">
+                                <h5>FLEAMARKET</h5>
+                                <p>Today's event has been cancelled and will be rescheduled for a new date.</p>
+                            </div>
+                            <div class="header2">
+                                <div class="content-zone">
+                                    <p>CANCELLED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>DIDACTIC</h2>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="scripts/jQuery.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+    $(".slider-img").on("click", function (e) {
+        e.stopPropagation(); // Prevents the click event from bubbling up to the document
+        $(".slider-img").removeClass("active");
+        $(".details").removeClass("active");
+        $(".slider-img img").removeClass("gray-overlay");
+
+        $(this).addClass("active");
+        $(".details", this).addClass("active"); // Add active class to details
+        $(".slider-img img", this).addClass("gray-overlay"); // Add gray overlay to the image
+    });
+
+    $(document).on("click", function () {
+        $(".slider-img").removeClass("active");
+        $(".details").removeClass("active"); // Remove active class from all details
+        $(".slider-img img").removeClass("gray-overlay"); // Remove gray overlay from all images
+    });
+
+    $(".slider-img").on("click", function (e) {
+        e.stopPropagation();
+    });
+});
+
+    </script>
+</main>
+
+
+
+<footer>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid footer">
+          <a class="navbar-brand neurafooter ms-5" href="#"><img src="imagesLogIn/LOGO_FOOTER.svg" alt="" width="117" height="17"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-4 me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"> <img src="imagesLogIn/instaFooter.svg" alt="" width="15" height="15"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img src="imagesLogIn/Vector.svg" alt="" width="15" height="14"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img src="imagesLogIn/twitter%20Footer.svg" alt="" width="15" height="15"></a>
+              </li>
+            </ul>
+            <form class="d-flex " role="search">
+              <div class="politicas me-5 mt-2">
+                <h6>Política de Privacidade</h6>
+              </div>
+              <div class="politicas me-5 mt-2">
+                <h6>Política de Cookies</h6>
+              </div>
+              <div class="politicas mt-2">
+                <h6>Política de Termos e Condições</h6>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+</footer>
+
+
+<script src="./scripts/updates.js"></script>
+
+</body>
+</html>
