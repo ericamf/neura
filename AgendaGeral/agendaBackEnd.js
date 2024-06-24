@@ -54,29 +54,35 @@ const eventSchema = new mongoose.Schema({
 const event = mongoose.model('Event', eventSchema);
 
 
-//OPERAÇÃO GET PARA OBTER EVENTS NA AGENDA SEGUNDO O DIA//
+//OPERAÇÃO GET PARA OBTER EVENTS NA AGENDA SEGUNDO O DIA 
+//+ EVENTOS FILTRADOS POR SUBTITLE PARA CONTA DE UTILIZADOR
 
-app.get('/events', function (req, res) {    
+app.get('/events', function (req, res) {
+    let query = {};
 
-    event.find().then(function (events) {
+    if (req.query.subtitle1) {
+        query.subtitle1 = req.query.subtitle1;
+    }
+
+    event.find(query).then(function (events) {
         let querySet = events;
 
-        const dateTime = req.query.dateTime
+        const dateTime = req.query.dateTime;
 
-        if(dateTime) {
-            querySet = querySet.filter((event) => { 
+        if (dateTime) {
+            querySet = querySet.filter((event) => {
                 return new Date(event.dateTime.time).getDate() === new Date(dateTime).getDate() &&
-                new Date(event.dateTime.time).getMonth() === new Date(dateTime).getMonth() &&
-                new Date(event.dateTime.time).getFullYear() === new Date(dateTime).getFullYear()
-            })
+                    new Date(event.dateTime.time).getMonth() === new Date(dateTime).getMonth() &&
+                    new Date(event.dateTime.time).getFullYear() === new Date(dateTime).getFullYear();
+            });
         }
 
-        res.send(querySet)
+        res.send(querySet);
     })
-    .catch(function(err){
-        res.status(500).send ({ message: "Error getting events", error: err})
-    })
-})
+    .catch(function (err) {
+        res.status(500).send({ message: "Error getting events", error: err });
+    });
+});
 
 
 // OPERAÇÃO POST PARA ADICIONAR UM EVENTO //
@@ -187,5 +193,20 @@ app.get('/cards', function(req, res){
     })
     .catch(function (err){
         res.status(500).send({ message: "Error getting cards", error: err });
+    });
+});
+
+
+//OPERAÇÃO DELETE PARA APAGAR EVENTOS COLLECTION EVENTS MAS NÃO NA PAGINA AGENDA MAS SIM NA PAGINA DE ADMNISTRADOR
+// Rota para deletar um evento
+app.delete('/events/:id', function (req, res) {
+    const eventId = req.params.id;
+    console.log('Deleting event with id:', eventId);
+
+    event.findByIdAndDelete(eventId)
+    .then(() => res.status(200).send({ message: 'Event deleted successfully' }))
+    .catch(err => {
+        console.error('Error deleting event:', err);
+        res.status(500).send({ message: 'Error deleting event', error: err });
     });
 });

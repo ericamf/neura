@@ -45,3 +45,165 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   });
 });
+
+
+//MODAL
+// Get the modal
+var modal = document.getElementById("myModal");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+const modalTitle = document.getElementById('modal-title');
+const modallocalName = document.getElementById('modal-localName');
+const modallocalSubname = document.getElementById('modal-localSubname');
+const modalemail = document.getElementById('modal-email');
+const modalcontact = document.getElementById('modal-contact');
+const modaleventInfo = document.getElementById('modal-eventInfo');
+const modalImage = document.getElementById('modal-image');
+const modaldate1 = document.getElementById('modal-date1');
+const modaldate2 = document.getElementById('modal-date2');
+const modaltime = document.getElementById('modal-time');
+const modalduration = document.getElementById('modal-duration');
+
+//+ POP UP DELETE
+const confirmDeletePopup = document.getElementById('confirmDeletePopup');
+const closePopup = document.getElementById('closePopup');
+const confirmDeleteButton = document.getElementById('confirmDeleteButton');
+const cancelDeleteButton = document.getElementById('cancelDeleteButton');
+
+let currentEventId = null;
+let currentCardElement = null;
+
+function showPopup(eventId, cardElement) {
+    currentEventId = eventId;
+    currentCardElement = cardElement;
+    confirmDeletePopup.style.display = "block";
+}
+
+function hidePopup() {
+    confirmDeletePopup.style.display = "none";
+}
+
+closePopup.onclick = function() {
+    hidePopup();
+}
+
+cancelDeleteButton.onclick = function() {
+    hidePopup();
+}
+
+window.onclick = function(event) {
+    if (event.target == confirmDeletePopup) {
+        hidePopup();
+    }
+}
+
+confirmDeleteButton.onclick = function() {
+    if (currentEventId && currentCardElement) {
+        deleteEvent(currentEventId, currentCardElement);
+        hidePopup();
+    }
+}
+
+
+
+function agendaEvents(events) {
+    const myContainer = document.getElementById('conjunto');
+    myContainer.innerHTML = ''; 
+
+    events.forEach((event) => {
+        const eventTime = new Date(event.dateTime.time);
+
+        const cardElement = document.createElement('div');
+        cardElement.className = "card";
+        cardElement.innerHTML = `
+        <div class="card mr-5" style="width: 18rem;" id="btn">
+            <img src="${event.image}" class="card-img-top" alt="...">
+            <div class="cardtextarrow">
+                <div class="card-body">
+                    <h5 class="card-title">${event.title}</h5>
+                    <p class="card-text">${event.subtitle1} <br> ${eventTime.getDate()}/${eventTime.getMonth() + 1} | ${eventTime.getHours()}H${eventTime.getMinutes()}</p>
+                </div>
+                <div class="arrowcard">
+                    <div>
+                        <img src="images/user (5).svg" class="btn" alt="A" height="45">
+                        <img src="images/user (1).svg" class="btn" alt="A" height="45">
+                    </div>
+                    <div>
+                        <button class="delete" data-id="${event._id}">
+                            <img src="images/user (2).svg" class="btn3" alt="A" width="30" height="30">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+
+        myContainer.appendChild(cardElement);
+
+        //EVENT LISTENER PARA ABRIR MODAL NO CARD
+        cardElement.addEventListener('click', () => {
+                modal.style.display = "flex";
+
+
+                modalTitle.innerHTML = events[i].title;
+                modalImage.src = events[i].image;
+                modallocalName.innerHTML = events[i].localInfo.localName;
+                modallocalSubname.innerHTML = events[i].localInfo.localSubname;
+                modalemail.innerHTML = events[i].localInfo.email;
+                modalcontact.innerHTML = events[i].localInfo.contact;
+                modaleventInfo.innerHTML = events[i].eventInfo;
+                modaldate1.innerHTML = events[i].datesInfo.date1;
+                modaldate2.innerHTML = events[i].datesInfo.date2;
+                modaltime.innerHTML = events[i].dateTime.time;
+                modalduration.innerHTML = events[i].dateTime.duration;
+            });
+
+        //EVENT LISTENER PARA ABRIL POP-UP NO BOTAO DELETE
+        const deleteButton = cardElement.querySelector('.delete');
+        deleteButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evitar que outros event listeners sejam acionados
+            const eventId = e.target.closest('button').dataset.id;
+            showPopup(eventId, cardElement);
+        });
+    });
+}
+
+function deleteEvent(eventId, cardElement) {
+    fetch(`http://localhost:3000/events/${eventId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (response.ok) {
+            cardElement.remove(); // Remover o elemento do DOM
+        } else {
+            console.error('Failed to delete event');
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+function getData() {
+    const subtitle1 = 'HardClub';
+    fetch(`http://localhost:3000/events?subtitle1=${subtitle1}`).then(function(response) {
+        return response.json();
+    })
+    .then(function(events) {
+        agendaEvents(events);
+    })
+    .catch(function(error) {
+        console.error('Error:', error);
+    });
+}
+
+getData();

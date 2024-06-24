@@ -420,6 +420,30 @@ ul{
     background-color: #9F97CA;
 }
 
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 250px;
+    align-self: center;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: #FF6711;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.popup.show {
+    display: block;
+}
+  
+
 footer{
     background-color: #c3c3c3;
     width: 100%;

@@ -48,9 +48,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //ENVIAR UM EVENTO CRIADO ATRAVÉS DO FORMULARIO
+// + POP UP DE EVENTO ADICIONADO
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('eventForm');
+    const popup = document.getElementById('popup');
+
     form.addEventListener('submit', async function (event) {
         event.preventDefault();
 
@@ -84,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (response.ok) {
                 console.log('Event added successfully');
+                form.reset(); // Limpar o formulário
+                showPopup(); // Mostrar o pop-up
             } else {
                 console.error('Error adding event');
             }
@@ -91,4 +96,11 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error:', error);
         }
     });
+
+    function showPopup() {
+        popup.classList.add('show');
+        setTimeout(() => {
+            popup.classList.remove('show');
+        }, 3000); // O pop-up será exibido por 3 segundos
+    }
 });

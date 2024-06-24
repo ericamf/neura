@@ -14,7 +14,105 @@
  
 </head>
 <body>
- 
+
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content  ">
+    <p>
+        <div class="containerevent m-0 rounded-3">
+            <div class="container m-0 ">
+              
+               <div class="buttonClose row justify-content-end">
+                   <div class="CLOSE col-1">
+                       <button class="close mt-3"><img src=".\Imagens\Modal\Group 104.svg" alt="" width="40" height="30"></button>
+                   </div>
+               </div>
+       
+       
+               <div class="event row p-3">
+                 <div class="eventpart1 col-12 col-md-6">
+       
+                   <div class="title mb-3" id="modal-title">
+                       X-TENSE CONCERT
+                   </div>
+                   <div class="imageEventX">
+                       <img src="Imagens\imagensEventos\evento 5.jpg" id="modal-image" class="rounded-3" alt=" width="" height="">
+                   </div>
+       
+       
+                   <div class="buttonsGoandTickets ">
+                       <div>
+                          <button class="button1 rounded-2">
+                            <img src=".\Imagens\Modal\Group 101.svg" alt="" width="40" height="47">
+                            <span class="button-text">I'M GOING</span> 
+                          </button>
+                      </div>
+                      <div>
+                          <button class="button1 rounded-2 ms-1">
+                            <img src=".\Imagens\Modal\Group 102.svg" alt="" width="40" height="47">
+                            <span class="button-text">SAVE THIS EVENT</span> 
+                          </button>
+                       </div>
+                       <div>
+                           <button class="goTickets rounded-3 ms-3"> GO FOR YOUR TICKETS </button>
+                       </div>
+                   </div>
+       
+                 </div>
+       
+                 <div class="eventpart2 col-12 col-md-6">
+                   <div class="infoAndButtonsViews">
+                       <div class="info">
+                           <p id="modal-time">21H</p>  
+                           <p class="ms-3" id="modal-duration">DURAÇÃO | 2H</p>
+                       </div>
+                       <div class="buttonsviews">
+                           <img src=".\Imagens\Modal\Group 114.svg" alt="" width="45" height="35">
+                           <img src=".\Imagens\Modal\Group 113.svg" class="ms-2" alt="" width="45" height="35">
+                       </div>
+                   </div>
+       
+       
+                   <div class="textevent">
+                       <h3 id="modal-localName">Hardclub</h3>
+                       <p id="modal-localSubname"> Praça do Infante D. Henrique, Porto </p>
+                         <div class="contactsEventText">
+                            <p id="modal-email">geral@hardclubporto.com </p>                    
+                            <p id="modal-contact">(+351) 220 101 186</p> 
+                         </div>
+                   </div>
+                   <div class="textevent2 mt-2" id="modal-eventInfo">
+                       <p id="modal-eventInfo">X-TENSE (ou Pablo) apresenta no Porto o seu novo concerto P DE PABLITO. O ano de 2019 foi o muito produtivo para o rapper da Pontinha com o lançamento dos 
+                       singles "Asi" , "Bolero", "Hambre", "Yolanda" e "P de Pablito", que chegaram ao Top 5 do Youtube; com a sua estreia no palco LG no MEO SUDOESTE e os inúmeros 
+                       concertos que deu pelo país.</p>
+                   </div>
+                   <div class="moredates mt-5">
+                       <h4>MORE DATES</h4>
+                       <p id="modal-date1">FRIDAY 26/04 | Lisbon</p>
+                       <p id="modal-date2">SATURDAY 27/04 | Lisbon</p>
+                   </div>
+                 </div>
+               </div>
+               
+            </div>
+           </div>       
+    </p>
+  </div>
+
+</div>
+
+   <!-- Confirmation Popup -->
+   <div id="confirmDeletePopup" class="popup">
+    <div class="popup-content">
+        <span class="close-popup" id="closePopup">&times;</span>
+        <p>ARE YOU SURE YOU WANT TO DELETE THIS EVENT?</p>
+        <button id="confirmDeleteButton">yes</button>
+        <button id="cancelDeleteButton">go back</button>
+    </div>
+</div>
+
     <header>
         <div class="menu fixed-top mb-3">
             <div class="containerM">
@@ -156,7 +254,7 @@
               </div>
               <div class="LogOut">
                 <div class="buttonLogOUT"> <button class="logout"><a href="login.html"> log out</a></button></div>
-                <div class="Definitions"><a href="#"><button>definitions</button></a></div>
+                <div class="Definitions"><a href="#"><button class="buttonsDefi">definitions</button></a></div>
               </div>
           </div>
           <div class="body">
@@ -189,94 +287,13 @@
                   <p>MY EVENTS</p>
               </div>
               <div class="botoes  col">
-              <div class="manageEvents "><a href="#"><button>manage events</button></a></div>
-              <div class="addEvents"><a href="userAddEvents.html"><button>add events</button></a></div>
+              <div class="manageEvents "><a href="#"><button class="buttonsBus">manage events</button></a></div>
+              <div class="addEvents"><a href="userAddEvents.html"><button class="buttonsBus">add events</button></a></div>
             </div>
  
    
    
-            <div class="conjunto1">
-   
-              <div class="card mr-5" style="width: 18rem;">
-                <img src="imagesLogIn/User's/userevent3.jpg" class="card-img-top" alt="...">
-                <div class="cardtextarrow">
-                  <div class="card-body">
-                  <h5 class="card-title">MANUEL ANGEL</h5>
-                  <p class="card-text">Hard Club Sala 2 <br> 21/06 | 21H</p>
-                  </div>
-                  <div class="arrowcard">
-                  <div>
-                    <img src="images/user (5).svg" href="#" class="btn" alt="A" height="45">
-                    <img src="images/user (1).svg" href="#" class="btn" alt="A" height="45">
-                  </div>
-                  <div>
-                    <button class="delete"><img src="images/user (2).svg" href="#" class="btn3" alt="A" width="30" height="30"></button>
-                  </div>
-                  </div>
-                </div>
-              </div>
-   
-   
-                <div class="card mr-5" style="width: 18rem;">
-                    <img src="imagesLogIn/User's/userevent2.jpg" class="card-img-top" alt="..." class="img-fluid">
-                    <div class="cardtextarrow">
-                    <div class="card-body">
-                      <h5 class="card-title">OVELHATRAX TAKEOVER</h5>
-                      <p class="card-text">Hard Club<br> 22/06 | 1h00</p>
-                    </div>
-                    <div class="arrowcard">
-                      <div>
-                        <img src="images/user (3).svg" href="#" class="btn" alt="A" height="45">
-                        <img src="images/user (9).svg" href="#" class="btn" alt="A" height="45">
-                      </div>
-                      <div>
-                        <button class="delete"><img src="images/user (2).svg" href="#" class="btn3" alt="A" width="30" height="30"></button>
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-   
-   
-                  <div class="card mr-5" style="width: 18rem;">
-                    <img src="imagesLogIn/User's/userevent1.webp" class="card-img-top" alt="...">
-                    <div class="cardtextarrow">
-                    <div class="card-body">
-                      <h5 class="card-title">ALL THEM WITCHES</h5>
-                      <p class="card-text">Hard Club<br> 24/06 | 21h00</p>
-                    </div>
-                    <div class="arrowcard">
-                      <div>
-                        <img src="images/user (4).svg" href="#" class="btn" alt="A" height="45">
-                        <img src="images/user (8).svg" href="#" class="btn" alt="A" height="45">
-                      </div>
-                      <div>
-                        <button class="delete"><img src="images/user (2).svg" href="#" class="btn3" alt="A" width="30" height="30"></button>
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-   
-   
-                  <div class="card" style="width: 18rem;">
-                    <img src="images\pexels-photo-167636.webp" class="card-img-top" alt="...">
-                    <div class="cardtextarrow">
-                    <div class="card-body">
-                      <h5 class="card-title">ORNATOS VIOLETA</h5>
-                      <p class="card-text">Hard Club<br> 29/06 | 21h30</p>
-                    </div>
-                    <div class="arrowcard">
-                      <div>
-                        <img src="images/user (6).svg" href="#" class="btn" alt="A" height="45">
-                        <img src="images/user (7).svg" href="#" class="btn" alt="A" height="45">
-                      </div>
-                      <div>
-                        <button class="delete"><img src="images/user (2).svg" href="#" class="btn3" alt="A" width="30" height="30"></button>
-                      </div>
-                      </div>
-                    </div>
-                  </div>
- 
-   
+            <div class="conjunto1" id="conjunto">
    
               </div>
             </div>

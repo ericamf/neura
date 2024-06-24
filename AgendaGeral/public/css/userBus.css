@@ -297,7 +297,40 @@ body {
  
 /*MAIN*/
  
- 
+/*barra do carroussel personalizada*/ 
+.conjunto1::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #CCCCCC;
+}
+.conjunto1::-webkit-scrollbar-button {
+   background-color: #FDB38B;
+}
+.conjunto1::-webkit-scrollbar-track {
+    background: #FDB38B;
+}
+.conjunto1l::-webkit-scrollbar-track-piece {
+    background: #FDB38B;
+}
+.conjunto1::-webkit-scrollbar-thumb {
+    background: #CECECE;
+    border-radius: 5px;
+}
+.conjunto1::-webkit-scrollbar-corner {
+    background: #FDB38B;
+    border-radius: 5px;
+}
+.conjunto1 textarea::-webkit-resizer {
+    border: 1px #FDB38B dashed;
+}
+
+.conjunto1::-webkit-scrollbar-button:start {
+    display: none;
+}
+.conjunto1::-webkit-scrollbar-button:end {
+    display: none;
+}
+
 .main{
    
     height: 100%;
@@ -307,7 +340,6 @@ body {
     align-items: center;
     justify-content: center;
 }
- 
  
  
 .containerEvent {
@@ -546,8 +578,6 @@ body {
     margin: 12px;
 }
  
- 
- 
 .content-container{
     width: 30%;
     height: 98%;
@@ -555,9 +585,6 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 37px;
-   
-   
- 
 }
  
 .content-container a {
@@ -567,8 +594,38 @@ body {
     font-size: 15px;
     font-weight: 700;
 }
+
+.buttonsDefi{
+    width: 150px;
+    text-align: center;
+    border-radius: 6px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 2px;
+    border: 2px solid #FF6711;
+    background-color: #FF6711;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    color:#ffffff;
+    transition-duration: 0.4s;
+}
+
+.buttonsDefi:hover{
+    background-color: #9F97CA;
+    color: #ffffff;
+}
  
- button {
+.buttonsDefi:focus{
+    background-color: #ffffff;
+    color: #FF6711;
+    border: 2px solid #FF6711;
+}
+ 
+ .buttonsBus {
     border-radius: 6px;
     padding-left: 40px;
     padding-right: 40px;
@@ -586,17 +643,16 @@ body {
     transition-duration: 0.4s;
 }
  
-button:hover{
+.buttonsBus:hover{
     background-color: #9F97CA;
     color: #ffffff;
 }
  
-button:focus{
+.buttonsBus:focus{
     background-color: #ffffff;
     color: #FF6711;
     border: 2px solid #FF6711;
 }
- 
  
  
 .body{
@@ -632,13 +688,15 @@ button:focus{
 }
  
  
- 
 .conjunto1{
-    display: grid;
-    justify-content: space-between;
+    overflow: auto;
+    overflow-y: hidden;
     contain: content;
     display: flex;
     column-gap: 30px;
+    margin-right: 112px;
+    padding-bottom: 10px;
+    justify-content: space-between;
     z-index: 3;
 }
 .card {
@@ -646,7 +704,8 @@ button:focus{
     background-color: #D4D1E6;
     border-radius: 10px;
     border: 0px;
-    width: 300px;
+    width: 5rem !important;
+    min-width: 260px !important;
     contain: content;
     display: flex;
     column-gap: 30px;
@@ -688,12 +747,308 @@ button:focus{
  
 
 .arrowcard{
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-right: 5px;
 }
  
+/*MODAL */
+
+* CSS DO MODAL*/
+
+.modal {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* MODAL CONTENT */
+
+  #myBtn{
+    border: none;
+    background-color: #ffffff;
+  }
+
+
+  #myBtn > .header {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+
+.content-zone {
+    width: 43%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 28px;
+}
+
+.titlesEvent {
+    width: 100%;
+    height: 90%;
+    font-family: "Mulish";
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.titlesEvent > h1 {
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.titlesEvent > p {
+    margin-top: 15px;
+    line-height: 5px;
+}
+ .time{
+    font-weight: 700;
+ } 
+
+
+  .modal-content {
+    display:flex;
+    align-items: center;
+    background-color: #D9D5EA;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 95%;
+  }
+  
+  /* The Close Button */
+ .CLOSE{
+    text-align: end;
+    justify-content: end;
+ }
+
+  .close {
+    background-color: transparent;
+    border: none;
+    padding: 0%;
+    margin:0%;
+    padding-right: 15px;
+  }
+
+
+/* CSS DO MODAL EVENTO SINGULAR */
+
+body {
+    font-family: 'Mulish';
+    color: #424242, 
+}
+
+
+.title { text-decoration: solid;
+         font-weight: 700;
+         color: #424242;
+}
+
+
+.containerevent {
+    display: grid;
+    background-color: #D9D5EA;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin-bottom: 40px;
+}
+
+.imageEventX > img{
+    filter: grayscale(0%)
+}
+
+
+.buttonX {
+    background-color:#D9D5EA;
+    border: none; 
+}
+
+.buttonX :hover {
+    filter: invert(62%) sepia(85%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(60%);
+}
+
+
+.eventpart1{
+    contain: content;
+}
+
+.imageEventX{
+    width: 100% ;
+    height:330px ;
+    contain: content;
+}
+
+.imageEventX > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.buttonsGoandTickets{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 18px;
+    left: 5px;
+
+}
+
+.goTickets {
+    background-color: #FF6711;
+    border: none;
+    height: 45px;
+    width: 230px;
+    color: white;
+    font-family: 'Mulish';
+    font-weight: 800;
+    box-shadow: 0px 2px 4px #7c7c7c;
+}
+
+.goTickets:hover{
+    background-color: #9F97CA;
+}
+
+.goTickets:focus{
+    background-color: #9F97CA;
+    color: #424242;
+}
+
+
+.button1 {
+    border: none;
+    background-color: white;
+    padding: 0%;
+    height: 45px;
+    transition: width 1.5s ease-out;
+}
+
+.button1 > img{
+    display: block;
+}
+
+.button1:hover > img{
+    display: none;
+}
+
+.button1 > span {
+    overflow: hidden;
+    background-color: #ffffff;
+    font-family: 'Mulish';
+    font-size: 13px ;
+    font-weight: 700;
+    color: #FF6711;
+    display: none;
+}
+
+.button1:hover > span {
+    display: block;
+    padding:10px;
+}
+
+.button1:focus > img{
+    display: none;
+}
+
+.button1:focus > span {
+    display: block;
+    color: #9F97CA;
+    padding:10px;
+}
+
+h4{
+    color: #FF6711;
+    font-weight: 400;
+    font-size: 12px;
+    font-weight: 600;
+}
+.model-content > p{
+    font-size: 10px;
+}
+
+
+
+/*coluna direita- informaçao*/
+.eventpart2{
+ contain: content;
+}
+
+.infoAndButtonsViews{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between
+    
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info > p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.buttonsviews{
+    display: flex;
+}
+
+.textevent > p {
+    font-family: "Mulish";
+    font-size: 15px;
+    margin: 0;
+}
+
+.textevent > h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contactsEventText{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactsEventText > p {
+    font-size:15px;
+}
+
+.textevent2 > p {
+    font-size:15px;
+}
+
+.moredates > p {
+    font-size:11px;
+    margin: 0;
+}
+
+
+
+
+/*MEDIA + FOOTER*/
 @media (min-width: 910px) {
     .menu-mobile {
         display: flex;
@@ -784,9 +1139,7 @@ footer{
         text-align: center;
     }
  
-    button{
-        width: 200px;
-    }
+
 
     .LogOut{
         flex-direction: column;
@@ -951,3 +1304,65 @@ footer{
         row-gap: 20px;
        }
 }
+
+/*POP UP DELETE*/
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:rgba(255, 255, 255, 0.2)
+  }
+  
+  .popup-content {
+    color:#424242;
+    background-color: rgba(255, 255, 255);
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .close-popup {
+    color: #424242;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-popup:hover,
+  .close-popup:focus {
+    color: #FF6711;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .popup-content > button{
+    background-color: #9F97CA;
+    border: none;
+    color:white;
+    width: 115px;
+    height: 28px;
+    border-radius: 7px;
+    margin: 10px;
+  }
+  .popup-content > button:hover {
+    background-color: #FF6711;
+  }
+  .popup-content > button:active {
+    background-color: #424242;
+  }
+
+  .popup-content > p {
+    font-family: "mulish";
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 35px;
+  }
+  
