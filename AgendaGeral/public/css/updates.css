@@ -28,8 +28,8 @@ header {
     display: flex;
     justify-content: center;
     font-family: Panchang-Semibold;
-    z-index: 0 !important;
-    background-image:  bottom, rgba(208, 202, 226, 0.5) 0%, rgba(253, 179, 139, 0.5) 100%);
+    z-index: 1 !important;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .containerM {
@@ -320,8 +320,8 @@ header {
 }
 
 footer{
-    position: fixed;
-    bottom: 0%;
+    position: relative;
+    bottom: 0% !important;
     background-color: #c3c3c3;
     z-index: 0 !important;
     width: 100%;
@@ -379,6 +379,9 @@ footer{
 /* SWIPER */
 
 .slider-container {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 100%;
     height: 100vh;
     background-image: url('Images/bg-img.png');
@@ -388,6 +391,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 0;
 }
 
 .slider-images {
@@ -457,11 +461,11 @@ h1 {
 }
 
 .details.active {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    justify-items: center;
+    padding: 25px;
     column-gap: 5px;
 }
 
@@ -561,10 +565,6 @@ h1 {
     min-width: 29%;
     height: 330px;
 }
-.containerEventCancel {
-    min-width: 330px;
-    height: 310px;
-}
 
 .image-container1 {
     width: 240px;
@@ -580,19 +580,6 @@ h1 {
     height: 100%;
 }
 
-.image-container2 {
-    width: 298px;
-    height: 250px;
-    border-radius: 10px;
-    contain: content;
-    filter: grayscale(100%);
-}
-
-.image-container2>img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
 
 .label-container1 {
     width: 225px;
@@ -664,10 +651,34 @@ h1 {
 
 /*Card cancelled*/
 
-.label-container2 {
+.containerEventCancel {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    contain: content;
+    padding: 20px;
+    width: 70%;
+    height: 297px;
+}
+
+.image-container2 {
     width: 250px;
-    height: 70%;
-    transform: translateY(-12rem) translateX(-3rem);
+    height: 256px;
+    border-radius: 10px;
+    contain: content;
+    filter: grayscale(100%);
+}
+
+.image-container2>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.label-container2 {
+    width: 235px;
+    height: 80%;
+    transform: translateY(-8rem) translateX(-1rem);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%, 0 100%);
     border-radius: 10px;
     background-color: #424242;
@@ -686,6 +697,7 @@ h1 {
     font-size: 15px;
     text-align: left;
     width: 72%;
+    padding: 0%;
     transition: all 0.5s ease;
 }
 
@@ -695,7 +707,8 @@ h1 {
     color: #FF6711;
     font-family: 'Mulish';
     font-weight: 700;
-    text-align: left;
+    padding: 0%;
+    text-align: center;
     transition: all 0.5s ease;
 }
 
@@ -704,16 +717,45 @@ h1 {
     margin-top: 10px;
     font-family: 'Mulish';
     font-weight: 300;
-    text-align: left;
+    text-align: center;
+    padding: 0%;
     transition: all 0.5s ease;
 }
 
 .header2 {
+    text-align: center;
+    padding: 0%;
     height: 100px;
-    margin-top: 15px;
-    margin-left: -3px;
     width: 100%;
     display: flex;
     justify-content: center;
     transition: all 0.5s ease;
+}
+
+.content-zone2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Panchang-Semibold;
+    color: #FF6711;
+    font-size: 18px;
+    transition: all 0.5s ease;
+    margin-bottom: 5px;
+    flex-direction: column;
+}
+
+.content-zone2 p{
+    margin-bottom: 0%;
+}
+.see-more-button2{
+    font-family: "mulish";
+    margin-top: -11px;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #FFFF;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
 }

@@ -156,23 +156,23 @@ function agendaEvents(events) {
                 modal.style.display = "flex";
 
 
-                modalTitle.innerHTML = events[i].title;
-                modalImage.src = events[i].image;
-                modallocalName.innerHTML = events[i].localInfo.localName;
-                modallocalSubname.innerHTML = events[i].localInfo.localSubname;
-                modalemail.innerHTML = events[i].localInfo.email;
-                modalcontact.innerHTML = events[i].localInfo.contact;
-                modaleventInfo.innerHTML = events[i].eventInfo;
-                modaldate1.innerHTML = events[i].datesInfo.date1;
-                modaldate2.innerHTML = events[i].datesInfo.date2;
-                modaltime.innerHTML = events[i].dateTime.time;
-                modalduration.innerHTML = events[i].dateTime.duration;
+                modalTitle.innerHTML = event.title;
+                modalImage.src = event.image;
+                modallocalName.innerHTML = event.localInfo.localName;
+                modallocalSubname.innerHTML = event.localInfo.localSubname;
+                modalemail.innerHTML = event.localInfo.email;
+                modalcontact.innerHTML = event.localInfo.contact;
+                modaleventInfo.innerHTML = event.eventInfo;
+                modaldate1.innerHTML = event.datesInfo.date1;
+                modaldate2.innerHTML = event.datesInfo.date2;
+                modaltime.innerHTML = event.dateTime.time;
+                modalduration.innerHTML = event.dateTime.duration;
             });
 
         //EVENT LISTENER PARA ABRIL POP-UP NO BOTAO DELETE
         const deleteButton = cardElement.querySelector('.delete');
         deleteButton.addEventListener('click', (e) => {
-            e.stopPropagation(); // Evitar que outros event listeners sejam acionados
+            e.stopPropagation();
             const eventId = e.target.closest('button').dataset.id;
             showPopup(eventId, cardElement);
         });

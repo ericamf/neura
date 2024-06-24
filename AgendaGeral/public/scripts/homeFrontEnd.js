@@ -1,4 +1,4 @@
-/* ABERTURA MENU HABURGUER MOBILE */
+// ABERTURA MENU HAMBURGUER MOBILE 
 document.addEventListener('DOMContentLoaded', function () {
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const sidebar = document.getElementById('sidebar');
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-/*ABRIR LUPA*/
+//ABRIR LUPA
 document.addEventListener('DOMContentLoaded', function () {
     const searchIcon = document.getElementById('search-icon');
     const searchInput = document.getElementById('search-input');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/*ABRIR LUPAMOBILE*/
+//ABRIR LUPAMOBILE
 document.addEventListener('DOMContentLoaded', function () {
     const searchIconM = document.getElementById('search-iconM');
     const searchInputM = document.getElementById('search-inputM');
@@ -47,17 +47,35 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /*BOTAO DOS UPDATES*/
+  //BOTAO DOS UPDATES
   document.addEventListener('DOMContentLoaded', function () {
-    const labelContainer2 = document.querySelector('.label-container2');
-    const seeMoreButton = labelContainer2.querySelector('.see-more-button');
+    const labelContainers1 = document.querySelectorAll('.label-container1');
+    const labelContainers2 = document.querySelectorAll('.label-container2');
 
-    labelContainer2.addEventListener('mouseenter', function () {
-        seeMoreButton.style.display = 'block';
+    //Event listeners para os cards com classe .label-container1
+    labelContainers1.forEach(labelContainer => {
+        const seeMoreButton = labelContainer.querySelector('.see-more-button2');
+
+        labelContainer.addEventListener('mouseenter', function () {
+            seeMoreButton.style.display = 'block';
+        });
+
+        labelContainer.addEventListener('mouseleave', function () {
+            seeMoreButton.style.display = 'none';
+        });
     });
 
-    labelContainer2.addEventListener('mouseleave', function () {
-        seeMoreButton.style.display = 'none';
+    //Event listeners para os cards com classe .label-container2
+    labelContainers2.forEach(labelContainer => {
+        const seeMoreButton = labelContainer.querySelector('.see-more-button');
+
+        labelContainer.addEventListener('mouseenter', function () {
+            seeMoreButton.style.display = 'block';
+        });
+
+        labelContainer.addEventListener('mouseleave', function () {
+            seeMoreButton.style.display = 'none';
+        });
     });
 });
 
@@ -66,13 +84,13 @@ document.addEventListener('DOMContentLoaded', function () {
 //MODAL
 // Get the modal
 var modal = document.getElementById("myModal");
-// Get the <span> element that closes the modal
+// Variável que busca o botão de fechar
 var span = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
+// Fechar modal com o botão
 span.onclick = function() {
   modal.style.display = "none";
 }
-// When the user clicks anywhere outside of the modal, close it
+// Fechar modal clickando fora 
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
