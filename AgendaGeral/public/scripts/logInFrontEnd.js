@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error('Credenciais inválidas');
                 // Mostrar mensagem de erro no front-end
                 const errorMessage = document.createElement('p');
-                errorMessage.textContent = 'Credenciais inválidas. Por favor, tente novamente.';
+                errorMessage.textContent = 'Invalid credentials. Please try again.';
                 const errorDiv = document.getElementById('error-message');
                 errorDiv.innerHTML = ''; // Limpa mensagens de erro anteriores
                 errorDiv.appendChild(errorMessage);

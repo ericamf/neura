@@ -544,7 +544,29 @@ footer{
 }
 
 .error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px; /* Espaçamento superior para separar a mensagem do campo */
+
+    margin-top: 20px;
+    color:#424242;
+}
+
+.buttonLog{
+    width: 120px;
+    height: 25px;
+    background-color: #FF6711;
+    font-family: "mulish";
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttonLog:hover {
+    background-color: #9F97CA;
+    
+}
+
+.buttonLog:focus {
+    background-color: #424242;
+    
 }
