@@ -6,8 +6,6 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const app = express();
 
-
-
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -141,8 +139,9 @@ userSchema.methods.setPassword = async function(password) {
 };
 
 // VERIFICAR SENHA
-userSchema.methods.checkPassword = async function(password) {
-    return await bcrypt.compare(password, this.passwordHash);
+async function checkPassword(password, userPassword) {
+    console.log(password, userPassword)
+    return await bcrypt.compare(password, userPassword);
 };
 
 const User = userConnection.model('User', userSchema);
@@ -166,16 +165,15 @@ app.post('/users/register', async (req, res) => {
 // ROTA PARA AUTENTICAR USER (LOG IN)
 app.post('/users/login', async (req, res) => {
     const { username, password } = req.body;
-
     try {
         const user = await User.findOne({ username });
 
         if (!user) {
             return res.status(404).send('Usuário não encontrado');
         }
-
-        const isPasswordValid = await user.checkPassword(password);
-
+        
+        const isPasswordValid = await checkPassword(password, user.passwordHash);
+        console.log("projeto");
         if (!isPasswordValid) {
             return res.status(401).send('Senha incorreta');
         }

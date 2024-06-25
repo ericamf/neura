@@ -80,12 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  window.location.href = 'userBusiness.html';
-});
-
 // ENVIAR DADOS DOS FORMULÁRIOS PARA O BACKEND + BASE DE DADOS
 
 /*document.addEventListener('DOMContentLoaded', function () {
@@ -156,28 +150,22 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     });
 
     const loginForm = document.getElementById('loginForm');
-    loginForm.addEventListener('submit', async function (event) {
+    loginForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
         const formData = {
-            email: document.getElementById('validationDefault01S').value,
+            username: document.getElementById('validationDefault01S').value,
             password: document.getElementById('inputPassword').value
         };
 
-        try {
-            const response = await fetch('http://localhost:3000/users/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-
-            if (response.ok) {
-                console.log('Login realizado com sucesso');
-                // Redirecionar apenas se o login for bem-sucedido
-                window.location.href = 'userBusiness.html';
-            } else {
+        fetch('http://localhost:3000/users/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        }).then((response) => {
+            if(response.status === 401) {
                 console.error('Credenciais inválidas');
                 // Mostrar mensagem de erro no front-end
                 const errorMessage = document.createElement('p');
@@ -185,10 +173,14 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
                 const errorDiv = document.getElementById('error-message');
                 errorDiv.innerHTML = ''; // Limpa mensagens de erro anteriores
                 errorDiv.appendChild(errorMessage);
+            }else{
+                console.log('Login realizado com sucesso');
+                // Redirecionar apenas se o login for bem-sucedido
+                window.location.href = 'userBusiness.html';
             }
-        } catch (error) {
+        }).catch((error) => {
             console.error('Erro:', error);
-        }
+        }); 
     });
 });
 

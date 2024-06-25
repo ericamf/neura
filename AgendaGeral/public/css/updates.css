@@ -354,27 +354,6 @@ footer{
     display: none;
 }
 
-@media only screen and (max-width: 900px) {
-    footer {
-      display: none;
-    }
-
-    .container-mobile {
-        display: block;
-    }
-
-    .menu {
-        display: none;
-    }
-    
-    .btn1{
-        margin: 3px;
-    }
-
-    .btn2{
-        margin: 3px;
-    }
-}
 
 /* SWIPER */
 
@@ -490,7 +469,6 @@ h1 {
     justify-items: center;
     padding: 5px;
     column-gap: 5px;
-    height: 665px;
 }
 
 .card {
@@ -801,4 +779,39 @@ h1 {
     font-family: "panchang";
     font-size: 20px;
     color:#ffffff;   
+}
+
+@media only screen and (max-width: 900px) {
+    footer {
+      display: none;
+    }
+
+    .container-mobile {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+    
+    .btn1{
+        margin: 3px;
+    }
+
+    .btn2{
+        margin: 3px;
+    }
+    
+    .cards{
+        width: 100%;
+        row-gap: 2px;
+        padding-bottom: 0% !important;
+        display: grid;
+        grid-template-columns: 100%;
+        align-content: center;
+        justify-items: center;
+        padding: 5px;
+        column-gap: 5px;
+        height: auto;
+    }
 }
