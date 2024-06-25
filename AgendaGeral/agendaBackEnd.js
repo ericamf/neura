@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const multer = require('multer');
 const path = require('path');
+const bcrypt = require('bcrypt');
 const app = express();
 
 
@@ -113,46 +114,83 @@ app.post('/events', upload.single('image'), (req, res) => {
 
 // CONEXÃO À DATABSE 'LOGIN' E COLLETION USERS
 const userUri = "mongodb+srv://40230045:neura@neuraagendacultural.yqgw2ak.mongodb.net/LogIn?retryWrites=true&w=majority&appName=NeuraLogIn";
-
 const userConnection = mongoose.createConnection(userUri);
 
+
 userConnection.on('connected', () => {
-    console.log('Connected to MongoDB - LogIn');
+    console.log('Conectado ao MongoDB - Login');
 });
 
 userConnection.on('error', (err) => {
-    console.log('Error connecting to MongoDB - LogIn', err);
+    console.error('Erro ao conectar ao MongoDB - Login:', err);
 });
 
-// MODELS E SCHEMAS DE USERS PARA LOGIN
-
+// SCHEMA E MODEL DE USER
 const userSchema = new mongoose.Schema({
-    firstName: String,
-    lastName: String,
-    username: String,
+    username: { type: String, required: true, unique: true },
+    passwordHash: { type: String, required: true },
+    name: String,
     country: String,
     city: String
 });
 
+// DEFINIR SENHA COM BCRYPT
+userSchema.methods.setPassword = async function(password) {
+    const saltRounds = 10;
+    this.passwordHash = await bcrypt.hash(password, saltRounds);
+};
+
+// VERIFICAR SENHA
+userSchema.methods.checkPassword = async function(password) {
+    return await bcrypt.compare(password, this.passwordHash);
+};
+
 const User = userConnection.model('User', userSchema);
 
-// OPERAÇÃO POST PARA ENVIAR DADOS PARA A BASE DE DADOS
+// REGISTAR NOVO USER
+app.post('/users/register', async (req, res) => {
+    const { name, password, username, country, city } = req.body;
 
-app.post('/users', (req, res) => {
-    const { firstName, lastName, username, country, city } = req.body;
+    try {
+        const newUser = new User({ name, password, username, country, city });
+        await newUser.setPassword(password); // DEFINIR SENHA COM BCRYPT
 
-    const newUser = new User({ firstName, lastName, username, country, city });
+        await newUser.save();
+        res.status(201).send('Usuário registrado com sucesso');
+    } catch (err) {
+        console.error('Erro ao registrar usuário:', err);
+        res.status(500).send('Erro ao registrar usuário: ' + err);
+    }
+});
 
-    newUser.save()
-        .then(() => res.status(201).send('Dados enviados com sucesso'))
-        .catch((err) => res.status(500).send('Erro ao salvar dados: ' + err));
+// ROTA PARA AUTENTICAR USER (LOG IN)
+app.post('/users/login', async (req, res) => {
+    const { username, password } = req.body;
+
+    try {
+        const user = await User.findOne({ username });
+
+        if (!user) {
+            return res.status(404).send('Usuário não encontrado');
+        }
+
+        const isPasswordValid = await user.checkPassword(password);
+
+        if (!isPasswordValid) {
+            return res.status(401).send('Senha incorreta');
+        }
+
+        res.status(200).send('Login bem-sucedido');
+    } catch (err) {
+        console.error('Erro ao autenticar usuário:', err);
+        res.status(500).send('Erro ao autenticar usuário: ' + err);
+    }
 });
 
 
 app.listen(3000, function () {
     console.log('Server running on http://localhost:3000');
 });
-
 
 
 

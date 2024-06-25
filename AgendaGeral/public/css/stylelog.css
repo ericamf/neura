@@ -542,3 +542,9 @@ footer{
     color: #FF6711;
     border: 2px solid #FF6711;
 }
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px; /* Espaçamento superior para separar a mensagem do campo */
+}
