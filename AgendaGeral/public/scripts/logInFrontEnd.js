@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 
-  // Função para fechar ambos os modais ao clicar no botão de fechar (X)
+  // Função para fechar ambos os modais ao clicar no botão de fechar
   closeButtons.forEach(button => {
       button.addEventListener('click', function () {
           modal1.style.display = 'none';
@@ -80,12 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// ENVIAR DADOS DOS FORMULÁRIOS PARA O BACKEND + BASE DE DADOS
 
-
-
-/*  ENVIAR DADOS DOS FORMULÁRIOS PARA O BACKEND + BASE DE DADOS */
-
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('articleForm');
     form.addEventListener('submit', async function (event) {
       event.preventDefault();
@@ -116,4 +113,74 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error('Erro:', error);
       }
     });
-  });
+  });*/
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('articleForm');
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const formData = {
+            name: document.getElementById('validationDefault01').value,
+            password: document.getElementById('validationDefault02').value,
+            username: document.getElementById('validationDefaultUsername').value,
+            country: document.getElementById('validationDefault03').value,
+            city: document.getElementById('validationDefault04').value
+        };
+
+        try {
+            const response = await fetch('http://localhost:3000/users/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                console.log('Conta registrada com sucesso');
+                // Redirecionar para a página de gerenciamento de conteúdo após o registro
+                window.location.href = 'userBusiness.html';
+            } else {
+                console.error('Erro ao registrar conta');
+            }
+        } catch (error) {
+            console.error('Erro:', error);
+        }
+    });
+
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = {
+            username: document.getElementById('validationDefault01S').value,
+            password: document.getElementById('inputPassword').value
+        };
+
+        fetch('http://localhost:3000/users/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        }).then((response) => {
+            if(response.status === 401) {
+                console.error('Credenciais inválidas');
+                // Mostrar mensagem de erro no front-end
+                const errorMessage = document.createElement('p');
+                errorMessage.textContent = 'Credenciais inválidas. Por favor, tente novamente.';
+                const errorDiv = document.getElementById('error-message');
+                errorDiv.innerHTML = ''; // Limpa mensagens de erro anteriores
+                errorDiv.appendChild(errorMessage);
+            }else{
+                console.log('Login realizado com sucesso');
+                // Redirecionar apenas se o login for bem-sucedido
+                window.location.href = 'userBusiness.html';
+            }
+        }).catch((error) => {
+            console.error('Erro:', error);
+        }); 
+    });
+});
+

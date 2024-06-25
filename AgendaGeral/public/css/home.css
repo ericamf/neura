@@ -13,7 +13,7 @@ body {
 
 header {
     padding-top: 15px;
-    background-image: linear-gradient(#424242,#15161B);
+    background-image: linear-gradient(#424242,#000000);
 }
 
 .linha {
@@ -28,7 +28,7 @@ header {
     display: flex;
     justify-content: center;
     font-family: Panchang-Semibold;
-    background-color: #424242;
+    background-color: rgba(66, 66, 66, 0.8);
 
 }
 
@@ -101,6 +101,7 @@ header {
     margin-right: 90px;
 }
 
+
 /* MOBILE MENU HAMBURGUER ABERTO */
 
 .container-mobile {
@@ -162,7 +163,7 @@ header {
 
 .search-input.show {
     display: inline-block;
-    width: 130px; /* Ajuste o valor conforme necessário */
+    width: 130px;
 }
 
 
@@ -195,10 +196,10 @@ header {
 
 .sidebar {
     position: fixed;
-    top: 66px; /* Ajuste a posição conforme necessário */
+    top: 66px; 
     right: -100%;
     width: 100%;
-    height: calc(100% - 66px); /* Ajuste para deixar espaço para a navbar */
+    height: calc(100% - 66px); 
     background: linear-gradient(to bottom, #D0CAE2 0%, #FDB38B 100%);
     color: #fff;
     transition: right 0.3s;
@@ -217,11 +218,11 @@ header {
 
 .main-content {
     transition: margin-right 0.3s;
-    display: none; /* Initially hidden */
+    display: none; 
 }
 
 .main-content.show {
-    display: block; /* Show when toggled */
+    display: block; 
   }
 
 .hidden {
@@ -287,7 +288,7 @@ header {
 .menu-mobile a {
     padding: 10px;
     text-decoration: none;
-    color: #424242; /* Mudança para branco para contraste com o fundo escuro */
+    color: #424242; 
 }
 
 @media (min-width: 900px) {
@@ -327,8 +328,10 @@ header {
     font-size: 75px;
     letter-spacing: 5px;
     -webkit-text-stroke: 1px #FF6711;
+    color: transparent;
 
 }
+
 
 .titleHoje{
     color:#FF6711;
@@ -363,7 +366,6 @@ header {
     width: 100%;
     height: 50%;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 84% 90%, 84% 100%, 0 100%);
-    border-radius: 15px;
     contain: content;
 }
 
@@ -419,7 +421,7 @@ header {
 
 /*EVENTOS HOJE E AMANHÃ*/ 
 
-/*barra do carrousseis personalizada*/ 
+/*barra dos carrousseis personalizada*/ 
 .carrousel1::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -446,10 +448,18 @@ header {
     border: 1px #ffffff dashed;
 }
 
+.carrousel1::-webkit-scrollbar-button:start {
+    display: none;
+}
+.carrousel1::-webkit-scrollbar-button:end {
+    display: none;
+}
+
 .carrousel2::-webkit-scrollbar {
     width: 10px;
     height: 10px;
     background-color: #CCCCCC;
+    margin: 10px;
 }
 .carrousel2::-webkit-scrollbar-button {
    background-color: #ffffff;
@@ -471,7 +481,12 @@ header {
 .carrousel2 textarea::-webkit-resizer {
     border: 1px #ffffff dashed;
 }
-
+.carrousel2::-webkit-scrollbar-button:start {
+    display: none;
+}
+.carrousel2::-webkit-scrollbar-button:end {
+    display: none;
+}
 
 .titletoday {
     color: #FF6711;
@@ -497,6 +512,7 @@ header {
     display: flex;
     column-gap: 30px;
     margin-left: 112px;
+    padding-bottom: 10px;
 }
 
 .carrousel2 {
@@ -506,6 +522,7 @@ header {
     display: flex;
     column-gap: 30px;
     margin-right: 112px;
+    padding-bottom: 10px;
 }
 
 .card {
@@ -548,6 +565,278 @@ header {
 .btn:hover {
     filter: invert(17%) sepia(85%) saturate(15%) hue-rotate(24deg) brightness(102%) contrast(82%);
 }
+
+
+/* MODAL CONTENT */
+
+#myBtn{
+    border: none;
+    background-color: #ffffff;
+  }
+
+
+  #myBtn > .header {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+
+.content-zone {
+    width: 43%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.titlesEvent {
+    width: 100%;
+    height: 90%;
+    font-family: "Mulish";
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.titlesEvent > h1 {
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.titlesEvent > p {
+    margin-top: 15px;
+    line-height: 5px;
+}
+ .time{
+    font-weight: 700;
+ } 
+
+
+  .modal-content {
+    display:flex;
+    align-items: center;
+    background-color: #D9D5EA;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 95%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* CSS DO MODAL EVENTO SINGULAR */
+
+
+.title { text-decoration: solid;
+         font-weight: 700;
+         color: #424242;
+}
+
+
+.containerevent {
+    display: grid;
+    background-color: #D9D5EA;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin-bottom: 40px;
+}
+
+.imageEventX > img{
+    filter: grayscale(0%)
+}
+
+
+.buttonX {
+    background-color:#D9D5EA;
+    border: none; 
+}
+
+.buttonX :hover {
+    filter: invert(62%) sepia(85%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(60%);
+}
+
+
+.eventpart1{
+    contain: content;
+}
+
+.imageEventX{
+    width: 100% ;
+    height:330px ;
+    contain: content;
+}
+
+.imageEventX > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.buttonsGoandTickets{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 18px;
+    left: 5px;
+
+}
+
+.goTickets {
+    background-color: #FF6711;
+    border: none;
+    height: 45px;
+    width: 230px;
+    color: white;
+    font-family: 'Mulish';
+    font-weight: 800;
+    box-shadow: 0px 2px 4px #7c7c7c;
+}
+
+.goTickets:hover{
+    background-color: #9F97CA;
+}
+
+.goTickets:focus{
+    background-color: #9F97CA;
+    color: #424242;
+}
+
+
+.button1 {
+    border: none;
+    background-color: white;
+    padding: 0%;
+    height: 45px;
+    transition: width 1.5s ease-out;
+}
+
+.button1 > img{
+    display: block;
+}
+
+.button1:hover > img{
+    display: none;
+}
+
+.button1 > span {
+    overflow: hidden;
+    background-color: #ffffff;
+    font-family: 'Mulish';
+    font-size: 13px ;
+    font-weight: 700;
+    color: #FF6711;
+    display: none;
+}
+
+.button1:hover > span {
+    display: block;
+    padding:10px;
+}
+
+.button1:focus > img{
+    display: none;
+}
+
+.button1:focus > span {
+    display: block;
+    color: #9F97CA;
+    padding:10px;
+}
+
+h4{
+    color: #FF6711;
+    font-weight: 400;
+    font-size: 12px;
+    font-weight: 600;
+}
+.model-content > p{
+    font-size: 10px;
+}
+
+
+
+/*coluna direita- informaçao*/
+.eventpart2{
+ contain: content;
+}
+
+.infoAndButtonsViews{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between
+    
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info > p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.buttonsviews{
+    display: flex;
+}
+
+.textevent > p {
+    font-family: "Mulish";
+    font-size: 15px;
+    margin: 0;
+}
+
+.textevent > h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contactsEventText{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactsEventText > p {
+    font-size:15px;
+}
+
+.textevent2 > p {
+    font-size:15px;
+}
+
+.moredates > p {
+    font-size:11px;
+    margin: 0;
+}
+
+/*UPDATES*/
+
+
 
 .Scrolling-Updates2 {
     font-size: 40px;
@@ -628,6 +917,8 @@ header {
     filter: grayscale(0%);
 }
 
+
+
 .label-container1 {
     width: 250px;
     height: 70%;
@@ -635,7 +926,105 @@ header {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 30% 35%, 0 35%);
     border-radius: 10px;
     background-color: #ffffff;
+    transition: clip-path 0.5s ease, transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
 }
+
+.label-container1:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    align-items: center;
+}
+
+.content-zone {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Panchang-Semibold;
+    color: #FF6711;
+    font-size: 18px;
+    transition: all 0.5s ease;
+    margin-bottom: 5px;
+}
+
+.body-card1 {
+    color: #FF6711;
+    font-family: 'Mulish';
+    font-weight: 300;
+    font-size: 15px;
+    text-align: left;
+    width: 100%;
+    padding-left: 80px;
+    transition: all 0.5s ease;
+}
+
+.body-card1 > h5 {
+    width: 100%;
+    padding-top: 20px;
+    color: #FF6711;
+    font-family: 'Mulish';
+    font-weight: 700;
+    text-align: left;
+    transition: all 0.5s ease;
+}
+
+.body-card1 > p {
+    color: #FF6711;
+    width: 100%;
+    font-family: 'Mulish';
+    font-weight: 300;
+    text-align: left;
+    transition: all 0.5s ease;
+    margin-bottom:0% !important;
+}
+
+.header1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease;
+    padding-top: 5px;
+}
+
+/* Centralize content when hovering */
+.label-container1:hover .body-card1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    text-align: center;
+}
+
+.label-container1:hover .body-card1 > h5,
+.label-container1:hover .body-card1 > p {
+    text-align: center;
+    margin: 0;
+}
+
+.see-more-button2 {
+    margin-top:25px;
+    background-color: transparent;
+    color: #424242 !important;
+    border: none;
+    /*padding: 10px 20px;*/
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Inicialmente escondido */
+    transition: opacity 0.3s ease;
+    font-family: "Mulish";
+    font-size: 12px;
+}
+
+.see-more-button2:hover {
+    color: #9F97CA;
+}
+
+
+/*Card cancelled*/
 
 .label-container2 {
     width: 250px;
@@ -644,82 +1033,107 @@ header {
     clip-path: polygon(0 0, 70% 0, 70% 65%, 100% 65%, 100% 100%, 0 100%);
     border-radius: 10px;
     background-color: #424242;
-}
-
-.content-zone {
-    width: 100%;
+    transition: clip-path 0.5s ease, transform 0.5s ease;
     display: flex;
-    justify-content: space-between;
-    margin-left: 25px;
-    font-family: Panchang-Semibold;
-    color: #FF6711;
-    font-size: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.body-card1{
-    color: #FF6711;
-    font-family: 'Mulish';
-    font-weight: 300;
-    font-size: 15px;
-
+.label-container2:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    align-items: center;
 }
 
-.body-card1>h5 {
-    width: 200px;
-    margin-left: 95px;
-    padding-top: 20px;
-    color: #FF6711;
-    font-family: 'Mulish';
-    font-weight: 700;
-}
-
-.body-card1>p {
-    color: #FF6711;
-    width: 250px;
-    margin-left: 95px;
-    width: 150px;
-    font-family: 'Mulish';
-    font-weight: 300;
-}
-
-.header1 {
-    padding-top: 30px;
-}
-
-.body-card2{
+.body-card2 {
     color: #FF6711;
     font-family: 'Mulish';
     font-weight: 300;
     font-size: 15px;
-
+    text-align: left;
+    width: 72%;
+    transition: all 0.5s ease;
 }
 
-.body-card2>h5 {
-    width: 150px;
-    margin-left: 20px;
-    padding-top: 20px;
+.body-card2 > h5 {
+    width: 100%;
+    padding-top: 10px;
     color: #FF6711;
     font-family: 'Mulish';
     font-weight: 700;
+    text-align: left;
+    transition: all 0.5s ease;
 }
 
-.body-card2>p {
+.body-card2 > p {
     color: #FF6711;
     margin-top: 10px;
-    margin-left: 20px;
-    width: 150px;
     font-family: 'Mulish';
     font-weight: 300;
+    text-align: left;
+    transition: all 0.5s ease;
 }
 
 .header2 {
     height: 100px;
-    margin-top: 43px;
-    margin-left: 14px;
+    margin-top: 15px;
+    margin-left: -3px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+/* Centralize content when hovering */
+.label-container2:hover .body-card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    text-align: center;
+}
+
+.label-container2:hover .body-card2 > h5 {
+    margin-bottom: 10px !important;
+    text-align: center;
+    margin: 0;
+}
+.label-container2:hover .body-card2 > p {
+    text-align: center;
+    margin: 0;
+}
+
+.content-zone{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-zone > p {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+.see-more-button {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Inicialmente escondido */
+    transition: opacity 0.3s ease;
+    font-family: "Mulish";
+    font-size: 12px;
+}
+
+.see-more-button:hover {
+    color: #9F97CA;
 }
 
 
 
+
+/*NEWSLETTER*/
 .newsletter {
     background-color: #424242;
     padding-top: 75px;

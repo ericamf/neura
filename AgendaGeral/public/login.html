@@ -40,15 +40,15 @@
                 <div class="form">
                 <form id="articleForm" class="row g-3">
                   <div class="col-md-6">
-                    <label for="validationDefault01" class="form-label">First name</label>
+                    <label for="validationDefault01" class="form-label">Name</label>
                     <input type="text" class="form-control" id="validationDefault01" value="" required>
                   </div>
                   <div class="col-md-6">
-                    <label for="validationDefault02" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="validationDefault02" value="" required>
+                    <label for="validationDefault02" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="validationDefault02" required>
                   </div>
                   <div class="col-md-12">
-                    <label for="validationDefaultUsername" class="form-label">Username</label>
+                    <label for="validationDefaultUsername" class="form-label">E-mail</label>
                     <div class="input-group">
                       <span class="input-group-text" id="inputGroupPrepend2">@</span>
                       <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
@@ -119,7 +119,7 @@
                   </div>
  
                   <div class="form">
-                  <form class="row g-3">
+                  <form class="row g-3" id="loginForm">
                     <div class="col-md-6">
                       <label for="validationDefault01" class="form-label">Email</label>
                       <input type="text" class="form-control" id="validationDefault01S" value="" required>
@@ -131,7 +131,7 @@
  
                     <div class="col-12">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2S" required>
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2S">
                         <label class="form-check-label" for="inlineFormCheck">
                           Remember me
                         </label>
@@ -139,7 +139,8 @@
                     </div>
  
                     <div class="col-12">
-                      <button class="btn-form btn-primary" type="submit">Login</button>
+                      <button class="btn-form btn-primary" id="loginButton" type="submit">Login</button>
+                      <div id="error-message"></div>
                     </div>
                   </form>
                   </div>
@@ -175,7 +176,7 @@
                   <a href="index.html">AGENDA</a>
                   <a href="#">INFO</a>
                   <a href="home.html"><img src="imagesLogIn\LOGO_grey.svg" alt="" width="120" height=""></a>
-                  <a href="#">UPDATES</a>
+                  <a href="updates.html">UPDATES</a>
                   <a href="login.html">LOG IN</a>
               </div>
   
@@ -231,7 +232,7 @@
                   <div class="menumobileA">
                     <a href="index.html">AGENDA</a>
                     <a href="#about">INFO</a>
-                    <a href="#services">UPDATES</a>
+                    <a href="updates.html">UPDATES</a>
                   </div>
 
 

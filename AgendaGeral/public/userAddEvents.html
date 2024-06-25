@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+    <link rel="stylesheet" type="text/css" href="css\userAddEvents.css">
+    <link rel="stylesheet" type="text/css" href="css\panchang.css">
+ 
+ 
+</head>
+ 
+<header>
+  <div class="menu fixed-top mb-3">
+    <div class="containerM">
+    <div class="menu-container d-flex justify-content-between align-items-center">
+
+       <div class="cityAndArrow1">
+        <div class="dropdown">
+          <a href="#" class="dropbtn">PORTO</a>
+          <div class="dropdown-content">
+            <a href="#">LISBOA</a>
+            <a href="#">MADRID</a>
+            <a href="#">PARIS</a>
+          </div>
+          <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+        </div>
+       </div>
+
+        <div class="center-menu d-none d-md-flex">
+            <a href="index.html">AGENDA</a>
+            <a href="#">INFO</a>
+            <a href="home.html"><img src="imagesLogIn\LOGO_grey.svg" alt="" width="120" height=""></a>
+            <a href="updates.html">UPDATES</a>
+            <a href="userBusiness.html">MY ACCOUNT</a>
+        </div>
+
+
+          <div class="LanguageAndArrow d-flex align-items-center">
+            <div class="lupa-container">
+              <img src="imagesLogIn/lupa_grey.svg" class="search-icon" id="search-icon" alt="Lupa" width="22" height="22" style="cursor: pointer;">
+              <input type="text" class="search-input" id="search-input" placeholder="Search...">
+            </div>
+          <div class="dropdown ms-2">
+            <a href="#" class="dropbtn">EN</a>
+            <div class="dropdown-content">
+              <a href="#">PT</a>
+            </div>
+            <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+          </div>
+         </div>
+    </div>
+    <div class="linha"></div>
+    </div>
+  </div>
+
+
+  <div class="container-mobile">
+    <nav class="navbar-mobile fixed-top">
+        <div class="logo">
+          <a href="home.html"><img src="imagesLogIn/LOGO_grey.svg" alt=""></a>
+        </div>
+
+        <div class="icons">
+          <div class="lupa-container">
+            <img src="imagesLogIn/lupa_grey.svg" class="search-icon" id="search-iconM" alt="Lupa" width="22" height="22" style="cursor: pointer;">
+            <input type="text" class="search-input" id="search-inputM" placeholder="Search...">
+          </div>
+            <div class="log in">
+              <a href="login.html"><img src="imagesLogIn/pessoa_grey.svg" class="search-icon" alt="Lupa" width="22" height="22"></a>
+            </div>
+
+            <div class="hamburger" id="hamburger-menu">
+                <div class="bar rounded-2"></div>
+                <div class="bar rounded-2"></div>
+                <div class="bar rounded-2"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <p></p>
+        </div>
+        <div class="main-content hidden" id="main-content">
+          <div class="menu-mobile">
+            <div class="menumobileA">
+              <a href="index.html">AGENDA</a>
+              <a href="#about">INFO</a>
+              <a href="updates.html">UPDATES</a>
+              <a href="userBusiness.html">MY ACCOUNT</a>
+            </div>
+
+
+            <div class="otherInfoMobile"> 
+              <div class="newslettermobile">
+                 <button> NEWSLETTER </button>
+              </div>
+
+              <div class="cityAndArrow1">
+                <div class="dropdown">
+                  <a href="#" class="dropbtn">PORTO</a>
+                  <div class="dropdown-content">
+                    <a href="#">LISBOA</a>
+                    <a href="#">MADRID</a>
+                    <a href="#">PARIS</a>
+                  </div>
+                  <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+                </div>
+               </div>
+
+              <div class="dropdown">
+                <a href="#" class="dropbtn">EN</a>
+                <div class="dropdown-content">
+                  <a href="#">PT</a>
+                </div>
+                <img src="imagesLogIn\arrow_grey.svg" class="arrow1" alt="Arrow" width="10" height="10">
+              </div>
+              
+              <a class="socialmedia-menu" href="#">
+                  <img src="imagesLogIn/INSTAGRAM_M_MOBILE.svg" alt="">
+                  <img src="imagesLogIn/TIKTOK_M_MOBILE.svg" alt="">
+                  <img src="imagesLogIn/X_M_MOBILE.svg" alt="">
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>  <!--div do containerMobile-->
+</header>
+ 
+ 
+<body>
+  <main>
+    <div class="container">
+        <div class="title-1">
+            <p>CREATE YOUR EVENT</p>
+        </div>
+    </div>
+    <div class="container">
+      <form id="eventForm" class="row g-3 needs-validation" enctype="multipart/form-data" novalidate>
+            <div class="col-md-6">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select" id="category" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Music</option>
+                    <option>Shows</option>
+                    <option>Sports</option>
+                    <option>Art</option>
+                    <option>Food</option>
+                    <option>Didactic</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid category.
+                </div>
+            </div>
+            <div class="col-md-6">
+              <label for="subtitle1" class="form-label">Subtitle 1</label>
+              <input type="text" class="form-control" id="subtitle1" required>
+              <div class="invalid-feedback">
+                  Please provide a valid subtitle.
+              </div>
+          </div>
+          <div class="col-md-6">
+              <label for="subtitle2" class="form-label">Subtitle 2</label>
+              <input type="text" class="form-control" id="subtitle2" required>
+          </div>
+            <div class="col-md-3">
+                <label for="dateTime" class="form-label">Date and Time</label>
+                <input type="datetime-local" class="form-control" id="dateTime" required>
+                <div class="invalid-feedback">
+                    Please choose a date and time.
+                </div>
+            </div>
+            <div class="col-md-3">
+              <label for="duration" class="form-label">Duration</label>
+              <input type="text" class="form-control" id="duration" required>
+          </div>
+            <div class="col-md-3">
+              <label for="date1" class="form-label">Date 1</label>
+              <input type="text" class="form-control" id="date1" required>
+          </div>
+          <div class="col-md-3">
+              <label for="date2" class="form-label">Date 2</label>
+              <input type="text" class="form-control" id="date2" required>
+          </div>
+            
+            <div class="col-md-6">
+                <label for="localName" class="form-label">Local Name</label>
+                <input type="text" class="form-control" id="localName" required>
+            </div>
+            <div class="col-md-6">
+                <label for="localSubname" class="form-label">Local Subname</label>
+                <input type="text" class="form-control" id="localSubname" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="col-md-6">
+                <label for="contact" class="form-label">Contact</label>
+                <input type="text" class="form-control" id="contact" required>
+            </div>
+
+            <div class="col-md-12">
+              <label for="description" class="form-label">Description</label>
+              <textarea class="form-control" id="description" rows="5" required></textarea>
+          </div>
+          <div class="col-md-12">
+            <label for="image" class="form-label">Upload an image</label>
+            <input class="form-control" type="file" id="image" name="image" required>
+        </div>
+        <div class="buttons col-12">
+            <button class="btn" type="submit">Submit form</button>
+            <button class="backButton" id="button" type="button"><a href="userBusiness.html">Back</a></button>
+        </div>
+        </form>
+    </div>
+    <div id="popup" class="popup">
+      <p>Evento adicionado</p>
+  </div>
+</main>
+ 
+    <footer>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid footer">
+              <a class="navbar-brand neurafooter ms-5" href="#"><img src="images/LOGO_FOOTER.svg" alt="" width="117" height="17"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-4 me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"> <img src="images/instaFooter.svg" alt="" width="15" height="15"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="images/Vector.svg" alt="" width="15" height="14"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="images/twitter%20Footer.svg" alt="" width="15" height="15"></a>
+                  </li>
+                </ul>
+                <form class="d-flex " role="search">
+                  <div class="politicas me-5 mt-2">
+                    <h6>Política de Privacidade</h6>
+                  </div>
+                  <div class="politicas me-5 mt-2">
+                    <h6>Política de Cookies</h6>
+                  </div>
+                  <div class="politicas mt-2">
+                    <h6>Política de Termos e Condições</h6>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </footer>
+
+<script src="./scripts/addEvents.js"></script>
+</body>
+</html>

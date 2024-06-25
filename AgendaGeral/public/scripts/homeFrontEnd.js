@@ -1,4 +1,4 @@
-/* ABERTURA MENU HABURGUER MOBILE */
+// ABERTURA MENU HAMBURGUER MOBILE 
 document.addEventListener('DOMContentLoaded', function () {
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const sidebar = document.getElementById('sidebar');
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-/*ABRIR LUPA*/
+//ABRIR LUPA
 document.addEventListener('DOMContentLoaded', function () {
     const searchIcon = document.getElementById('search-icon');
     const searchInput = document.getElementById('search-input');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/*ABRIR LUPAMOBILE*/
+//ABRIR LUPAMOBILE
 document.addEventListener('DOMContentLoaded', function () {
     const searchIconM = document.getElementById('search-iconM');
     const searchInputM = document.getElementById('search-inputM');
@@ -46,3 +46,128 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
   });
+
+  //BOTAO DOS UPDATES
+  document.addEventListener('DOMContentLoaded', function () {
+    const labelContainers1 = document.querySelectorAll('.label-container1');
+    const labelContainers2 = document.querySelectorAll('.label-container2');
+
+    //Event listeners para os cards com classe .label-container1
+    labelContainers1.forEach(labelContainer => {
+        const seeMoreButton = labelContainer.querySelector('.see-more-button2');
+
+        labelContainer.addEventListener('mouseenter', function () {
+            seeMoreButton.style.display = 'block';
+        });
+
+        labelContainer.addEventListener('mouseleave', function () {
+            seeMoreButton.style.display = 'none';
+        });
+    });
+
+    //Event listeners para os cards com classe .label-container2
+    labelContainers2.forEach(labelContainer => {
+        const seeMoreButton = labelContainer.querySelector('.see-more-button');
+
+        labelContainer.addEventListener('mouseenter', function () {
+            seeMoreButton.style.display = 'block';
+        });
+
+        labelContainer.addEventListener('mouseleave', function () {
+            seeMoreButton.style.display = 'none';
+        });
+    });
+});
+
+
+
+//MODAL
+// Get the modal
+var modal = document.getElementById("myModal");
+// Variável que busca o botão de fechar
+var span = document.getElementsByClassName("close")[0];
+// Fechar modal com o botão
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// Fechar modal clickando fora 
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+const modalTitle = document.getElementById('modal-title');
+const modallocalName = document.getElementById('modal-localName');
+const modallocalSubname = document.getElementById('modal-localSubname');
+const modalemail = document.getElementById('modal-email');
+const modalcontact = document.getElementById('modal-contact');
+const modaleventInfo = document.getElementById('modal-eventInfo');
+const modalImage = document.getElementById('modal-image');
+const modaldate1 = document.getElementById('modal-date1');
+const modaldate2 = document.getElementById('modal-date2');
+const modaltime = document.getElementById('modal-time');
+const modalduration = document.getElementById('modal-duration');
+
+// GETTING OS EVENTOS
+function homeCards(cards) {
+    const todayContainer = document.getElementById('carrouselToday');
+    const tomorrowContainer = document.getElementById('carrouselTomorrow');
+    
+    todayContainer.innerHTML = '';
+    tomorrowContainer.innerHTML = '';
+    
+    cards.forEach(card => {
+        const cardTime = new Date(card.dateTime.time);
+
+        let cardElement = document.createElement('div');
+        cardElement.className = "card";
+        cardElement.style.width = '17rem';
+        cardElement.innerHTML = `
+            <img src="${card.image}" class="card-img-top" alt="...">
+            <div class="cardtextarrow">
+                <div class="card-body">
+                    <h5 class="card-title">${card.title}</h5>
+                    <p class="card-text">${card.subtitle1} <br> ${cardTime.toLocaleDateString()} ${cardTime.getHours()}H${cardTime.getMinutes()}</p>
+                </div>
+                <div class="arrowcard text-end">
+                    <img src="images/ARROW_CARDS.svg" class="btn" alt="A" width="50" height="50">
+                </div>
+            </div>
+        `;
+
+        if (cardTime.getDate() === 1) {  
+            todayContainer.appendChild(cardElement);
+        } else if (cardTime.getDate() === 2) { 
+            tomorrowContainer.appendChild(cardElement);
+        }
+
+        cardElement.addEventListener('click', () => {
+            modal.style.display = "flex";
+
+            console.log(card.image)
+
+            modalTitle.innerHTML = card.title;
+            modalImage.src = card.image;
+            modallocalName.innerHTML = card.localInfo.localName;
+            modallocalSubname.innerHTML = card.localInfo.localSubname;
+            modalemail.innerHTML = card.localInfo.email;
+            modalcontact.innerHTML = card.localInfo.contact;
+            modaleventInfo.innerHTML = card.eventInfo;
+            modaldate1.innerHTML = card.datesInfo.date1;
+            modaldate2.innerHTML = card.datesInfo.date2;
+            modaltime.innerHTML = card.dateTime.time;
+            modalduration.innerHTML = card.dateTime.duration;
+        });
+    });
+}
+
+// Fetching the cards from the server
+fetch('/cards')
+    .then(response => response.json())
+    .then(data => {
+        homeCards(data);
+    })
+    .catch(error => {
+        console.error('Error fetching cards:', error);
+    });
