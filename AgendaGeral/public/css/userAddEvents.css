@@ -49,6 +49,8 @@ header {
     text-decoration: none;
     text-align: center;
 }
+
+
 .dropdown {
     position: relative;
     font-family: Panchang-Light;
@@ -77,6 +79,7 @@ header {
 }
 
 .menu-container a:hover {color:#9F97CA;}
+.menu-container a:focus {color:#FF6711;}
 
 .arrow1:hover {
     filter: invert(62%) sepia(84%) saturate(140%) hue-rotate(209deg) brightness(86%) contrast(91%);
